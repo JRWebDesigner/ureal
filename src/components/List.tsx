@@ -1,6 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+type ListItemProps = {
+  title: string;
+  description: string;
+  index: number;
+};
 
 const items = [
   { title: 'Administración Financiera', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.' },
