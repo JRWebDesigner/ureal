@@ -1,24 +1,34 @@
+"use client"
 import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Swiper as SwiperClass } from "swiper";
 
 interface Slide {
   id: number;
   bgImage: string;
+  content?: string;
 }
 
 const slides: Slide[] = [
-  { id: 1, bgImage: "/Images/banner.webp" },
-  { id: 2, bgImage: "/Images/banner2.jpg" },
-  { id: 3, bgImage: "/Images/banner3.jpg" },
+  {
+    id: 1,
+    bgImage: "/Images/banner.webp",
+  },
+  {
+    id: 2,
+    bgImage: "/Images/banner2.jpg",
+  },
+  {
+    id: 3,
+    bgImage: "/Images/banner3.jpg",
+  },
 ];
 
 export default function HeroCarrusel() {
-  const swiperRef = useRef<SwiperClass | null>(null);
-  const zoomFactors = useRef<Record<number, number>>({});
+  const swiperRef = useRef<any>(null);
+  const zoomFactors = useRef<{ [key: number]: number }>({});
 
   useEffect(() => {
     slides.forEach((slide) => {
@@ -29,24 +39,23 @@ export default function HeroCarrusel() {
   const handleZoom = () => {
     if (!swiperRef.current) return;
 
-    const swiper = swiperRef.current;
+    const swiper = swiperRef.current.swiper;
     const activeSlideId = slides[swiper.activeIndex].id;
     const bgElement = swiper.slides[swiper.activeIndex].querySelector(".slide-bg") as HTMLElement | null;
 
-    if (!bgElement) return;
-
-    if (zoomFactors.current[activeSlideId] < 1.4) {
-      zoomFactors.current[activeSlideId] += 0.002;
-      bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+    if (bgElement && bgElement instanceof HTMLElement) {
+      if (zoomFactors.current[activeSlideId] < 1.4) {
+        zoomFactors.current[activeSlideId] += 0.002;
+        bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+      }
     }
   };
 
   useEffect(() => {
-    if (!swiperRef.current) return;
     const zoomInterval = setInterval(handleZoom, 10);
 
     return () => clearInterval(zoomInterval);
-  }, [swiperRef]);
+  }, []);
 
   return (
     <Swiper
@@ -58,8 +67,8 @@ export default function HeroCarrusel() {
       loop
       className="h-full w-full"
       onSlideChangeTransitionStart={() => {
-        const slides = swiperRef.current?.slides || [];
-        slides.forEach((slide) => {
+        const slides = swiperRef.current?.swiper.slides || [];
+        slides.forEach((slide: HTMLElement) => {
           const bg = slide.querySelector(".slide-bg") as HTMLElement | null;
           if (bg) bg.style.transform = "scale(1.2)";
         });
