@@ -1,6 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import dynamic from "next/dynamic";
+
+// Carga dinámica de Swiper solo en el cliente
+const Swiper = dynamic(() => import('swiper/react').then(mod => mod.Swiper), { ssr: false });
+const SwiperSlide = dynamic(() => import('swiper/react').then(mod => mod.SwiperSlide), { ssr: false });
+
 import { Autoplay, EffectFade } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
