@@ -1,7 +1,5 @@
 "use client";
-import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Swiper as SwiperType } from "swiper/types";
 
 // Cargar Swiper de manera dinámica
 const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), { ssr: false });
@@ -14,23 +12,15 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-interface Slide {
-  id: number;
-  bgImage: string;
-}
-
-const slides: Slide[] = [
+const slides = [
   { id: 1, bgImage: "/Images/banner.webp" },
   { id: 2, bgImage: "/Images/banner2.jpg" },
   { id: 3, bgImage: "/Images/banner3.jpg" },
 ];
 
 export default function HeroCarrusel() {
-  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
-
   return (
     <Swiper
-      onSwiper={setSwiperInstance}
       speed={1500}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       loop
