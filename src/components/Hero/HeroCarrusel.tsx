@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
@@ -8,7 +8,6 @@ import "swiper/css/effect-fade";
 interface Slide {
   id: number;
   bgImage: string;
-  content?: string;
 }
 
 const slides: Slide[] = [
@@ -27,7 +26,7 @@ const slides: Slide[] = [
 ];
 
 export default function HeroCarrusel() {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<Swiper | null>(null);
   const zoomFactors = useRef<{ [key: number]: number }>({});
 
   useEffect(() => {
@@ -39,11 +38,13 @@ export default function HeroCarrusel() {
   const handleZoom = () => {
     if (!swiperRef.current) return;
 
-    const swiper = swiperRef.current.swiper;
+    const swiper = swiperRef.current;
     const activeSlideId = slides[swiper.activeIndex].id;
-    const bgElement = swiper.slides[swiper.activeIndex].querySelector(".slide-bg") as HTMLElement | null;
+    const bgElement = swiper.slides[swiper.activeIndex].querySelector(
+      ".slide-bg"
+    ) as HTMLElement | null;
 
-    if (bgElement && bgElement instanceof HTMLElement) {
+    if (bgElement) {
       if (zoomFactors.current[activeSlideId] < 1.4) {
         zoomFactors.current[activeSlideId] += 0.002;
         bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
@@ -67,8 +68,8 @@ export default function HeroCarrusel() {
       loop
       className="h-full w-full"
       onSlideChangeTransitionStart={() => {
-        const slides = swiperRef.current?.swiper.slides || [];
-        slides.forEach((slide: HTMLElement) => {
+        const slides = swiperRef.current?.slides || [];
+        slides.forEach((slide) => {
           const bg = slide.querySelector(".slide-bg") as HTMLElement | null;
           if (bg) bg.style.transform = "scale(1.2)";
         });
