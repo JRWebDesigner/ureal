@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import { Swiper as SwiperType } from "swiper/types";
 
@@ -28,45 +28,21 @@ const slides: Slide[] = [
 export default function HeroCarrusel() {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
-  const handleZoom = useCallback(() => {
-    if (!swiperInstance) return;
-
-    const activeIndex = swiperInstance.activeIndex;
-    const bgElement = swiperInstance.slides[activeIndex].querySelector(".slide-bg") as HTMLElement | null;
-
-    if (bgElement) {
-      bgElement.style.transform = "scale(1.4)";
-      setTimeout(() => {
-        bgElement.style.transition = "transform 1s ease-in-out";
-        bgElement.style.transform = "scale(1.2)";
-      }, 100);
-    }
-  }, [swiperInstance]);
-
-  useEffect(() => {
-    const zoomInterval = setInterval(handleZoom, 3000);
-    return () => clearInterval(zoomInterval);
-  }, [handleZoom]);
-
   return (
     <Swiper
+      onSwiper={setSwiperInstance}
       speed={1500}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       loop
       effect="fade"
       modules={[Autoplay, EffectFade]}
       className="h-full w-full"
-      onSwiper={setSwiperInstance}
-      onSlideChangeTransitionStart={handleZoom}
     >
       {slides.map((slide) => (
-        <SwiperSlide key={slide.id} className="relative">
+        <SwiperSlide key={slide.id}>
           <div
-            className="slide-bg absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-in-out"
-            style={{
-              backgroundImage: `url(${slide.bgImage})`,
-              transform: "scale(1.2)",
-            }}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.bgImage})` }}
           />
         </SwiperSlide>
       ))}
