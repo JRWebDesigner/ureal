@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { motion, Variants } from "framer-motion"
-import HeroCarrusel from "./HeroCarrusel.tsx"
+import HeroCarrusel from "./HeroCarrusel"
 
 const titleVariants: Variants = {
     offscreen: {
