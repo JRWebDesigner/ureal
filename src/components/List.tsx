@@ -2,12 +2,6 @@
 
 import { motion } from 'framer-motion';
 
-type ListItemProps = {
-  title: string;
-  description: string;
-  index: number;
-};
-
 const items = [
   { title: 'Administración Financiera', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.' },
   { title: 'Comercio Internacional', description: 'Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.' },
@@ -19,7 +13,13 @@ const items = [
   { title: 'Contaduría Pública', description: 'Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.' }
 ];
 
-const ListItem: React.FC<{ title: string; description: string; index: number }> = ({ title, description, index }) => {
+type ListItemProps = {
+  title: string;
+  description: string;
+  index: number;
+};
+
+const ListItem = ({ title, description, index }: ListItemProps) => {
   return (
     <motion.li
       className="p-4 bg-white shadow-md rounded-2xl mb-2 text-lg"
