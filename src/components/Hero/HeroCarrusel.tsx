@@ -1,13 +1,18 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import dynamic from "next/dynamic";
-import { Autoplay, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
+import { Swiper as SwiperType } from "swiper/types";
 
 // Cargar Swiper de manera dinámica
 const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), { ssr: false });
 const SwiperSlide = dynamic(() => import("swiper/react").then((mod) => mod.SwiperSlide), { ssr: false });
+
+// Importar los módulos correctamente según la versión de Swiper
+import { Autoplay, EffectFade } from 'swiper/modules';
+
+// Importar estilos de Swiper
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 interface Slide {
   id: number;
@@ -21,7 +26,8 @@ const slides: Slide[] = [
 ];
 
 export default function HeroCarrusel() {
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const zoomFactors = useRef<{ [key: number]: number }>({});
 
   useEffect(() => {
@@ -30,34 +36,37 @@ export default function HeroCarrusel() {
     });
   }, []);
 
-  const handleZoom = () => {
+  const handleZoom = useCallback(() => {
     if (!swiperInstance) return;
+
     const activeIndex = swiperInstance.activeIndex;
     const activeSlideId = slides[activeIndex]?.id;
-    const bgElement = swiperInstance.slides[activeIndex]?.querySelector(".slide-bg") as HTMLElement | null;
+    const bgElement = swiperInstance.slides[activeIndex].querySelector(".slide-bg") as HTMLElement | null;
 
-    if (bgElement && zoomFactors.current[activeSlideId] < 1.4) {
-      zoomFactors.current[activeSlideId] += 0.002;
-      bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+    if (bgElement && activeSlideId !== undefined) {
+      if (zoomFactors.current[activeSlideId] < 1.4) {
+        zoomFactors.current[activeSlideId] += 0.002;
+        bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+      }
     }
-  };
+  }, [swiperInstance]);
 
   useEffect(() => {
     const zoomInterval = setInterval(handleZoom, 10);
     return () => clearInterval(zoomInterval);
-  }, [swiperInstance]);
+  }, [handleZoom]);
 
   return (
     <Swiper
-      onSwiper={setSwiperInstance}
+      ref={swiperRef}
       speed={1500}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       loop
       modules={[Autoplay, EffectFade]}
-      effect="fade"
       className="h-full w-full"
+      onSwiper={setSwiperInstance}
       onSlideChangeTransitionStart={() => {
-        swiperInstance?.slides.forEach((slide: any) => {
+        swiperInstance?.slides.forEach((slide) => {
           const bg = slide.querySelector(".slide-bg") as HTMLElement | null;
           if (bg) bg.style.transform = "scale(1.2)";
         });
