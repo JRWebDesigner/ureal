@@ -7,7 +7,6 @@ import "swiper/css/effect-fade";
 interface Slide {
   id: number;
   bgImage: string;
-  content: string;
 }
 
 const slides: Slide[] = [
