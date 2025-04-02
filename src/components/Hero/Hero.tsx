@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
