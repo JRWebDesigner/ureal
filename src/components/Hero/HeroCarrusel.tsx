@@ -1,55 +1,92 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/bundle';
-import 'swiper/css/effect-coverflow' 
-import {Autoplay,EffectCoverflow } from 'swiper/modules';
+import { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+interface Slide {
+  id: number;
+  bgImage: string;
+  content: string;
+}
+
+const slides: Slide[] = [
+  {
+    id: 1,
+    bgImage: "/Images/banner.webp",
+  },
+  {
+    id: 2,
+    bgImage: "/Images/banner2.jpg",
+  },
+  {
+    id:3,
+    bgImage:"/Images/banner3.jpg"
+  }
+];
+
+
 export default function HeroCarrusel(){
-    return( 
-        <Swiper
-              effect={'coverflow'}
-              grabCursor={true}
-              modules={[ EffectCoverflow ,Autoplay]}
-              coverflowEffect={
-                {
-                  rotate:50,
-                  stretch:0,
-                  depth:100,
-                  modifier:1,
-                  slideShadows:true
-                }
-              }
-              autoplay={{
-                delay:3000,
-                disableOnInteraction:false
+  const swiperRef = useRef<any>(null);
+  const zoomFactors = useRef<{ [key: number]: number }>({});
+
+  useEffect(() => {
+    slides.forEach((slide) => {
+      zoomFactors.current[slide.id] = 1;
+    });
+  }, []);
+
+  const handleZoom = () => {
+    if (!swiperRef.current) return;
+
+    const swiper = swiperRef.current.swiper;
+    const activeSlideId = slides[swiper.activeIndex].id;
+    const bgElement = swiper.slides[swiper.activeIndex].querySelector(".slide-bg");
+
+    if (!bgElement) return;
+
+    // Incrementar zoom solo para el slide activo
+    if (zoomFactors.current[activeSlideId] < 1.4) {
+      zoomFactors.current[activeSlideId] += 0.002; // Ajusta la velocidad
+      bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+    }
+  };
+
+  useEffect(() => {
+    const zoomInterval = setInterval(handleZoom, 10); 
+
+    return () => clearInterval(zoomInterval);
+  }, []);
+
+  return( 
+      <Swiper
+        ref={swiperRef}
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        speed={1500}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop
+        className="h-full w-full"
+        onSlideChangeTransitionStart={() => {
+          // Resetear zoom al cambiar de slide
+          const slides = swiperRef.current?.swiper.slides || [];
+          slides.forEach((slide: HTMLElement) => {
+            const bg = slide.querySelector(".slide-bg");
+            if (bg) bg.style.transform = "scale(1.2)";
+          });
+        }}  
+      >
+      {slides.map((slide) => (
+          <SwiperSlide key={slide.id} className="relative">
+            <div
+              className="slide-bg absolute inset-0 bg-cover bg-center transition-transform duration-5000"
+              style={{
+                backgroundImage: `url(${slide.bgImage})`,
+                transform: "scale(1.2)",
               }}
-              spaceBetween={50}
-              loop={true}
-              slidesPerView={1}
-              className="w-[90%] text-xl md:text-3xl text-center font-semibold flex justify-center items-center"
-            >
-          <SwiperSlide>
-            <div  className="flex justify-around items-center flex-col-reverse md:flex-row gap-5">
-              <span>
-                La tecnología más avanzada en equipos y herramientas para tu laboratorio.
-              </span>
-              <img className='w-[29%] md:w-[24%]' src="/images/miicroscopio.png" alt="microscopio" />
-            </div>
+            />
           </SwiperSlide>
-          <SwiperSlide >
-            <div className='flex justify-around items-center flex-col-reverse md:flex-row gap-5'>
-            <span>
-              Instrumentos y dispositivos de las marcas más reconocidas y confiables.
-            </span>
-                <img className='w-[29%] md:w-[24%]' src="/images/h3565-family-600-x-600--removebg-preview.png" alt="microscopio" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-around items-center flex-col-reverse md:flex-row gap-5">
-            <span>
-              Todo lo esencial para tu laboratorio, disponible en un único sitio.
-            </span>
-                <img className='w-[29%] md:w-[24%]' src="/images/manta-calentamiento-sin-agitacion-black-diamond-removebg-preview.png" alt="microscopio" />
-            </div>
-          </SwiperSlide>
-        </Swiper>
+        ))}
+      </Swiper>
     )
 }

@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
-  const pathname = usePathname(); // Obtiene la ruta actual
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 50);
@@ -27,8 +27,8 @@ export default function Header() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 w-full p-4 transition-all z-50 ${
-          scrolling ? "bg-red-800 shadow-lg" : "bg-transparent"
+        className={`fixed top-0 left-0 w-full px-4 py-2 transition-all z-50 ${
+          scrolling ? "bg-red-800 shadow-lg" : "bg-[#ff000049]"
         }`}
       >
         <div className="container mx-auto flex justify-between items-center">
@@ -36,7 +36,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             
           >
-            <Link href="/"><img width={40} src="/Images/logo.png" alt="logo" /></Link>
+            <Link href="/"><img width={70} src="/Images/logo.png" alt="logo" /></Link>
           </motion.div>
           <ul className="flex gap-6 text-white">
             {links.map((link) => (
@@ -48,7 +48,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   className={`relative ${
-                    pathname === link.href ? "font-bold text-black" : ""
+                    pathname === link.href ? "font-bold text-white" : ""
                   }`}
                 >
                   {link.name}
