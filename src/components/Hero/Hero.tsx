@@ -1,6 +1,5 @@
-"use client"
 import { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -8,6 +7,7 @@ import "swiper/css/effect-fade";
 interface Slide {
   id: number;
   bgImage: string;
+  content?: string;
 }
 
 const slides: Slide[] = [
@@ -26,7 +26,7 @@ const slides: Slide[] = [
 ];
 
 export default function HeroCarrusel() {
-  const swiperRef = useRef<SwiperRef | null>(null);
+  const swiperRef = useRef<any>(null);
   const zoomFactors = useRef<{ [key: number]: number }>({});
 
   useEffect(() => {
@@ -40,18 +40,19 @@ export default function HeroCarrusel() {
 
     const swiper = swiperRef.current.swiper;
     const activeSlideId = slides[swiper.activeIndex].id;
-    const bgElement = swiper.slides[swiper.activeIndex].querySelector(".slide-bg");
+    const bgElement = swiper.slides[swiper.activeIndex].querySelector(".slide-bg") as HTMLElement | null;
 
-    if (!bgElement) return;
-
-    if (zoomFactors.current[activeSlideId] < 1.4) {
-      zoomFactors.current[activeSlideId] += 0.002;
-      bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+    if (bgElement && bgElement instanceof HTMLElement) {
+      if (zoomFactors.current[activeSlideId] < 1.4) {
+        zoomFactors.current[activeSlideId] += 0.002;
+        bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
+      }
     }
   };
 
   useEffect(() => {
     const zoomInterval = setInterval(handleZoom, 10);
+
     return () => clearInterval(zoomInterval);
   }, []);
 
@@ -67,7 +68,7 @@ export default function HeroCarrusel() {
       onSlideChangeTransitionStart={() => {
         const slides = swiperRef.current?.swiper.slides || [];
         slides.forEach((slide: HTMLElement) => {
-          const bg = slide.querySelector(".slide-bg");
+          const bg = slide.querySelector(".slide-bg") as HTMLElement | null;
           if (bg) bg.style.transform = "scale(1.2)";
         });
       }}
