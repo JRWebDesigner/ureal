@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+
 type ListItemProps = {
   title: string;
   description: string;
@@ -18,7 +19,7 @@ const items = [
   { title: 'Contaduría Pública', description: 'Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.' }
 ];
 
-const ListItem = ({ title, description, index }) => {
+const ListItem: React.FC<{ title: string; description: string; index: number }> = ({ title, description, index }) => {
   return (
     <motion.li
       className="p-4 bg-white shadow-md rounded-2xl mb-2 text-lg"
@@ -30,11 +31,6 @@ const ListItem = ({ title, description, index }) => {
       <p className="text-sm text-gray-600">{description}</p>
     </motion.li>
   );
-  ListItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired
-};
 };
 
 export default function AnimatedList() {
@@ -52,4 +48,3 @@ export default function AnimatedList() {
       </motion.ul>
     </div>
   );
-}
