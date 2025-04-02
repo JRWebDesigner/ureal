@@ -25,6 +25,11 @@ const ListItem = ({ title, description, index }) => {
       <p className="text-sm text-gray-600">{description}</p>
     </motion.li>
   );
+  ListItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired
+};
 };
 
 export default function AnimatedList() {
