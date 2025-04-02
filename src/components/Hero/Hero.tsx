@@ -1,89 +1,49 @@
-import { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
+'use client'
+import React from 'react';
+import { motion, Variants } from "framer-motion"
+import HeroCarrusel from "./HeroCarrusel"
 
-interface Slide {
-  id: number;
-  bgImage: string;
-  content?: string;
-}
-
-const slides: Slide[] = [
-  {
-    id: 1,
-    bgImage: "/Images/banner.webp",
-  },
-  {
-    id: 2,
-    bgImage: "/Images/banner2.jpg",
-  },
-  {
-    id: 3,
-    bgImage: "/Images/banner3.jpg",
-  },
-];
-
-export default function HeroCarrusel() {
-  const swiperRef = useRef<any>(null);
-  const zoomFactors = useRef<{ [key: number]: number }>({});
-
-  useEffect(() => {
-    slides.forEach((slide) => {
-      zoomFactors.current[slide.id] = 1;
-    });
-  }, []);
-
-  const handleZoom = () => {
-    if (!swiperRef.current) return;
-
-    const swiper = swiperRef.current.swiper;
-    const activeSlideId = slides[swiper.activeIndex].id;
-    const bgElement = swiper.slides[swiper.activeIndex].querySelector(".slide-bg") as HTMLElement | null;
-
-    if (bgElement && bgElement instanceof HTMLElement) {
-      if (zoomFactors.current[activeSlideId] < 1.4) {
-        zoomFactors.current[activeSlideId] += 0.002;
-        bgElement.style.transform = `scale(${zoomFactors.current[activeSlideId]})`;
-      }
+const titleVariants: Variants = {
+    offscreen: {
+        opacity: 0,
+        y: 100
+    },
+    onscreen: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.9,
+            delayChildren: 0.2,
+            staggerChildren: 0.1,
+        }
     }
   };
 
-  useEffect(() => {
-    const zoomInterval = setInterval(handleZoom, 10);
+  const Hero: React.FC = () => {  
+    return (
+        <section 
+            id="hero"
+            className="uppercase relative flex items-center justify-center px-5 h-[80vh] md:h-[90vh] bg-[url('/Images/banner.webp')] bg-cover bg-center bg-no-repeat bg-opacity-10"
+        >
+	
+        <div className='absolute w-full h-full bg-black opacity-60 z-20' />
+        <div className="absolute w-full h-full z-10">
+          <HeroCarrusel />
+        </div>
+        <motion.h1 
+         className="uppercase relative z-30 text-4xl md:text-5xl text-center w-[80%] text-white md:w-1/2 mx-auto font-bold" 
+        variants={titleVariants} 
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+      >
+                Universidad real de la camara de comercio
+      
+       </motion.h1>
+      </section>
+    );
+};
 
-    return () => clearInterval(zoomInterval);
-  }, []);
-
-  return (
-    <Swiper
-      ref={swiperRef}
-      modules={[Autoplay, EffectFade]}
-      effect="fade"
-      speed={1500}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      loop
-      className="h-full w-full"
-      onSlideChangeTransitionStart={() => {
-        const slides = swiperRef.current?.swiper.slides || [];
-        slides.forEach((slide: HTMLElement) => {
-          const bg = slide.querySelector(".slide-bg") as HTMLElement | null;
-          if (bg) bg.style.transform = "scale(1.2)";
-        });
-      }}
-    >
-      {slides.map((slide) => (
-        <SwiperSlide key={slide.id} className="relative">
-          <div
-            className="slide-bg absolute inset-0 bg-cover bg-center transition-transform duration-5000"
-            style={{
-              backgroundImage: `url(${slide.bgImage})`,
-              transform: "scale(1.2)",
-            }}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-}
+export default Hero;
