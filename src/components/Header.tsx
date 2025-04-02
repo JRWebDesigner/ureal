@@ -21,7 +21,7 @@ export default function Header() {
   ];
 
   return (
-    <header className='bg-red-800 px-2 w-full py-2 h-[40px]'>
+    <header className=''>
       <Container>
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
