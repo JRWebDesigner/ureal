@@ -27,27 +27,24 @@ const slides: Slide[] = [
 
 export default function HeroCarrusel() {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
-  const zoomFactors = useState<{ [key: number]: number }>(() =>
-    slides.reduce((acc, slide) => ({ ...acc, [slide.id]: 1 }), {})
-  )[0];
 
   const handleZoom = useCallback(() => {
     if (!swiperInstance) return;
 
     const activeIndex = swiperInstance.activeIndex;
-    const activeSlideId = slides[activeIndex]?.id;
     const bgElement = swiperInstance.slides[activeIndex].querySelector(".slide-bg") as HTMLElement | null;
 
-    if (bgElement && activeSlideId !== undefined) {
-      if (zoomFactors[activeSlideId] < 1.4) {
-        zoomFactors[activeSlideId] += 0.002;
-        bgElement.style.transform = `scale(${zoomFactors[activeSlideId]})`;
-      }
+    if (bgElement) {
+      bgElement.style.transform = "scale(1.4)";
+      setTimeout(() => {
+        bgElement.style.transition = "transform 1s ease-in-out";
+        bgElement.style.transform = "scale(1.2)";
+      }, 100);
     }
-  }, [swiperInstance, zoomFactors]);
+  }, [swiperInstance]);
 
   useEffect(() => {
-    const zoomInterval = setInterval(handleZoom, 10);
+    const zoomInterval = setInterval(handleZoom, 3000);
     return () => clearInterval(zoomInterval);
   }, [handleZoom]);
 
@@ -56,20 +53,16 @@ export default function HeroCarrusel() {
       speed={1500}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       loop
+      effect="fade"
       modules={[Autoplay, EffectFade]}
       className="h-full w-full"
-      onSwiper={setSwiperInstance} // Guardamos la instancia aquí
-      onSlideChangeTransitionStart={() => {
-        swiperInstance?.slides.forEach((slide) => {
-          const bg = slide.querySelector(".slide-bg") as HTMLElement | null;
-          if (bg) bg.style.transform = "scale(1.2)";
-        });
-      }}
+      onSwiper={setSwiperInstance}
+      onSlideChangeTransitionStart={handleZoom}
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id} className="relative">
           <div
-            className="slide-bg absolute inset-0 bg-cover bg-center transition-transform duration-5000"
+            className="slide-bg absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-in-out"
             style={{
               backgroundImage: `url(${slide.bgImage})`,
               transform: "scale(1.2)",
