@@ -36,7 +36,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             
           >
-            <Link href="/"><img width={170} src="/images/logo.png" alt="logo" /></Link>
+            <Link href="/"><img width={170} src="/Images/logo.png" alt="logo" /></Link>
           </motion.div>
           <ul className="flex gap-6 text-white">
             {links.map((link) => (
@@ -55,7 +55,7 @@ export default function Header() {
                   {pathname === link.href && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute -bottom-1 left-0 w-full h-[2px] bg-yellow-400"
+                      className="absolute -bottom-1 left-0 w-full h-[2px] bg-red-400"
                     />
                   )}
                 </Link>
