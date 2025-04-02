@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
     return (
         <section
             id="hero"
-            className="uppercase relative flex items-center justify-center px-5 h-[80vh] md:h-[100vh] bg-[url('/Images/banner.webp')] bg-cover bg-center bg-no-repeat bg-opacity-10"
+            className="uppercase relative flex items-center justify-center px-5 h-[70vh] md:h-[80vh] bg-[url('/Images/banner.webp')] bg-cover bg-center bg-no-repeat bg-opacity-10"
         >
             <div className="absolute left-0 right-0 bottom-0 backdrop-blur-[2px] h-40 bg-gradient-to-b from-transparent via-[#ff8181ad] to-[rgb(255,255,255)]">
             </div>
