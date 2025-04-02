@@ -2,13 +2,18 @@
 import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
-// Carga dinámica de Swiper solo en el cliente
-const Swiper = dynamic(() => import('swiper/react').then(mod => mod.Swiper), { ssr: false });
-const SwiperSlide = dynamic(() => import('swiper/react').then(mod => mod.SwiperSlide), { ssr: false });
+// Cargar Swiper de manera dinámica
+const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), { ssr: false });
+const SwiperSlide = dynamic(() => import("swiper/react").then((mod) => mod.SwiperSlide), { ssr: false });
 
-import { Autoplay, EffectFade } from "swiper";
-import "swiper/css";
-import "swiper/css/effect-fade";
+// Importar los módulos correctamente según la versión de Swiper
+import SwiperCore, { Autoplay, EffectFade } from 'swiper';
+
+// Importar estilos de Swiper
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+
+SwiperCore.use([Autoplay, EffectFade]);
 
 interface Slide {
   id: number;
@@ -66,8 +71,6 @@ export default function HeroCarrusel() {
   return (
     <Swiper
       ref={swiperRef}
-      modules={[Autoplay, EffectFade]}
-      effect="fade"
       speed={1500}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       loop
