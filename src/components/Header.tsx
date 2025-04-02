@@ -21,7 +21,7 @@ export default function Header() {
   ];
 
   return (
-    <header className='bg-red-800 px-2 w-full py-2'>
+    <header className='bg-red-800 px-2 w-full py-2 h-[40px]'>
       <Container>
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
@@ -36,7 +36,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             
           >
-            <Link href="/"><img width={100} src="/Images/logo.png" alt="logo" /></Link>
+            <Link href="/"><img width={40} src="/Images/logo.png" alt="logo" /></Link>
           </motion.div>
           <ul className="flex gap-6 text-white">
             {links.map((link) => (
