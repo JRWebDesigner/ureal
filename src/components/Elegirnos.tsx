@@ -26,11 +26,11 @@ export default function Elegirnos(){
           className="w-[90%] h-[400px] md:w-[600px] hidden md:block rounded-3xl"
         >
 
-          <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl">
+          <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
             <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/mundo.jpg' alt='mundo empresarial' />
-            <span className="px-6 z-20 font-bold text-white text-xl">
+            <h3 className="px-6 z-20 font-bold text-white text-xl">
               Programas académicos orientados al mundo empresarial
-            </span>
+            </h3>
           </SwiperSlide>
           <SwiperSlide className="relative bg-black flex justify-end items-center">
             <img className="absolute opacity-30 w-full h-full z-10" src='Images/mundo.jpg' alt='mundo empresarial' />
