@@ -1,6 +1,5 @@
 import Container from '../components/Container';
 import Hero from '../components/Hero/Hero';
-import List from '../components/List'
  export default function Home() {
   return (
     <>
