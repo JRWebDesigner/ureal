@@ -18,17 +18,17 @@ export default function Elegirnos(){
           clickable: true,
           }}
  autoplay={{
-        delay: 3500, // tiempo en ms entre slides (2500 = 2.5 segundos)
+        delay: 2000, // tiempo en ms entre slides (2500 = 2.5 segundos)
         disableOnInteraction: false, // permite que el autoplay continúe después de interacción del usuario
     }}
 
           modules={[Pagination,Autoplay]}
-          className="h-[400px] w-[600px] hidden md:block"
+          className="w-[90%] h-[400px] md:w-[600px] hidden md:block rounded-3xl"
         >
 
-          <SwiperSlide className="relative bg-black flex justify-end items-center">
-            <img className="absolute opacity-30 w-full h-full z-10" src='Images/mundo.jpg' alt='mundo empresarial' />
-            <span className="relative z-20 font-bold text-white">
+          <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl">
+            <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/mundo.jpg' alt='mundo empresarial' />
+            <span className="px-6 z-20 font-bold text-white text-xl">
               Programas académicos orientados al mundo empresarial
             </span>
           </SwiperSlide>
