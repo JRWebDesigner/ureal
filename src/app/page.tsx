@@ -11,9 +11,12 @@ export default function Home() {
       <Container>
         <Bienvenida />
         <PregradoCarrusel />
-        <Elegirnos />
       </Container>
       <Oportunidad />
-    </>
+      <Container>
+        <Elegirnos />
+      </Container>
+
+      </>
   );
 }
