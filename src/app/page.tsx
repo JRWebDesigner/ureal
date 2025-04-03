@@ -4,6 +4,7 @@ import Bienvenida from '../components/Bienvenida'
 import PregradoCarrusel from '../components/Pregrado/PregradoCarrusel'
 import Elegirnos from '../components/Elegirnos'
 import Oportunidad from '../components/Oportunidad'
+import CTA from '../components/CTA'
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <Oportunidad />
       <Container>
         <Elegirnos />
+        <CTA />
       </Container>
 
       </>

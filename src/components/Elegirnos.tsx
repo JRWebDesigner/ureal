@@ -43,7 +43,7 @@ export default function Elegirnos(){
     }}
 
           modules={[Pagination,Autoplay]}
-          className="w-[100%] h-[600px] md:w-[700px] hidden md:block rounded-3xl"
+          className="w-[100%] h-[600px] md:w-[700px] hidden md:block rounded-3xl mt-10"
         >
          {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
