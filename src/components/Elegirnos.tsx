@@ -28,7 +28,7 @@ export default function Elegirnos(){
 
           <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
             <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/mundo.jpg' alt='mundo empresarial' />
-            <h3 className="px-6 z-20 font-bold text-white text-xl">
+            <h3 className="relative w-full h-full flex-center z-20 font-bold text-white text-xl">
               Programas académicos orientados al mundo empresarial
             </h3>
           </SwiperSlide>
