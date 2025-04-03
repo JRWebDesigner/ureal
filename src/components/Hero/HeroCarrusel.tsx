@@ -1,14 +1,12 @@
 "use client";
 import dynamic from "next/dynamic";
 
-// Cargar Swiper de manera dinámica
+// Cargar Swiper dinámicamente para evitar problemas con SSR
 const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), { ssr: false });
 const SwiperSlide = dynamic(() => import("swiper/react").then((mod) => mod.SwiperSlide), { ssr: false });
 
 // Importar módulos de Swiper
 import { Autoplay, EffectFade } from "swiper/modules";
-
-// Importar estilos de Swiper
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -20,22 +18,27 @@ const slides = [
 
 export default function HeroCarrusel() {
   return (
-    <Swiper
-      speed={1500}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      loop
-      effect="fade"
-      modules={[Autoplay, EffectFade]}
-      className="h-full w-full"
-    >
-      {slides.map((slide) => (
-        <SwiperSlide key={slide.id}>
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.bgImage})` }}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="relative w-full h-full">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        effect="fade"
+        speed={1500}
+        className="h-full w-full"
+      >
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div
+              className="w-full h-full bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${slide.bgImage})`,
+                height: "100vh",
+              }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
