@@ -27,25 +27,25 @@ export default function Elegirnos(){
         >
 
           <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
-            <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/mundo.jpg' alt='mundo empresarial' />
+            <img className="absolute object-cover opacity-50 w-full h-full z-10 rounded-3xl" src='Images/mundo.jpg' alt='mundo empresarial' />
             <h3 className="relative w-full h-full flex-center z-20 font-bold text-white text-xl px-6 text-center">
               Programas académicos orientados al mundo empresarial
             </h3>
           </SwiperSlide>
           <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
-            <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/banner2.jpg' alt='mundo empresarial' />
+            <img className="absolute object-cover opacity-50 w-full h-full z-10 rounded-3xl" src='Images/banner.webp' alt='mundo empresarial' />
             <h3 className="relative w-full h-full flex-center z-20 font-bold text-white text-xl px-6 text-center">
               Docentes con amplia experiencia en el sector
             </h3>
           </SwiperSlide>
           <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
-            <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/convenio.jpg' alt='mundo empresarial' />
+            <img className="absolute object-contain md:object-cover opacity-50 w-full h-full z-10 rounded-3xl" src='Images/convenio.jpg' alt='mundo empresarial' />
             <h3 className="relative w-full h-full flex-center z-20 font-bold text-white text-xl px-6 text-center">
               Convenios con empresas y oportunidades de networking
             </h3>
           </SwiperSlide>
           <SwiperSlide className="relative bg-black flex justify-center items-center rounded-3xl w-full h-full">
-            <img className="absolute object-cover opacity-30 w-full h-full z-10 rounded-3xl" src='Images/infraestructura.jpg' alt='mundo empresarial' />
+            <img className="absolute object-cover opacity-50 w-full h-full z-10 rounded-3xl" src='Images/infraestructura.jpg' alt='mundo empresarial' />
             <h3 className="relative w-full h-full flex-center z-20 font-bold text-white text-xl px-6 text-center">
               Infraestructura moderna y tecnología de vanguardia
             </h3>
