@@ -1,5 +1,4 @@
 "use client"
-import ElegirnosSwiper from "./ElegirnosSwiper"
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
