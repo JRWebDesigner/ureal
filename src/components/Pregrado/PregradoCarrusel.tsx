@@ -14,7 +14,7 @@ import {Autoplay, Pagination } from 'swiper/modules';
 export default function PregradoCarrusel(){
   return(
     <>
-      <motion.h2 initial={{opacity:0, x:-80}} whileInVier={{opacity:1, x:0}} animation={{duration: 0.7}} viewport={{once: true}} className="text-center text-red-950 font-bold text-xl md:text-3xl">Carreras de Pregrado</motion.h2>
+      <motion.h2 initial={{opacity:0, x:-80}} whileInView={{opacity:1, x:0}} animation={{duration: 0.7}} viewport={{once: true}} className="text-center text-red-950 font-bold text-xl md:text-3xl">Carreras de Pregrado</motion.h2>
 <Swiper
         slidesPerView={1}
         spaceBetween={10}
