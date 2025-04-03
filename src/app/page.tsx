@@ -12,7 +12,7 @@ import List from '../components/List'
          <p className="">Somos una institución de educación superior enfocada en formar líderes empresariales con una visión global e innovadora. Con un enfoque práctico y una sólida red de alianzas comerciales, brindamos a nuestros estudiantes una 
         educación de excelencia alineada con las necesidades del mercado.</p>
         </div>
-        <img width={150px} src"" alt=""/>
+        <img className="rouded-full" width={150px} src="./Images/bienvenido.jpg"  alt="bienvenida"/>
        </div>
       </Container>
     </>
