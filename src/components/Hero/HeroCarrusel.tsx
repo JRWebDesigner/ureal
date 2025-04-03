@@ -1,8 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
-
-// Importar CSS necesario
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
@@ -18,17 +16,14 @@ export default function HeroCarrusel() {
     <div className="relative w-full h-full">
       <Swiper
         modules={[Autoplay, EffectFade]}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        autoplay={{ delay: 3000 }}
         loop={true}
         effect="fade"
         speed={1500}
-        style={{ height: "100vh" }}
+        style={{ height: "100vh", width: "100%" }} // Contenedor principal
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
+          <SwiperSlide key={slide.id} style={{ height: "100vh" }}>
             <div
               className="w-full h-full bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.bgImage})` }}
