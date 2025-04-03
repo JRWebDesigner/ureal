@@ -25,7 +25,7 @@ export default function HeroCarrusel() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} style={{ height: "100vh" }}>
             <div
-              className="w-full h-full bg-cover bg-center"
+              className="w-full h-[80vh] md:h-[90vh] bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.bgImage})` }}
             />
           </SwiperSlide>
