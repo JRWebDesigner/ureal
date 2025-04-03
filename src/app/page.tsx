@@ -15,7 +15,20 @@ import List from '../components/List'
         <img className="rounded-full" width={150} src="/Images/bienvenido.jpg"  alt="bienvenida"/>
        </section>    
        <section >
-        
+        <h2 className="font-bold text-2xl text-center">¿Por qué elegirnos?</h2>
+        <ul>
+         <li>
+         ✅ Programas académicos orientados al mundo empresarial</li>
+         <li>
+          ✅ Docentes con amplia experiencia en el sector
+         </li>
+         <li>
+          ✅ Convenios con empresas y oportunidades de networking
+         </li>
+         <li>
+         ✅ Infraestructura moderna y tecnología de vanguardia
+         </li>
+         </ul>
        </section>
       </Container>
     </>
