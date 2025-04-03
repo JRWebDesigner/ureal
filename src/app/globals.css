@@ -12,4 +12,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,6 +3,7 @@ import Hero from '../components/Hero/Hero';
 import Bienvenida from '../components/Bienvenida'
 import PregradoCarrusel from '../components/Pregrado/PregradoCarrusel'
 import Elegirnos from '../components/Elegirnos'
+import Oportunidad from '../components/Oportunidad'
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
         <PregradoCarrusel />
         <Elegirnos />
       </Container>
+      <Oportunidad />
     </>
   );
 }
