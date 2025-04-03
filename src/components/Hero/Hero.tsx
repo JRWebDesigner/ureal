@@ -32,16 +32,17 @@ const titleVariants: Variants = {
         <div className="absolute w-full h-full z-10">
           <HeroCarrusel />
         </div>
-        <motion.h1 
-         className="uppercase relative z-30 text-4xl md:text-5xl text-center w-[80%] text-white md:w-1/2 mx-auto font-bold" 
+        <motion.div 
+         className=" flex justify-center ítems-center flex-col relative z-30 w-[80%] mx-auto text-white" 
         variants={titleVariants} 
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
       >
-                Universidad real de la camara de comercio
-      
-       </motion.h1>
+               <h1 className="uppercase text-4xl md:text-5xl text-center font-bold"> Universidad Real de la Cámara de Comercio</h1> 
+            <span className="font-semibold text-2xl">Formando líderes empresariales </span>
+       </motion.div>
+		
       </section>
     );
 };
