@@ -33,14 +33,14 @@ const titleVariants: Variants = {
           <HeroCarrusel />
         </div>
         <motion.div 
-         className=" flex justify-center ítems-center flex-col relative z-30 w-[80%] mx-auto text-white" 
+         className=" flex justify-center ítems-center flex-col relative z-30 w-[80%] mx-auto text-white text-center" 
         variants={titleVariants} 
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
       >
-               <h1 className="uppercase text-4xl md:text-5xl text-center font-bold"> Universidad Real de la Cámara de Comercio</h1> 
-            <span className="font-semibold text-2xl">Formando líderes empresariales </span>
+               <h1 className="uppercase text-3xl md:text-5xl text-center font-bold"> Universidad Real de la Cámara de Comercio</h1> 
+            <span className="text-center text-xl">Formando líderes empresariales </span>
        </motion.div>
 		
       </section>
