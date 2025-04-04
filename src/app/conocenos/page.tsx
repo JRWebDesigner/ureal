@@ -1,5 +1,5 @@
 export default function PageConocenos(){
-return{
+return(
     <></>
-    }
+    )
 }
