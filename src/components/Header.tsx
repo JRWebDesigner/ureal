@@ -65,7 +65,7 @@ export default function Header() {
             scrolling ? "bg-black shadow-lg" : "bg-[#000000]"
           }`}
         >
-        <section className='redes flex items-center items-center md:items-start gap-6 text-white my-2 pl-6'>
+        <section className='redes flex flex-center md:flex-start items-center md:items-start gap-6 text-white my-2 pl-6'>
           <a
           href="https://www.facebook.com/univreal"
           target="_blank"
