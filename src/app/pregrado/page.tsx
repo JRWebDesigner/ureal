@@ -100,7 +100,7 @@ const carreras = [
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-r from-red-800 to-yellow-800 text-white overflow-hidden">
+      <section className="relative py-20 md:py-32 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-black"></div>
         </div>
