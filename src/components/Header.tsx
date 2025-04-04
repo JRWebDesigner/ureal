@@ -77,45 +77,7 @@ export default function Header() {
                   onMouseEnter={() => link.submenu && setOpenSubmenu(link.name)}
                   onMouseLeave={() => link.submenu && setOpenSubmenu(null)}
                 >
-                  {link.submenu ? (
-                    <>
-                      <button
-                        onClick={() => toggleSubmenu(link.name)}
-                        className={`flex items-center gap-1 px-2 py-1 ${
-                          pathname === link.href ? "font-bold" : ""
-                        }`}
-                      >
-                        {link.name}
-                        {openSubmenu === link.name ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
-                      </button>
-                      
-                      <AnimatePresence>
-                        {openSubmenu === link.name && (
-                          <motion.ul
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute left-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                          >
-                            {link.submenu.map((subItem) => (
-                              <motion.li
-                                key={subItem.href}
-                                whileHover={{ x: 5 }}
-                              >
-                                <Link
-                                  href={subItem.href}
-                                  className="block px-4 py-2 text-red-800 hover:bg-red-50"
-                                >
-                                  {subItem.name}
-                                </Link>
-                              </motion.li>
-                            ))}
-                          </motion.ul>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
+                {(
                     <Link
                       href={link.href}
                       className={`relative px-2 py-1 ${
