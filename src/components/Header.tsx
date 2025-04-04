@@ -125,49 +125,7 @@ export default function Header() {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      {link.submenu ? (
-                        <div className="flex flex-col">
-                          <button
-                            onClick={() => toggleSubmenu(link.name)}
-                            className={`flex justify-between items-center px-4 py-3 text-lg ${
-                              pathname === link.href ? "font-bold bg-red-700 rounded" : ""
-                            }`}
-                          >
-                            {link.name}
-                            {openSubmenu === link.name ? <FaChevronUp /> : <FaChevronDown />}
-                          </button>
-                          
-                          <AnimatePresence>
-                            {openSubmenu === link.name && (
-                              <motion.ul
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="pl-6 overflow-hidden"
-                              >
-                                {link.submenu.map((subItem) => (
-                                  <motion.li
-                                    key={subItem.href}
-                                    initial={{ x: -10, opacity: 0 }}
-                                    animate={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 0.2 }}
-                                  >
-                                    <Link
-                                      href={subItem.href}
-                                      className={`block px-4 py-2 text-lg ${
-                                        pathname === subItem.href ? "font-bold bg-red-700 rounded" : ""
-                                      }`}
-                                    >
-                                      {subItem.name}
-                                    </Link>
-                                  </motion.li>
-                                ))}
-                              </motion.ul>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      ) : (
+                      {(
                         <Link
                           href={link.href}
                           className={`block px-4 py-3 text-lg ${
