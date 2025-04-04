@@ -6,8 +6,8 @@ import Image from 'next/image'
 export default function PagePregrado() {
   const carreras = [
     {
-      nombre: "Administración de Empresas",
-      slug: "administracion-empresas",
+      nombre: "Administración Financiera",
+      slug: "administracion-financiera",
       descripcion: "Formación de líderes para la gestión empresarial global",
       imagen: "/images/administracion.jpg" // Reemplaza con tu ruta de imagen
     },
@@ -35,38 +35,68 @@ export default function PagePregrado() {
       descripcion: "Profesionales para el bienestar mental y social",
       imagen: "/images/psicologia.jpg"
     },
-    {
-      nombre: "Ingeniería de Sistemas",
-      slug: "ingenieria-sistemas",
-      descripcion: "Expertos en tecnología y transformación digital",
-      imagen: "/images/sistemas.jpg"
-    },
-    {
-      nombre: "Comunicación Social",
-      slug: "comunicacion-social",
-      descripcion: "Profesionales de la información y medios digitales",
-      imagen: "/images/comunicacion.jpg"
-    },
-    {
-      nombre: "Medicina",
-      slug: "medicina",
-      descripcion: "Formación de médicos con vocación de servicio",
-      imagen: "/images/medicina.jpg"
-    },
-    {
-      nombre: "Arquitectura",
-      slug: "arquitectura",
-      descripcion: "Creatividad y técnica para diseñar espacios habitables",
-      imagen: "/images/arquitectura.jpg"
-    },
-    {
-      nombre: "Enfermería",
-      slug: "enfermeria",
-      descripcion: "Profesionales comprometidos con el cuidado de la salud",
-      imagen: "/images/enfermeria.jpg"
-    }
-  ]
-
+const carreras = [
+  {
+    nombre: "Administración Financiera",
+    slug: "administracion-financiera",
+    descripcion: "Formación en gestión de recursos financieros empresariales",
+    imagen: "/images/financiera.jpg"
+  },
+  {
+    nombre: "Comercio Internacional",
+    slug: "comercio-internacional",
+    descripcion: "Especialistas en negocios y operaciones globales",
+    imagen: "/images/comercio.jpg"
+  },
+  {
+    nombre: "Comunicación Audiovisual",
+    slug: "comunicacion-audiovisual",
+    descripcion: "Profesionales en producción de contenidos multimedia",
+    imagen: "/images/audiovisual.jpg"
+  },
+  {
+    nombre: "Mercadotecnia",
+    slug: "mercadotecnia",
+    descripcion: "Expertos en estrategias de mercado y branding",
+    imagen: "/images/mercadotecnia.jpg"
+  },
+  {
+    nombre: "Ingeniería en Sistemas y Computación Administrativa",
+    slug: "ingenieria-sistemas",
+    descripcion: "Fusión de tecnología y gestión empresarial",
+    imagen: "/images/sistemas-computacion.jpg"
+  },
+  {
+    nombre: "Administración Turística y Hotelería",
+    slug: "administracion-turistica",
+    descripcion: "Gestión de empresas y servicios turísticos",
+    imagen: "/images/turismo.jpg"
+  },
+  {
+    nombre: "Administración de Empresas",
+    slug: "administracion-empresas",
+    descripcion: "Líderes para la gestión organizacional efectiva",
+    imagen: "/images/administracion.jpg"
+  },
+  {
+    nombre: "Contaduría Pública",
+    slug: "contaduria-publica",
+    descripcion: "Expertos en información financiera y auditoría",
+    imagen: "/images/contaduria.jpg"
+  },
+  {
+    nombre: "Ingeniería Comercial",
+    slug: "ingenieria-comercial",
+    descripcion: "Estrategas en desarrollo de mercados y negocios",
+    imagen: "/images/ingenieria-comercial.jpg"
+  },
+  {
+    nombre: "Derecho",
+    slug: "derecho",
+    descripcion: "Formación de juristas con excelencia académica",
+    imagen: "/images/derecho.jpg"
+  }
+]
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
