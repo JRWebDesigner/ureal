@@ -9,61 +9,61 @@ const carreras = [
     nombre: "Administración Financiera",
     slug: "administracion-financiera",
     descripcion: "Formación en gestión de recursos financieros empresariales",
-    imagen: "/images/financiera.jpg"
+    imagen: "/Images/financiera.jpg"
   },
   {
     nombre: "Comercio Internacional",
     slug: "comercio-internacional",
     descripcion: "Especialistas en negocios y operaciones globales",
-    imagen: "/images/comercio.jpg"
+    imagen: "/Images/comercio.jpg"
   },
   {
     nombre: "Comunicación Audiovisual",
     slug: "comunicacion-audiovisual",
     descripcion: "Profesionales en producción de contenidos multimedia",
-    imagen: "/images/audiovisual.jpg"
+    imagen: "/Images/audiovisual.jpg"
   },
   {
     nombre: "Mercadotecnia",
     slug: "mercadotecnia",
     descripcion: "Expertos en estrategias de mercado y branding",
-    imagen: "/images/mercadotecnia.jpg"
+    imagen: "/Images/mercadotecnia.jpg"
   },
   {
     nombre: "Ingeniería en Sistemas y Computación Administrativa",
     slug: "ingenieria-sistemas",
     descripcion: "Fusión de tecnología y gestión empresarial",
-    imagen: "/images/sistemas-computacion.jpg"
+    imagen: "/Images/sistemas-computacion.jpg"
   },
   {
     nombre: "Administración Turística y Hotelería",
     slug: "administracion-turistica",
     descripcion: "Gestión de empresas y servicios turísticos",
-    imagen: "/images/turismo.jpg"
+    imagen: "/Images/turismo.jpg"
   },
   {
     nombre: "Administración de Empresas",
     slug: "administracion-empresas",
     descripcion: "Líderes para la gestión organizacional efectiva",
-    imagen: "/images/administracion.jpg"
+    imagen: "/Images/administracion.jpg"
   },
   {
     nombre: "Contaduría Pública",
     slug: "contaduria-publica",
     descripcion: "Expertos en información financiera y auditoría",
-    imagen: "/images/contaduria.jpg"
+    imagen: "/Images/contaduria.jpg"
   },
   {
     nombre: "Ingeniería Comercial",
     slug: "ingenieria-comercial",
     descripcion: "Estrategas en desarrollo de mercados y negocios",
-    imagen: "/images/ingenieria-comercial.jpg"
+    imagen: "/Images/ingenieria-comercial.jpg"
   },
   {
     nombre: "Derecho",
     slug: "derecho",
     descripcion: "Formación de juristas con excelencia académica",
-    imagen: "/images/derecho.jpg"
+    imagen: "/Images/derecho.jpg"
   }
 ]
   return (
