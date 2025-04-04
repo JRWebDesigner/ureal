@@ -212,7 +212,7 @@ export default function PageDerechoDigital() {
                 {
                   modulo: "Módulo 3",
                   titulo: "Blockchain y Fintech en el Derecho Digital Bancario",
-                  icon: <FaLaptopCode className="mr-2 text-blue-700" />,,
+                  icon: <FaLaptopCode className="mr-2 text-blue-700" />,
                   temas: [
                     " jurídico y su evolución",
                     "Vinculación con bitcoin y criptomonedas",
