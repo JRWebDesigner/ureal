@@ -12,10 +12,10 @@ interface CareersData {
 }
 
 export default function ContactPage() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
-  const [selectedArea, setSelectedArea] = useState('');
-  const [selectedCareer, setSelectedCareer] = useState('');
+  const [selectedArea, setSelectedArea] = useState<AreaType>('');
+  const [selectedCareer, setSelectedCareer] = useState<CareerType>('');
 
   // Datos de carreras por área
  const careersData: CareersData = {
