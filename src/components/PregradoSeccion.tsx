@@ -29,7 +29,7 @@ const PregradoSection = () => {
             Programas de Pregrado
           </h2>
           <p className="text-xl italic font-medium text-gray-700 mb-6">
-            "El primer paso para cambiar tu vida es decidir formarte donde se forman los líderes del mañana."
+            El primer paso para cambiar tu vida es decidir formarte donde se forman los líderes del mañana.
           </p>
           <p className="text-lg leading-relaxed text-gray-800">
             Los programas de pregrado en la UREAL están diseñados para preparar profesionales con una sólida base teórica y práctica en áreas clave del mundo empresarial. A través de metodologías innovadoras, docentes con experiencia real en el sector y una fuerte vinculación con la industria, nuestros estudiantes desarrollan las habilidades necesarias para enfrentar los desafíos del mercado y destacar en el ámbito profesional desde el primer día.
