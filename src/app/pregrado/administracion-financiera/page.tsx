@@ -103,7 +103,6 @@ export default function PageAdminFinanciera() {
     { codigo: "PEE101", nombre: "Política y Estrategia Empresarial" } // Corregido "Poliótica"
   ]
 }
-    // ... Agrega los demás semestres con la misma estructura
   ];
 
   return (
@@ -251,32 +250,6 @@ export default function PageAdminFinanciera() {
           >
             Plan de Estudios
           </motion.h2>
-          
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white rounded-lg overflow-hidden">
-              <thead className="bg-orange-800 text-white">
-                <tr>
-                  <th className="py-3 px-4 text-left">Código</th>
-                  <th className="py-3 px-4 text-left">Materia</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {semestres[0].materias.map((materia, index) => (
-                  <motion.tr
-                    key={index}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="hover:bg-orange-50"
-                  >
-                    <td className="py-4 px-4 font-mono text-orange-600">{materia.codigo}</td>
-                    <td className="py-4 px-4">{materia.nombre}</td>
-                  </motion.tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
 
           {/* Acordeón para semestres (opcional) */}
           <div className="mt-8 max-w-4xl mx-auto">
