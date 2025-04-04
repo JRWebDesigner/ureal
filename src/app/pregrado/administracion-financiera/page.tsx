@@ -27,6 +27,82 @@ export default function PageAdminFinanciera() {
         { codigo: "ENG101-2", nombre: "Inglés II" }
       ]
     },
+    {
+    nombre: "Tercer Semestre",
+    materias: [
+      { codigo: "COM101-3", nombre: "Computación para la Administración" },
+      { codigo: "CON102-3", nombre: "Contabilidad de Costos" },
+      { codigo: "FIN102-3", nombre: "Finanzas II" },
+      { codigo: "MER101-3", nombre: "Mercadotecnia" },
+      { codigo: "CDA101-3", nombre: "Estadística Administrativa" },
+      { codigo: "RHH101-3", nombre: "Recursos Humanos" },
+      { codigo: "ENG102-3", nombre: "Inglés III" }
+      ]
+    },
+    {
+      nombre: "Cuarto Semestre",
+      materias: [
+      { codigo: "DER102-4", nombre: "Derecho del trabajo" },
+      { codigo: "DRE101-4", nombre: "Desarrollo de Emprendedores" },
+      { codigo: "ECO102-4", nombre: "Economía Financiera" },
+      { codigo: "INF103-4", nombre: "Instituciones financieras" },
+      { codigo: "CON103-4", nombre: "Contabilidad Administrativa" },
+      { codigo: "CDA102-4", nombre: "Tec. Cuan. para la Toma de Decisiones" },
+      { codigo: "ENG103-4", nombre: "Inglés IV" }
+      ]
+    },
+    {
+      nombre: "Quinto Semestre",
+      materias: [
+        { codigo: "ADF105-5", nombre: "Administración Financiera" },
+        { codigo: "IFN104-5", nombre: "Administración Bancaria" },
+        { codigo: "MVA104-5", nombre: "Mercado de Valores" },
+        { codigo: "AIF104-5", nombre: "Análisis e Interpretación de Estados Financieros" },
+        { codigo: "EFC105-5", nombre: "Estructura Financiera del Capital" },
+        { codigo: "ANI103-5", nombre: "Ambiente de Negocios Internacionales" },
+        { codigo: "ENG104-5", nombre: "Inglés V" }
+      ]
+    },
+    {
+      nombre: "Sexto Semestre",
+      materias: [
+        { codigo: "MVA105-6", nombre: "Administración de Inversiones" },
+        { codigo: "AIF105-6", nombre: "Análisis Financiero Cuantitativo" },
+        { codigo: "IFN105-6", nombre: "Administración del Crédito" },
+        { codigo: "DER103-6", nombre: "Derecho Financiero y Tributario" }, // Corregido "Finaciero" a "Financiero"
+        { codigo: "FEP104-6", nombre: "Formulación y Evaluación de Proyectos" },
+        { codigo: "ADF106-6", nombre: "Finanzas Internacionales" }, // Agregada "es" final
+        { codigo: "ENG105-6", nombre: "Inglés VI" }
+      ]
+    },
+    {
+  nombre: "Séptimo Semestre",
+  materias: [
+    { codigo: "TNC107-7", nombre: "Técnicas de Consultoría" }, // Corregido "Teócnicas de Consultorióa"
+    { codigo: "MVA106-7", nombre: "Inversión Extranjera" }, // Corregido "Inversioón"
+    { codigo: "INF107-7", nombre: "Ingeniería Financiera" }, // Agregada tilde en "Ingeniería"
+    { codigo: "ADF107-7", nombre: "Seminario de Finanzas" },
+    { codigo: "GPU107-7", nombre: "Gestión Pública" }, // Corregido "Gestioén Publica"
+    { codigo: "VEP107-7", nombre: "Valor en el Ejercicio Profesional" }, // Corregido "Profecional"
+    { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
+  ]
+},
+{
+  nombre: "Octavo Semestre",
+  materias: [
+    { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
+    { codigo: "PRE108-8", nombre: "Práctica Empresarial" } // Corregido "Practica" → "Práctica"
+  ]
+},
+{
+  nombre: "Materias Complementarias",
+  materias: [
+    { codigo: "INA100", nombre: "Idioma Nativo Aymara" },
+    { codigo: "IDM104", nombre: "Investigación de Mercados I" }, // Corregido "Investigacioón"
+    { codigo: "IDM105", nombre: "Investigación de Mercados II" }, // Corregido "Investigacioón"
+    { codigo: "PEE101", nombre: "Política y Estrategia Empresarial" } // Corregido "Poliótica"
+  ]
+}
     // ... Agrega los demás semestres con la misma estructura
   ];
 
