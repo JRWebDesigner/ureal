@@ -1,3 +1,5 @@
 export default fuction PageDerecho(){
-  return()
+  return(
+    <div className="min-h-[80vh]"></div>
+  )
 }
