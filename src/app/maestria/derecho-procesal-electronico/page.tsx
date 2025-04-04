@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen } from 'react-icons/fi'
-import { FaRobot, FaBlockchan, FaDigitalTachograph, FaLaptopCode } from 'react-icons/fa'
+import { FaRobot, FaDigitalTachograph, FaLaptopCode } from 'react-icons/fa'
 
 export default function PageDerechoDigital() {
   return (
@@ -212,9 +212,9 @@ export default function PageDerechoDigital() {
                 {
                   modulo: "Módulo 3",
                   titulo: "Blockchain y Fintech en el Derecho Digital Bancario",
-                  icon: <FaBlockchain className="mr-2 text-blue-700" />,
+                  icon: <FaLaptopCode className="mr-2 text-blue-700" />,,
                   temas: [
-                    "Blockchain jurídico y su evolución",
+                    " jurídico y su evolución",
                     "Vinculación con bitcoin y criptomonedas",
                     "Aplicaciones tecnológicas en el ámbito jurídico"
                   ]

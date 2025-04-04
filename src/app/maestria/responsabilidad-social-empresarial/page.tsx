@@ -1,6 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
-import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen, FiTrendingUp, FiShare2 } from 'react-icons/fi'
+import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen, FiTrendingUp, FiShare2, FiUsers } from 'react-icons/fi'
 
 export default function PageMarketingDigital() {
   return (
