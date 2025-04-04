@@ -4,12 +4,12 @@ import Container from './Container';
 import Link from "next/link";
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from "next/navigation";
-import { FaBars, FaTime } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  //const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
