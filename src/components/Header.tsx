@@ -4,7 +4,7 @@ import Container from './Container';
 import Link from "next/link";
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from "next/navigation";
-import { FaBars, FaTimes, FaPhoneAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaBars, FaTimes, FaPhoneAlt } from 'react-icons/fa';
 
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
@@ -20,7 +20,7 @@ export default function Header() {
 
   const links = [
     { name: "Inicio", href: "/" },
-    { 
+    {
       name: "Pregrado", 
       href: "/pregrado",
     },
@@ -45,9 +45,9 @@ export default function Header() {
     setOpenSubmenu(null); // Cerrar todos los submenús al cambiar de ruta
   }, [pathname]);
 
-  const toggleSubmenu = (menuName: string) => {
-    setOpenSubmenu(openSubmenu === menuName ? null : menuName);
-  };
+ // const toggleSubmenu = (menuName: string) => {
+  //  setOpenSubmenu(openSubmenu === menuName ? null : menuName);
+  //};
 
   return (
     <header className="">
