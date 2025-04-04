@@ -25,7 +25,7 @@ export default function Header() {
       href: "#",
       submenu: [
         { name: "Pregrado", href: "/pregrado" },
-        { name: "Postgrado", href: "/postgrado" },
+        { name: "Postgrado", href: "/maestria" },
         { name: "Maestría", href: "/maestria" }
       ]
     },
