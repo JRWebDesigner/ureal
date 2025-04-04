@@ -9,97 +9,97 @@ export default function PageMaestria() {
       nombre: "Recursos Humanos y Salario Emocional",
       slug: "recursos-humanos-salario-emocional",
       descripcion: "Herramienta útil y necesaria para gestionar el capital humano en las organizaciones",
-      imagen: "/images/rrhh.jpg"
+      imagen: "/Images/rrhh.jpg"
     },
     {
       nombre: "Gestión Tributaria, Legal y Aduanera",
       slug: "gestion-tributaria-legal-aduanera",
       descripcion: "Fortalecimiento de conocimientos para resolver problemas en gestión tributaria y aduanera",
-      imagen: "/images/tributaria.jpg"
+      imagen: "/Images/tributaria.jpg"
     },
     {
       nombre: "Gestión de Procesos de Contratación del Estado",
       slug: "gestion-contratacion-estado",
       descripcion: "Administración eficiente de procesos de contratación gubernamentales con transparencia",
-      imagen: "/images/contratacion-estado.jpg"
+      imagen: "/Images/contratacion-estado.jpg"
     },
     {
       nombre: "Comercio Exterior y Despacho Aduanero",
       slug: "comercio-exterior-despacho-aduanero",
       descripcion: "Nueva visión para encarar relaciones comerciales internacionales",
-      imagen: "/images/comercio-exterior.jpg"
+      imagen: "/Images/comercio-exterior.jpg"
     },
     {
       nombre: "Derecho y Procedimiento Administrativo",
       slug: "derecho-procedimiento-administrativo",
       descripcion: "Metodología basada en la ciencia y el derecho moderno",
-      imagen: "/images/derecho-administrativo.jpg"
+      imagen: "/Images/derecho-administrativo.jpg"
     },
     {
       nombre: "Analista de Marketing",
       slug: "analista-marketing",
       descripcion: "Desarrollo de análisis de estrategias y resultados de marketing",
-      imagen: "/images/marketing.jpg"
+      imagen: "/Images/marketing.jpg"
     },
     {
       nombre: "Educación Superior",
       slug: "educacion-superior",
       descripcion: "Análisis de tendencias y retos en el campo de la educación superior",
-      imagen: "/images/educacion-superior.jpg"
+      imagen: "/Images/educacion-superior.jpg"
     },
     {
       nombre: "Derecho Empresarial y Societario",
       slug: "derecho-empresarial-societario",
       descripcion: "Aspectos legales relevantes para la gestión de empresas y sociedades",
-      imagen: "/images/derecho-empresarial.jpg"
+      imagen: "/Images/derecho-empresarial.jpg"
     },
     {
       nombre: "Gestión Competitiva de Seguros y Riesgos",
       slug: "gestion-seguros-riesgos",
       descripcion: "Herramientas para administración eficiente de seguros y riesgos",
-      imagen: "/images/seguros.jpg"
+      imagen: "/Images/seguros.jpg"
     },
     {
       nombre: "Derecho Notarial",
       slug: "derecho-notarial",
       descripcion: "Conocimientos especializados en función notarial y seguridad jurídica",
-      imagen: "/images/notarial.jpg"
+      imagen: "/Images/notarial.jpg"
     },
     {
       nombre: "Derecho Procesal Electrónico Legaltech Judicial",
       slug: "derecho-procesal-electronico",
       descripcion: "Uso de tecnologías legales para mejorar la administración de justicia",
-      imagen: "/images/legaltech.jpg"
+      imagen: "/Images/legaltech.jpg"
     },
     {
       nombre: "Arbitraje, Conciliación y Negociación",
       slug: "arbitraje-conciliacion-negociacion",
       descripcion: "Resolución alternativa y efectiva de conflictos",
-      imagen: "/images/arbitraje.jpg"
+      imagen: "/Images/arbitraje.jpg"
     },
     {
       nombre: "Diplomacia Comercial",
       slug: "diplomacia-comercial",
       descripcion: "Capacitación en manejo de controversias comerciales internacionales",
-      imagen: "/images/diplomacia.jpg"
+      imagen: "/Images/diplomacia.jpg"
     },
     {
       nombre: "Gestión Pública y Administrativa",
       slug: "gestion-publica-administrativa",
       descripcion: "Liderazgo y gestión eficaz de entidades gubernamentales",
-      imagen: "/images/gestion-publica.jpg"
+      imagen: "/Images/gestion-publica.jpg"
     },
     {
       nombre: "Auditoría de Sistemas Informáticos Forenses",
       slug: "auditoria-sistemas-forenses",
       descripcion: "Herramientas informáticas y normas de seguridad en auditoría forense",
-      imagen: "/images/auditoria-forense.jpg"
+      imagen: "/Images/auditoria-forense.jpg"
     },
     {
       nombre: "Responsabilidad Social Empresarial",
       slug: "responsabilidad-social-empresarial",
       descripcion: "Estrategias e implementación de RSE en organizaciones",
-      imagen: "/images/rse.jpg"
+      imagen: "/Images/rse.jpg"
     }
   ];
 

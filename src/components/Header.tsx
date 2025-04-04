@@ -73,35 +73,35 @@ export default function Header() {
           target="_blank"
           className="text-white hover:scale-105 transition-transform duration-300"
         >
-          <FaFacebookF size={24} />
+          <FaFacebookF size={20} />
         </a>
         <a
           href="https://instagram.com/univreal?utm_medium=copy_link"
           target="_blank"
           className="text-white hover:scale-105 transition-transform duration-300"
         >
-          <FaInstagram size={24} />
+          <FaInstagram size={20} />
         </a>
         <a
           href="https://twitter.com/UnivReal?s=08"
           target="_blank"
           className="text-white hover:scale-105 transition-transform duration-300"
         >
-          <FaXTwitter size={24} />
+          <FaXTwitter size={20} />
         </a>
         <a
           href="https://www.youtube.com/c/universidadreal/videos"
           target="_blank"
           className="text-white hover:scale-105 transition-transform duration-300"
         >
-          <FaYoutube size={24} />
+          <FaYoutube size={20} />
         </a>
         <a
           href="https://wa.me/+59161190061"
           target="_blank"
           className="text-white hover:scale-105 transition-transform duration-300"
         >
-          <FaWhatsapp size={24} />
+          <FaWhatsapp size={20} />
         </a>
         </section>
           <div className="container mx-auto flex justify-between items-center">
