@@ -43,7 +43,9 @@ export default function Header() {
       name:"Descuentos", href:"/conocenos/descuentos"
     },
     { name: "Becas", href: "/conocenos/Becas" },
+{ name: "Blog", href:"https://sites.google.com/view/turealblog/inicio"},
     { name: "Contactanos", href: "/contactanos" },
+    
   ];
 
   useEffect(() => {
