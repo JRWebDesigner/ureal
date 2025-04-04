@@ -3,6 +3,14 @@ import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 
+type AreaType = 'pregrado' | 'postgrado' | '';
+type CareerType = string;
+
+interface CareersData {
+  pregrado: CareerType[];
+  postgrado: CareerType[];
+}
+
 export default function ContactPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
