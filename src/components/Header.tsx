@@ -29,7 +29,14 @@ export default function Header() {
         { name: "Maestría", href: "/maestria" }
       ]
     },
-    { name: "Conócenos", href: "/conocenos" },
+    { name: "Conócenos", href: "#",
+      submenu:[
+        { name: "Mision y Vision", href: "/mision-vision" },
+        { name: "Plan al Contado", href: "/plan-al-contado" },
+        { name: "Descuentos", href: "/descuentos" },
+        { name: "Becas", href: "/becas"}
+      ]
+    },
     { name: "Contáctanos", href: "/contactanos" },
   ];
 
