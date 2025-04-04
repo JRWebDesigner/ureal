@@ -240,6 +240,7 @@ export default function PageMercadotecnia() {
                 </div>
               </motion.div>
             ))}
+          </div>
         </div>
       </section>
 
