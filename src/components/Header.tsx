@@ -43,7 +43,7 @@ export default function Header() {
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="/">
-                <img width={70} src="/Images/logo.png" alt="logo" className="h-12 w-auto" />
+                <img width={120} src="/Images/logo.png" alt="logo" className="h-12 w-auto" />
               </Link>
             </motion.div>
 
