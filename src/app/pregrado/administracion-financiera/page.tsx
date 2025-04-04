@@ -69,21 +69,20 @@ export default function PageAdminFinanciera() {
         { codigo: "MVA105-6", nombre: "Administración de Inversiones" },
         { codigo: "AIF105-6", nombre: "Análisis Financiero Cuantitativo" },
         { codigo: "IFN105-6", nombre: "Administración del Crédito" },
-        { codigo: "DER103-6", nombre: "Derecho Financiero y Tributario" }, // Corregido "Finaciero" a "Financiero"
+        { codigo: "DER103-6", nombre: "Derecho Financiero y Tributario" }, 
         { codigo: "FEP104-6", nombre: "Formulación y Evaluación de Proyectos" },
-        { codigo: "ADF106-6", nombre: "Finanzas Internacionales" }, // Agregada "es" final
+        { codigo: "ADF106-6", nombre: "Finanzas Internacionales" }, 
         { codigo: "ENG105-6", nombre: "Inglés VI" }
       ]
     },
     {
   nombre: "Séptimo Semestre",
   materias: [
-    { codigo: "TNC107-7", nombre: "Técnicas de Consultoría" }, // Corregido "Teócnicas de Consultorióa"
-    { codigo: "MVA106-7", nombre: "Inversión Extranjera" }, // Corregido "Inversioón"
-    { codigo: "INF107-7", nombre: "Ingeniería Financiera" }, // Agregada tilde en "Ingeniería"
+    { codigo: "TNC107-7", nombre: "Técnicas de Consultoría" },     { codigo: "MVA106-7", nombre: "Inversión Extranjera" }, 
+    { codigo: "INF107-7", nombre: "Ingeniería Financiera" }, 
     { codigo: "ADF107-7", nombre: "Seminario de Finanzas" },
-    { codigo: "GPU107-7", nombre: "Gestión Pública" }, // Corregido "Gestioén Publica"
-    { codigo: "VEP107-7", nombre: "Valor en el Ejercicio Profesional" }, // Corregido "Profecional"
+    { codigo: "GPU107-7", nombre: "Gestión Pública" }, 
+    { codigo: "VEP107-7", nombre: "Valor en el Ejercicio Profesional" }, 
     { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
   ]
 },
@@ -91,16 +90,15 @@ export default function PageAdminFinanciera() {
   nombre: "Octavo Semestre",
   materias: [
     { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
-    { codigo: "PRE108-8", nombre: "Práctica Empresarial" } // Corregido "Practica" → "Práctica"
+    { codigo: "PRE108-8", nombre: "Práctica Empresarial" } 
   ]
 },
 {
   nombre: "Materias Complementarias",
   materias: [
     { codigo: "INA100", nombre: "Idioma Nativo Aymara" },
-    { codigo: "IDM104", nombre: "Investigación de Mercados I" }, // Corregido "Investigacioón"
-    { codigo: "IDM105", nombre: "Investigación de Mercados II" }, // Corregido "Investigacioón"
-    { codigo: "PEE101", nombre: "Política y Estrategia Empresarial" } // Corregido "Poliótica"
+    { codigo: "IDM104", nombre: "Investigación de Mercados I" },
+    { codigo: "IDM105", nombre: "Investigación de Mercados II" },    { codigo: "PEE101", nombre: "Política y Estrategia Empresarial" } 
   ]
 }
   ];
@@ -108,7 +106,7 @@ export default function PageAdminFinanciera() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-black text-white">
+      <section className="py-16 md:py-24 bg-[url('/Images/financiera.jpg')] bg-opacity-50 bg-cover bg-fixed  text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}

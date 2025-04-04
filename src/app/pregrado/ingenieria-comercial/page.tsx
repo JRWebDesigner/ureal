@@ -106,7 +106,7 @@ export default function PageIngenieriaComercial() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-black text-white">
+      <section className="py-16 md:py-24 bg-[url('/Images/ingenieria-comercial.jpg')] bg-opacity-50 bg-cover bg-fixed text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
