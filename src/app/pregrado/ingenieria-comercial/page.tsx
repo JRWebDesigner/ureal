@@ -3,32 +3,106 @@ import { motion } from 'framer-motion'
 
 export default function PageIngenieriaComercial() {
   const semestres = [
-    {
-      nombre: "Primer Semestre",
-      materias: [
-        { codigo: "ICO100-1", nombre: "Introducción a la Ingeniería Comercial" },
-        { codigo: "MIC100-1", nombre: "Microeconomía" },
-        { codigo: "MAT100-1", nombre: "Matemáticas para Negocios" },
-        { codigo: "ADM100-1", nombre: "Principios de Administración" },
-        { codigo: "CON100-1", nombre: "Contabilidad Básica" },
-        { codigo: "TIC100-1", nombre: "Tecnologías de Información Comercial" },
-        { codigo: "ING100-1", nombre: "Inglés Comercial I" }
-      ]
-    },
-    {
-      nombre: "Segundo Semestre",
-      materias: [
-        { codigo: "MAC101-2", nombre: "Macroeconomía" },
-        { codigo: "EST101-2", nombre: "Estadística Aplicada a Negocios" },
-        { codigo: "MER101-2", nombre: "Principios de Marketing" },
-        { codigo: "FIN101-2", nombre: "Finanzas Corporativas" },
-        { codigo: "COM101-2", nombre: "Comercio Electrónico" },
-        { codigo: "DER101-2", nombre: "Derecho Comercial Internacional" },
-        { codigo: "ING101-2", nombre: "Inglés Comercial II" }
-      ]
-    },
-  ];
-
+  {
+    nombre: "Primer Semestre",
+    materias: [
+      { codigo: "ADM100-1", nombre: "Administración" },
+      { codigo: "MET100-1", nombre: "Métodos y Técnicas de Estudio" },
+      { codigo: "MAT100-1", nombre: "Matemáticas" },
+      { codigo: "CON100-1", nombre: "Contabilidad Básica" },
+      { codigo: "ECO100-1", nombre: "Principios de Microeconomía" },
+      { codigo: "LEN100-1", nombre: "Lenguaje y Redacción en Español" },
+      { codigo: "ENG100-1", nombre: "Inglés I" }
+    ]
+  },
+  {
+    nombre: "Segundo Semestre",
+    materias: [
+      { codigo: "ADM101-2", nombre: "Administración II" },
+      { codigo: "DER101-2", nombre: "Derecho Comercial y Administrativo" },
+      { codigo: "MAT101-2", nombre: "Matemáticas II" },
+      { codigo: "CON101-2", nombre: "Contabilidad Intermedia" },
+      { codigo: "ECO101-2", nombre: "Principios de Macroeconomía" },
+      { codigo: "PSI101-2", nombre: "Psicología Organizacional" },
+      { codigo: "ENG101-2", nombre: "Inglés II" }
+    ]
+  },
+  {
+    nombre: "Tercer Semestre",
+    materias: [
+      { codigo: "COM101-3", nombre: "Computación para la Administración" },
+      { codigo: "CDA101-3", nombre: "Estadística Administrativa" },
+      { codigo: "CON102-3", nombre: "Contabilidad de Costos" },
+      { codigo: "MER101-3", nombre: "Mercadotecnia I" },
+      { codigo: "DRE101-3", nombre: "Desarrollo de Emprendedores" },
+      { codigo: "MFI102-3", nombre: "Matemática Financiera" },
+      { codigo: "ENG102-3", nombre: "Inglés III" }
+    ]
+  },
+  {
+    nombre: "Cuarto Semestre",
+    materias: [
+      { codigo: "RHH101-4", nombre: "Recursos Humanos" },
+      { codigo: "AIF104-4", nombre: "Análisis e Interpretación de Estados Financieros" },
+      { codigo: "MER102-4", nombre: "Mercadotecnia II" },
+      { codigo: "ADV101-4", nombre: "Administración de Ventas" },
+      { codigo: "IDM104-4", nombre: "Investigación de Mercados I" },
+      { codigo: "CDA102-4", nombre: "Tec. Cuan. para la Toma de Decisiones" },
+      { codigo: "ENG103-4", nombre: "Inglés IV" }
+    ]
+  },
+  {
+    nombre: "Quinto Semestre",
+    materias: [
+      { codigo: "DPM101-5", nombre: "Desarrollo de productos" },
+      { codigo: "CDA103-5", nombre: "Análisis de Decisiones I" },
+      { codigo: "ADC106-5", nombre: "Análisis del Consumidor" },
+      { codigo: "MDS105-5", nombre: "Mercadotecnia de Servicios" },
+      { codigo: "ADF105-5", nombre: "Administración Financiera" },
+      { codigo: "CDA104-5", nombre: "Administración de Operaciones" },
+      { codigo: "ENG104-5", nombre: "Inglés V" }
+    ]
+  },
+  {
+    nombre: "Sexto Semestre",
+    materias: [
+      { codigo: "PDV102-6", nombre: "Proceso de Ventas" },
+      { codigo: "DPM102-6", nombre: "Sistemas de Investigación de Mercados" },
+      { codigo: "CEL102-6", nombre: "Comercio Electronico e-commerce" },
+      { codigo: "IDM105-6", nombre: "Investigación de Mercados II" },
+      { codigo: "PUB107-6", nombre: "Publicidad I" },
+      { codigo: "MER103-6", nombre: "Mercadotecnia III" },
+      { codigo: "ENG105-6", nombre: "Inglés VI" }
+    ]
+  },
+  {
+    nombre: "Séptimo Semestre",
+    materias: [
+      { codigo: "IDM106-7", nombre: "Seminario de Investigación de Mercados" },
+      { codigo: "FEP104-7", nombre: "Formulación y Evaluación de Proyectos" },
+      { codigo: "PUB108-7", nombre: "Publicidad II" },
+      { codigo: "PDV104-7", nombre: "Seminario de Promoción" },
+      { codigo: "MDI107-7", nombre: "Marketing Digital" },
+      { codigo: "VEP107-7", nombre: "Valores en el Ejercicio Profesional" },
+      { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
+    ]
+  },
+  {
+    nombre: "Octavo Semestre",
+    materias: [
+      { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
+      { codigo: "PRE108-8", nombre: "Práctica Empresarial" }
+    ]
+  },
+  {
+    nombre: "Materias Complementarias",
+    materias: [
+      { codigo: "INA100", nombre: "Idioma Nativo (Aymara o Quechua)" },
+      { codigo: "MER104-7", nombre: "Seminario Avanzado de Mercadotecnia" },
+      { codigo: "ECO106", nombre: "Economía Internacional" }
+    ]
+  }
+];
   return (
     <div>
       {/* Hero Section */}

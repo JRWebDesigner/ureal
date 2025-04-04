@@ -2,33 +2,108 @@
 import { motion } from 'framer-motion'
 
 export default function PageTurismoHoteles() {
-  const semestres = [
-    {
-      nombre: "Primer Semestre",
-      materias: [
-        { codigo: "TUR100-1", nombre: "Introducción al Turismo" },
-        { codigo: "ADM100-1", nombre: "Fundamentos de Administración" },
-        { codigo: "CON100-1", nombre: "Contabilidad Básica" },
-        { codigo: "HOT100-1", nombre: "Principios de Hotelería" },
-        { codigo: "GEO100-1", nombre: "Geografía Turística" },
-        { codigo: "COM100-1", nombre: "Comunicación Efectiva" },
-        { codigo: "ENG100-1", nombre: "Inglés Turístico I" }
-      ]
-    },
-    {
-      nombre: "Segundo Semestre",
-      materias: [
-        { codigo: "TUR101-2", nombre: "Patrimonio Cultural y Natural" },
-        { codigo: "MER101-2", nombre: "Mercadotecnia Turística" },
-        { codigo: "HOT101-2", nombre: "Operaciones Hoteleras" },
-        { codigo: "NUT101-2", nombre: "Gastronomía y Nutrición" },
-        { codigo: "DER101-2", nombre: "Legislación Turística" },
-        { codigo: "TIC101-2", nombre: "Tecnologías para el Turismo" },
-        { codigo: "ENG101-2", nombre: "Inglés Turístico II" }
-      ]
-    },
-    // ... Agregar los demás semestres aquí
-  ];
+const semestres = [
+  {
+    nombre: "Primer Semestre",
+    materias: [
+      { codigo: "MAT100-1", nombre: "Matemáticas I" },
+      { codigo: "LEN100-1", nombre: "Lenguaje y Redacción en Español" },
+      { codigo: "MET100-1", nombre: "Métodos y Técnicas de Estudio" },
+      { codigo: "ADM100-1", nombre: "Administración" },
+      { codigo: "CON100-1", nombre: "Contabilidad Básica" },
+      { codigo: "ECO100-1", nombre: "Principios de Microeconomía" },
+      { codigo: "ENG100-1", nombre: "Inglés I" }
+    ]
+  },
+  {
+    nombre: "Segundo Semestre",
+    materias: [
+      { codigo: "TUH100-2", nombre: "Introducción al Turismo" },
+      { codigo: "ECO101-2", nombre: "Principios de Microeconomía" },
+      { codigo: "MAT101-2", nombre: "Matemáticas II" },
+      { codigo: "TUH101-2", nombre: "Geografía Turística" },
+      { codigo: "CON101-2", nombre: "Contabilidad Intermedia" },
+      { codigo: "TUH102-2", nombre: "Seminario Artístico y Cultural" },
+      { codigo: "ENG101-2", nombre: "Inglés II" }
+    ]
+  },
+  {
+    nombre: "Tercer Semestre",
+    materias: [
+      { codigo: "TUH103-3", nombre: "Producción de Alimentos y Bebidas" },
+      { codigo: "CON102-3", nombre: "Contabilidad de Costos" },
+      { codigo: "CDC101-3", nombre: "Cultura de Calidad" },
+      { codigo: "MER101-3", nombre: "Mercadotecnia I" },
+      { codigo: "CDA101-3", nombre: "Estadística Administrativa" },
+      { codigo: "RHH101-3", nombre: "Recursos Humanos" },
+      { codigo: "ENG102-3", nombre: "Inglés III" }
+    ]
+  },
+  {
+    nombre: "Cuarto Semestre",
+    materias: [
+      { codigo: "TUH104-4", nombre: "Operación y Servicios de Alimentos y Bebidas" },
+      { codigo: "DDE101-4", nombre: "Desarrollo de Emprendedores" },
+      { codigo: "EDS101-4", nombre: "Ecología y Desarrollo Sostenible" },
+      { codigo: "CON103-4", nombre: "Contabilidad Administrativa" },
+      { codigo: "CDD102-4", nombre: "Tec. Cuan. para la Toma de Decisiones" },
+      { codigo: "TUH105-4", nombre: "Administración Hotelera" },
+      { codigo: "ENG103-4", nombre: "Inglés IV" }
+    ]
+  },
+  {
+    nombre: "Quinto Semestre",
+    materias: [
+      { codigo: "TUH106-5", nombre: "Técnicas de Guiaje y Manejo de Grupos" },
+      { codigo: "IDM104-5", nombre: "Investigación de Mercados I" },
+      { codigo: "TUH107-5", nombre: "Operación y División de Cuartos" },
+      { codigo: "TUH108-5", nombre: "Sistema de Información para Hotelería y Turismo" },
+      { codigo: "TUH109-5", nombre: "Mercadotecnia y Ventas en Hotelería y Turismo" },
+      { codigo: "TUH110-5", nombre: "Gestión de Espacios Naturales y Turismo" },
+      { codigo: "ENG104-5", nombre: "Inglés V" }
+    ]
+  },
+  {
+    nombre: "Sexto Semestre",
+    materias: [
+      { codigo: "TUH111-6", nombre: "Mantenimiento de Instalaciones Hoteleras" },
+      { codigo: "TUH112-6", nombre: "Etnografía y Folclore de Bolivia" },
+      { codigo: "TUH113-6", nombre: "Ordenamiento Turístico del Territorio" },
+      { codigo: "COM101-6", nombre: "Computación para la Administración" },
+      { codigo: "TUH114-6", nombre: "Protocolo y Adm. de Grupos y Convenciones" },
+      { codigo: "TUH115-6", nombre: "Sem. Integrador de Dir. de Emp. Turísticas" },
+      { codigo: "ENG105-6", nombre: "Inglés VI" }
+    ]
+  },
+  {
+    nombre: "Séptimo Semestre",
+    materias: [
+      { codigo: "TDC107-7", nombre: "Técnicas de Consultoría" },
+      { codigo: "TUH116-7", nombre: "Museología" },
+      { codigo: "TUH117-7", nombre: "Adm. de la Calidad en Org. de Servicio" },
+      { codigo: "TUH118-7", nombre: "Desarrollo de Proyectos Tur. y Hot." },
+      { codigo: "TUH119-7", nombre: "Sis. de Operación e Inf. de Agencias de Viajes" },
+      { codigo: "VEP107-7", nombre: "Valores en el Ejercicio Profesional" },
+      { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
+    ]
+  },
+  {
+    nombre: "Octavo Semestre",
+    materias: [
+      { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
+      { codigo: "PRE108-8", nombre: "Práctica Empresarial" }
+    ]
+  },
+  {
+    nombre: "Materias Complementarias",
+    materias: [
+      { codigo: "INA100", nombre: "Idioma Nativo (Aymara o Quechua)" },
+      { codigo: "LTD105", nombre: "Legislación Turística y Derecho de la Emp." },
+      { codigo: "PEE101", nombre: "Política y Estrategia Empresarial" },
+      { codigo: "PUB101", nombre: "Publicidad y Promoción" }
+    ]
+  }
+];
 
   return (
     <div>

@@ -3,32 +3,108 @@ import { motion } from 'framer-motion'
 
 export default function PageContaduriaPublica() {
   const semestres = [
-    {
-      nombre: "Primer Semestre",
-      materias: [
-        { codigo: "CON100-1", nombre: "Introducción a la Contaduría Pública" },
-        { codigo: "MAT100-1", nombre: "Matemáticas Financieras" },
-        { codigo: "DER100-1", nombre: "Derecho Comercial" },
-        { codigo: "ECO100-1", nombre: "Principios de Economía" },
-        { codigo: "ADM100-1", nombre: "Administración Básica" },
-        { codigo: "TIC100-1", nombre: "Tecnologías de Información Contable" },
-        { codigo: "ETI100-1", nombre: "Ética Profesional" }
-      ]
-    },
-    {
-      nombre: "Segundo Semestre",
-      materias: [
-        { codigo: "CON101-2", nombre: "Contabilidad General" },
-        { codigo: "FIN101-2", nombre: "Finanzas Básicas" },
-        { codigo: "AUD101-2", nombre: "Principios de Auditoría" },
-        { codigo: "TRI101-2", nombre: "Tributación I" },
-        { codigo: "COS101-2", nombre: "Contabilidad de Costos" },
-        { codigo: "EST101-2", nombre: "Estadística Aplicada" },
-        { codigo: "DER101-2", nombre: "Derecho Laboral" }
-      ]
-    },
-  ];
-
+  {
+    nombre: "Primer Semestre",
+    materias: [
+      { codigo: "MAT100-1", nombre: "Matemáticas I" },
+      { codigo: "LEN100-1", nombre: "Lenguaje y Redacción en Español" },
+      { codigo: "MET100-1", nombre: "Métodos y Técnicas de Estudio" },
+      { codigo: "ADM100-1", nombre: "Administración" },
+      { codigo: "CON100-1", nombre: "Contabilidad Básica" },
+      { codigo: "ECO100-1", nombre: "Principios de Microeconomía" },
+      { codigo: "ENG100-1", nombre: "Inglés I" }
+    ]
+  },
+  {
+    nombre: "Segundo Semestre",
+    materias: [
+      { codigo: "DER101-2", nombre: "Derecho Comercial y Administrativo" },
+      { codigo: "ECO101-2", nombre: "Principios de Macroeconomía" },
+      { codigo: "MAT101-2", nombre: "Matemáticas II" },
+      { codigo: "ADM102-2", nombre: "Administración II" },
+      { codigo: "CON101-2", nombre: "Contabilidad Intermedia" },
+      { codigo: "PSI101-2", nombre: "Psicología Organizacional" },
+      { codigo: "ENG101-2", nombre: "Inglés II" }
+    ]
+  },
+  {
+    nombre: "Tercer Semestre",
+    materias: [
+      { codigo: "COM101-3", nombre: "Computación para la Administración" },
+      { codigo: "CON102-3", nombre: "Contabilidad de Costos I" },
+      { codigo: "MFI102-3", nombre: "Matemática Financiera" },
+      { codigo: "CBA101-3", nombre: "Contabilidad Bancaria" },
+      { codigo: "CDA101-3", nombre: "Estadística Administrativa" },
+      { codigo: "FCI102-3", nombre: "Fundamentos de Control Interno" },
+      { codigo: "ENG102-3", nombre: "Inglés III" }
+    ]
+  },
+  {
+    nombre: "Cuarto Semestre",
+    materias: [
+      { codigo: "DER102-4", nombre: "Derecho del trabajo" },
+      { codigo: "PTA104-4", nombre: "Procedimientos Tributarios y Aduaneros" },
+      { codigo: "CON103-4", nombre: "Contabilidad de Costos II" },
+      { codigo: "CSE104-4", nombre: "Contabilidad de Servicios" },
+      { codigo: "AIF104-4", nombre: "Análisis e Interpretación de E. Financieros" },
+      { codigo: "TRI104-4", nombre: "Tributación" },
+      { codigo: "ENG103-4", nombre: "Inglés IV" }
+    ]
+  },
+  {
+    nombre: "Quinto Semestre",
+    materias: [
+      { codigo: "ADF105-5", nombre: "Administración Financiera" },
+      { codigo: "AUD105-5", nombre: "Auditoria I" },
+      { codigo: "AOP105-5", nombre: "Auditoria Operativa" },
+      { codigo: "PRE104-5", nombre: "Presupuestos" },
+      { codigo: "CMP105-5", nombre: "Contabilidad Minera y Petroleras" },
+      { codigo: "CGU105-5", nombre: "Contabilidad Gubernamental" },
+      { codigo: "ENG104-5", nombre: "Inglés V" }
+    ]
+  },
+  {
+    nombre: "Sexto Semestre",
+    materias: [
+      { codigo: "AUD106-6", nombre: "Auditoria II" },
+      { codigo: "MVA104-6", nombre: "Mercado de Valores" },
+      { codigo: "ACT105-6", nombre: "Análisis de Contabilidad Tributaria" },
+      { codigo: "AUT106-6", nombre: "Auditoria Tributaria I" },
+      { codigo: "FEP104-6", nombre: "Formulación y Evaluación de Proyectos" },
+      { codigo: "FCO106-6", nombre: "Finanzas Corporativas" },
+      { codigo: "ENG105-6", nombre: "Inglés VI" }
+    ]
+  },
+  {
+    nombre: "Séptimo Semestre",
+    materias: [
+      { codigo: "AFO107-7", nombre: "Auditoria Forense" },
+      { codigo: "AUT107-7", nombre: "Auditoria Tributaria II" },
+      { codigo: "GTE107-7", nombre: "Gerencia de Tesorería" },
+      { codigo: "ADF106-7", nombre: "Finanzas Internacionales" },
+      { codigo: "TNC107-7", nombre: "Técnicas de Consultoría" },
+      { codigo: "VEP107-7", nombre: "Valores en el Ejercicio Profesional" },
+      { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
+    ]
+  },
+  {
+    nombre: "Octavo Semestre",
+    materias: [
+      { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
+      { codigo: "PRE108-8", nombre: "Práctica Empresarial" }
+    ]
+  },
+  {
+    nombre: "Materias Complementarias",
+    materias: [
+      { codigo: "INA100", nombre: "Idioma Nativo (Aymara o Quechua)" },
+      { codigo: "ECO102-4", nombre: "Economía Financiera" },
+      { codigo: "MVA105-6", nombre: "Administración de Inversiones" },
+      { codigo: "GPU107-7", nombre: "Gestión Pública" },
+      { codigo: "DRE101-4", nombre: "Desarrollo de Emprendedores" }
+    ]
+  }
+];
   return (
     <div>
       {/* Hero Section */}

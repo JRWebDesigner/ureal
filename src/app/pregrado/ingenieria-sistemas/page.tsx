@@ -3,33 +3,105 @@ import { motion } from 'framer-motion'
 
 export default function PageIngenieriaSistemas() {
   const semestres = [
-    {
-      nombre: "Primer Semestre",
-      materias: [
-        { codigo: "ISC100-1", nombre: "Introducción a la Ingeniería de Sistemas" },
-        { codigo: "MAT100-1", nombre: "Matemáticas Discretas" },
-        { codigo: "ADM100-1", nombre: "Fundamentos de Administración" },
-        { codigo: "PRO100-1", nombre: "Programación Básica" },
-        { codigo: "INF100-1", nombre: "Informática Aplicada" },
-        { codigo: "MET100-1", nombre: "Metodología de la Investigación" },
-        { codigo: "ENG100-1", nombre: "Inglés Técnico I" }
-      ]
-    },
-    {
-      nombre: "Segundo Semestre",
-      materias: [
-        { codigo: "ISC101-2", nombre: "Arquitectura de Computadoras" },
-        { codigo: "MAT101-2", nombre: "Cálculo Diferencial" },
-        { codigo: "ADM101-2", nombre: "Contabilidad Administrativa" },
-        { codigo: "PRO101-2", nombre: "Programación Orientada a Objetos" },
-        { codigo: "RED101-2", nombre: "Redes de Computadoras I" },
-        { codigo: "EST101-2", nombre: "Estadística Descriptiva" },
-        { codigo: "ENG101-2", nombre: "Inglés Técnico II" }
-      ]
-    },
-    // ... Agregar los demás semestres aquí
-  ];
-
+  {
+    nombre: "Primer Semestre",
+    materias: [
+      { codigo: "MAT100-1", nombre: "Matemáticas I" },
+      { codigo: "LEN100-1", nombre: "Lenguaje y Redacción en Español" },
+      { codigo: "PRG100-1", nombre: "Introducción a la Informática" },
+      { codigo: "ADM100-1", nombre: "Administración" },
+      { codigo: "CON100-1", nombre: "Contabilidad Básica" },
+      { codigo: "ECO100-1", nombre: "Principios de Microeconomía" },
+      { codigo: "ENG100-1", nombre: "Inglés I" }
+    ]
+  },
+  {
+    nombre: "Segundo Semestre",
+    materias: [
+      { codigo: "PRG101-2", nombre: "Computación para Ingeniería" },
+      { codigo: "ECO101-2", nombre: "Principios de Macroeconomía" },
+      { codigo: "MAT101-2", nombre: "Matemáticas II" },
+      { codigo: "FIN101-2", nombre: "Finanzas I" },
+      { codigo: "RED102-2", nombre: "Organización Computacional" },
+      { codigo: "CDA101-2", nombre: "Estadística Administrativa" },
+      { codigo: "ENG101-2", nombre: "Inglés II" }
+    ]
+  },
+  {
+    nombre: "Tercer Semestre",
+    materias: [
+      { codigo: "DDE101-3", nombre: "Desarrollo de Emprendedores" },
+      { codigo: "CON102-3", nombre: "Contabilidad de Costos" },
+      { codigo: "FIN102-3", nombre: "Finanzas II" },
+      { codigo: "COM101-3", nombre: "Computación para la Administración" },
+      { codigo: "PRG102-3", nombre: "Sistemas de Programación" },
+      { codigo: "RED103-3", nombre: "Redes de Comunicación" },
+      { codigo: "ENG102-3", nombre: "Inglés III" }
+    ]
+  },
+  {
+    nombre: "Cuarto Semestre",
+    materias: [
+      { codigo: "SIS101-4", nombre: "Introducción a los Sistemas de Información" },
+      { codigo: "SIS102-4", nombre: "Base de Datos" },
+      { codigo: "PRG103-4", nombre: "Lenguajes de Programación" },
+      { codigo: "MER101-4", nombre: "Mercadotecnia" },
+      { codigo: "PRG104-4", nombre: "Estructura de Datos" },
+      { codigo: "MET100-4", nombre: "Métodos y Técnicas de Investigación" },
+      { codigo: "ENG103-4", nombre: "Inglés IV" }
+    ]
+  },
+  {
+    nombre: "Quinto Semestre",
+    materias: [
+      { codigo: "DER105-5", nombre: "Administración Estratégica de Datos" },
+      { codigo: "SIS103-5", nombre: "Desarrollo de Sistemas de Información" },
+      { codigo: "SIS104-5", nombre: "Redes de Información en los Negocios" },
+      { codigo: "CON103-5", nombre: "Contabilidad Administrativa" },
+      { codigo: "CDA102-5", nombre: "Técnicas Cuantitativas para la Toma de Decisiones" },
+      { codigo: "FEP104-5", nombre: "Formulación y Evaluación de Proyectos" },
+      { codigo: "ENG104-5", nombre: "Inglés V" }
+    ]
+  },
+  {
+    nombre: "Sexto Semestre",
+    materias: [
+      { codigo: "RED105-6", nombre: "Aplicación de Sistemas Operativos Abiertos" },
+      { codigo: "SIS105-6", nombre: "Administración y Factibilidad de Proyectos de Informática" },
+      { codigo: "SIS106-6", nombre: "Administración de Informática en Organizaciones" },
+      { codigo: "SIS107-6", nombre: "Sistemas Información para la Competitividad" },
+      { codigo: "ING104-6", nombre: "Teoría General de Sistemas" },
+      { codigo: "ING105-6", nombre: "Modelación de Sistemas" },
+      { codigo: "ENG105-6", nombre: "Inglés VI" }
+    ]
+  },
+  {
+    nombre: "Séptimo Semestre",
+    materias: [
+      { codigo: "SIS108-7", nombre: "Sistemas Información para la Innovación" },
+      { codigo: "ING106-7", nombre: "Sistemas para Toma de Decisiones y Sis. Expertos" },
+      { codigo: "RED106-7", nombre: "Actualización Tecnológica en Informática" },
+      { codigo: "ING107-7", nombre: "Auditoría y Consultoría en Sistemas Información" },
+      { codigo: "ING109-7", nombre: "Ingeniería de Software" },
+      { codigo: "VEP107-7", nombre: "Valores en el Ejercicio Profesional" },
+      { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
+    ]
+  },
+  {
+    nombre: "Octavo Semestre",
+    materias: [
+      { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
+      { codigo: "PRE108-8", nombre: "Práctica Empresarial" }
+    ]
+  },
+  {
+    nombre: "Materias Complementarias",
+    materias: [
+      { codigo: "INA100", nombre: "Idioma Nativo Aymara" },
+      { codigo: "INQ100", nombre: "Idioma Nativo Quechua" }
+    ]
+  }
+];
   return (
     <div>
       {/* Hero Section */}
