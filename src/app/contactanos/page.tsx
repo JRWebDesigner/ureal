@@ -18,7 +18,7 @@ export default function ContactPage() {
   const [selectedCareer, setSelectedCareer] = useState('');
 
   // Datos de carreras por área
-  const careersData = {
+ const careersData: CareersData = {
     pregrado: [
       'Ingeniería de Software',
       'Diseño Gráfico',
@@ -49,7 +49,6 @@ export default function ContactPage() {
       'Doctorado en Arquitectura Sostenible'
     ]
   };
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
