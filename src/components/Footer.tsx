@@ -128,18 +128,23 @@ export default function Footer() {
                     className="pl-4 mt-1 space-y-1"
                   >
                     <li>
-                      <Link href="/historia" className="text-red-200 hover:text-white block py-1">
-                        Historia
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/mision-vision" className="text-red-200 hover:text-white block py-1">
+                      <Link href="/conocenos/mision-vision" className="text-red-200 hover:text-white block py-1">
                         Misión y Visión
                       </Link>
                     </li>
                     <li>
-                      <Link href="/autoridades" className="text-red-200 hover:text-white block py-1">
-                        Autoridades
+                      <Link href="/conocenos/plan-al-contado" className="text-red-200 hover:text-white block py-1">
+                        Plan al Contado
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/conocenos/descuentos" className="text-red-200 hover:text-white block py-1">
+                        Descuentos
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/conocenos/becas" className="text-red-200 hover:text-white block py-1">
+                        Becas
                       </Link>
                     </li>
                   </motion.ul>
