@@ -4,37 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function PagePregrado() {
-  const carreras = [
-    {
-      nombre: "Administración Financiera",
-      slug: "administracion-financiera",
-      descripcion: "Formación de líderes para la gestión empresarial global",
-      imagen: "/images/administracion.jpg" // Reemplaza con tu ruta de imagen
-    },
-    {
-      nombre: "Contaduría Pública",
-      slug: "contaduria-publica",
-      descripcion: "Profesionales éticos para la confianza financiera",
-      imagen: "/images/contaduria.jpg"
-    },
-    {
-      nombre: "Ingeniería Comercial",
-      slug: "ingenieria-comercial",
-      descripcion: "Especialistas en comercio internacional y mercados globales",
-      imagen: "/images/comercial.jpg"
-    },
-    {
-      nombre: "Derecho",
-      slug: "derecho",
-      descripcion: "Formación de juristas con excelencia académica",
-      imagen: "/images/derecho.jpg"
-    },
-    {
-      nombre: "Psicología",
-      slug: "psicologia",
-      descripcion: "Profesionales para el bienestar mental y social",
-      imagen: "/images/psicologia.jpg"
-    },
 const carreras = [
   {
     nombre: "Administración Financiera",
