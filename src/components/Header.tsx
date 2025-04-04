@@ -74,8 +74,7 @@ export default function Header() {
                 <motion.li
                   key={link.name}
                   className="relative"
-                  onMouseEnter={() => link.submenu && setOpenSubmenu(link.name)}
-                  onMouseLeave={() => link.submenu && setOpenSubmenu(null)}
+                 
                 >
                 {(
                     <Link
@@ -143,12 +142,7 @@ export default function Header() {
                     transition={{ duration: 0.3, delay: 0.1 }}
                     className="mt-2"
                   >
-                    <a 
-                      href="tel:+123456789" 
-                      className="flex items-center gap-2 bg-red-600 px-6 py-3 rounded-full text-lg w-full justify-center"
-                    >
-                      <FaPhoneAlt /> Llamar ahora
-                    </a>
+                   
                   </motion.li>
                 </ul>
               </motion.div>
