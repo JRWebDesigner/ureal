@@ -21,23 +21,23 @@ export default function Header() {
   const links = [
     { name: "Inicio", href: "/" },
     { 
-      name: "Formación", 
-      href: "#",
-      submenu: [
-        { name: "Pregrado", href: "/pregrado" },
-        { name: "Postgrado", href: "/maestria" },
-        { name: "Maestría", href: "/maestria" }
-      ]
+      name: "Pregrado", 
+      href: "/pregrado",
     },
-    { name: "Conócenos", href: "#",
-      submenu:[
-        { name: "Mision y Vision", href: "/conocenos/mision-vision" },
-        { name: "Plan al Contado", href: "/conocenos/plan-al-contado" },
-        { name: "Descuentos", href: "/conocenos/descuentos" },
-        { name: "Becas", href: "/conocenos/becas"}
-      ]
+    {
+      name:'Postgrado',
+      href:"/maestria"
     },
-    { name: "Contáctanos", href: "/contactanos" },
+    { name: "Conócenos", href: "/conocenos/mision-vision",
+    },
+    {
+      name:"Planes", href:"/conocenos/planes-al-contado"
+    },
+    {
+      name:"Descuentos", href:"/conocenos/descuentos"
+    },
+    { name: "Becas", href: "/conocenos/Becas" },
+    { name: "Contactanos", href: "/contactanos" },
   ];
 
   useEffect(() => {
@@ -57,14 +57,14 @@ export default function Header() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
           className={`fixed top-0 left-0 w-full px-4 py-2 transition-all z-50 ${
-            scrolling ? "bg-red-800 shadow-lg" : "bg-[#ff000049]"
+            scrolling ? "bg-black shadow-lg" : "bg-[#000000]"
           }`}
         >
           <div className="container mx-auto flex justify-between items-center">
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="/">
-                <img width={70} src="/Images/logo.png" alt="logo" className="h-12 w-auto" />
+                <img width={140} src="/Images/logo.png" alt="logo" className="h-12 w-auto" />
               </Link>
             </motion.div>
 
@@ -119,28 +119,20 @@ export default function Header() {
                     <Link
                       href={link.href}
                       className={`relative px-2 py-1 ${
-                        pathname === link.href ? "font-bold" : ""
+                        pathname === link.href ? "font-bold text-black bg-white rounded-2xl" : ""
                       }`}
                     >
                       {link.name}
                       {pathname === link.href && (
                         <motion.span
                           layoutId="underline"
-                          className="absolute -bottom-1 left-0 w-full h-[2px] bg-red-400"
+                          className=""
                         />
                       )}
                     </Link>
                   )}
                 </motion.li>
               ))}
-              <motion.li whileHover={{ scale: 1.1 }}>
-                <a 
-                  href="tel:+123456789" 
-                  className="flex items-center gap-2 bg-red-600 px-4 py-2 rounded-full"
-                >
-                  <FaPhoneAlt /> Llamar
-                </a>
-              </motion.li>
             </ul>
 
             {/* Botón Menú Móvil */}

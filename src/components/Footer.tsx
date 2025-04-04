@@ -13,7 +13,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-gradient-to-b from-red-800 to-red-900 text-white pt-12 pb-6">
+    <footer className="bg-black text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         {/* Contenido principal del footer */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -31,7 +31,7 @@ export default function Footer() {
                 className="h-16 w-auto mb-4 cursor-pointer hover:opacity-90 transition-opacity"
               />
             </Link>
-            <p className="text-center md:text-left text-red-100">
+            <p className="text-center md:text-left text-white">
               Transformando vidas a través de la educación de calidad y valores empresariales.
             </p>
             <div className="flex mt-4 space-x-4">
@@ -39,21 +39,21 @@ export default function Footer() {
               <motion.a
                 href="#"
                 whileHover={{ y: -3, scale: 1.1 }}
-                className="bg-red-700 p-3 rounded-full hover:bg-red-600 transition-colors"
+                className="bg-gray-700 p-3 rounded-full hover:bg-red-600 transition-colors"
               >
                 <FaFacebook className="text-white text-xl" />
               </motion.a>
               <motion.a
                 href="#"
                 whileHover={{ y: -3, scale: 1.1 }}
-                className="bg-red-700 p-3 rounded-full hover:bg-red-600 transition-colors"
+                className="bg-gray-700 p-3 rounded-full hover:bg-red-600 transition-colors"
               >
                 <FaYoutube className="text-white text-xl" />
               </motion.a>
               <motion.a
                 href="#"
                 whileHover={{ y: -3, scale: 1.1 }}
-                className="bg-red-700 p-3 rounded-full hover:bg-red-600 transition-colors"
+                className="bg-gray-700 p-3 rounded-full hover:bg-red-600 transition-colors"
               >
                 <FaWhatsapp className="text-white text-xl" />
               </motion.a>
