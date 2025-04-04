@@ -4,102 +4,102 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function PageMaestria() {
-  const diplomados = [
+  const  = [
     {
       nombre: "Recursos Humanos y Salario Emocional",
       slug: "recursos-humanos-salario-emocional",
       descripcion: "Herramienta útil y necesaria para gestionar el capital humano en las organizaciones",
-      imagen: "/images/diplomados/rrhh.jpg"
+      imagen: "/images/rrhh.jpg"
     },
     {
       nombre: "Gestión Tributaria, Legal y Aduanera",
       slug: "gestion-tributaria-legal-aduanera",
       descripcion: "Fortalecimiento de conocimientos para resolver problemas en gestión tributaria y aduanera",
-      imagen: "/images/diplomados/tributaria.jpg"
+      imagen: "/images/tributaria.jpg"
     },
     {
       nombre: "Gestión de Procesos de Contratación del Estado",
       slug: "gestion-contratacion-estado",
       descripcion: "Administración eficiente de procesos de contratación gubernamentales con transparencia",
-      imagen: "/images/diplomados/contratacion-estado.jpg"
+      imagen: "/images/contratacion-estado.jpg"
     },
     {
       nombre: "Comercio Exterior y Despacho Aduanero",
       slug: "comercio-exterior-despacho-aduanero",
       descripcion: "Nueva visión para encarar relaciones comerciales internacionales",
-      imagen: "/images/diplomados/comercio-exterior.jpg"
+      imagen: "/images/comercio-exterior.jpg"
     },
     {
       nombre: "Derecho y Procedimiento Administrativo",
       slug: "derecho-procedimiento-administrativo",
       descripcion: "Metodología basada en la ciencia y el derecho moderno",
-      imagen: "/images/diplomados/derecho-administrativo.jpg"
+      imagen: "/images/derecho-administrativo.jpg"
     },
     {
       nombre: "Analista de Marketing",
       slug: "analista-marketing",
       descripcion: "Desarrollo de análisis de estrategias y resultados de marketing",
-      imagen: "/images/diplomados/marketing.jpg"
+      imagen: "/images/marketing.jpg"
     },
     {
       nombre: "Educación Superior",
       slug: "educacion-superior",
       descripcion: "Análisis de tendencias y retos en el campo de la educación superior",
-      imagen: "/images/diplomados/educacion-superior.jpg"
+      imagen: "/images/educacion-superior.jpg"
     },
     {
       nombre: "Derecho Empresarial y Societario",
       slug: "derecho-empresarial-societario",
       descripcion: "Aspectos legales relevantes para la gestión de empresas y sociedades",
-      imagen: "/images/diplomados/derecho-empresarial.jpg"
+      imagen: "/images/derecho-empresarial.jpg"
     },
     {
       nombre: "Gestión Competitiva de Seguros y Riesgos",
       slug: "gestion-seguros-riesgos",
       descripcion: "Herramientas para administración eficiente de seguros y riesgos",
-      imagen: "/images/diplomados/seguros.jpg"
+      imagen: "/images/seguros.jpg"
     },
     {
       nombre: "Derecho Notarial",
       slug: "derecho-notarial",
       descripcion: "Conocimientos especializados en función notarial y seguridad jurídica",
-      imagen: "/images/diplomados/notarial.jpg"
+      imagen: "/images/notarial.jpg"
     },
     {
       nombre: "Derecho Procesal Electrónico Legaltech Judicial",
       slug: "derecho-procesal-electronico",
       descripcion: "Uso de tecnologías legales para mejorar la administración de justicia",
-      imagen: "/images/diplomados/legaltech.jpg"
+      imagen: "/images/legaltech.jpg"
     },
     {
       nombre: "Arbitraje, Conciliación y Negociación",
       slug: "arbitraje-conciliacion-negociacion",
       descripcion: "Resolución alternativa y efectiva de conflictos",
-      imagen: "/images/diplomados/arbitraje.jpg"
+      imagen: "/images/arbitraje.jpg"
     },
     {
       nombre: "Diplomacia Comercial",
       slug: "diplomacia-comercial",
       descripcion: "Capacitación en manejo de controversias comerciales internacionales",
-      imagen: "/images/diplomados/diplomacia.jpg"
+      imagen: "/images/diplomacia.jpg"
     },
     {
       nombre: "Gestión Pública y Administrativa",
       slug: "gestion-publica-administrativa",
       descripcion: "Liderazgo y gestión eficaz de entidades gubernamentales",
-      imagen: "/images/diplomados/gestion-publica.jpg"
+      imagen: "/images/gestion-publica.jpg"
     },
     {
       nombre: "Auditoría de Sistemas Informáticos Forenses",
       slug: "auditoria-sistemas-forenses",
       descripcion: "Herramientas informáticas y normas de seguridad en auditoría forense",
-      imagen: "/images/diplomados/auditoria-forense.jpg"
+      imagen: "/images/auditoria-forense.jpg"
     },
     {
       nombre: "Responsabilidad Social Empresarial",
       slug: "responsabilidad-social-empresarial",
       descripcion: "Estrategias e implementación de RSE en organizaciones",
-      imagen: "/images/diplomados/rse.jpg"
+      imagen: "/images/rse.jpg"
     }
   ];
 
@@ -125,7 +125,7 @@ export default function PageMaestria() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl max-w-3xl mx-auto"
           >
-            Diplomados diseñados para la excelencia profesional
+             diseñados para la excelencia profesional
           </motion.p>
         </div>
       </section>
@@ -140,11 +140,11 @@ export default function PageMaestria() {
           className="max-w-7xl mx-auto"
         >
           <h2 className="text-3xl font-bold text-red-800 mb-12 text-center">
-            Nuestros Diplomados
+            Nuestros 
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {diplomados.map((diplomado, index) => (
+            {.map((diplomado, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
