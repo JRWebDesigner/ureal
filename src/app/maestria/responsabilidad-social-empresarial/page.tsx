@@ -1,8 +1,8 @@
 "use client"
 import { motion } from 'framer-motion'
-import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen } from 'react-icons/fi'
+import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen, FiTrendingUp, FiShare2 } from 'react-icons/fi'
 
-export default function PageRecursosHumanos() {
+export default function PageMarketingDigital() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
@@ -17,7 +17,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Diplomado en Recursos Humanos y Salario Emocional
+            Diplomado en Marketing Digital y RSE
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl max-w-3xl mx-auto"
           >
-            Fortalece tus conocimientos para gestionar el capital humano con enfoque estratégico
+            Estrategias digitales con enfoque en responsabilidad social empresarial
           </motion.p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function PageRecursosHumanos() {
                 <FiCalendar className="text-red-800 text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inscripción hasta</p>
-                  <p className="font-bold text-red-800">2024-06-26</p>
+                  <p className="font-bold text-red-800">2024-04-25</p>
                 </div>
               </div>
             </motion.div>
@@ -69,6 +69,7 @@ export default function PageRecursosHumanos() {
                 <div>
                   <p className="text-sm text-gray-600">Modalidad</p>
                   <p className="font-bold text-red-800">VIRTUAL</p>
+                  <p className="text-xs text-gray-500">DIPLOMADO</p>
                 </div>
               </div>
             </motion.div>
@@ -82,6 +83,7 @@ export default function PageRecursosHumanos() {
                 <div>
                   <p className="text-sm text-gray-600">Inversión</p>
                   <p className="font-bold text-red-800">3 Cuotas de Bs. 800</p>
+                  <p className="text-xs text-gray-500">Contado: Bs. 2100</p>
                 </div>
               </div>
             </motion.div>
@@ -102,7 +104,7 @@ export default function PageRecursosHumanos() {
             <h2 className="text-3xl font-bold text-red-800 mb-6">Descripción del Programa</h2>
             <div className="prose max-w-none">
               <p className="text-gray-700 mb-6 text-lg">
-                El Diplomado en Recursos Humanos y Salario Emocional busca fortalecer los conocimientos de los profesionales para resolver los problemas que cotidianamente se les presentan en RRHH y Salario Emocional, buscando que los participantes empleen las normativas correspondientes de una manera eficaz y oportuna.
+                Este programa combina estrategias de marketing digital con los principios de la Responsabilidad Social Empresarial, formando profesionales capaces de desarrollar campañas efectivas con impacto positivo.
               </p>
             </div>
           </motion.div>
@@ -122,7 +124,7 @@ export default function PageRecursosHumanos() {
             <h2 className="text-3xl font-bold text-red-800 mb-6">Objetivo del Programa</h2>
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-800">
               <p className="text-gray-700">
-                Conocer y desarrollar la legislación tributaria vigente, con énfasis en los principales cuerpos normativos que regulan esta materia, manejando conceptos jurídicos y contables que se utilizarán como herramientas para la aplicación e interpretación de esta normativa específica en materia tributaria y aduanera, con el fin de desarrollar habilidades para evaluar, analizar y aplicar las estrategias y soluciones tributarias y aduaneras que requieran instituciones y clientes.
+                Proporcionar las herramientas y los conocimientos para desempeñarse en un nivel operativo en el área de marketing virtual, así como desarrollar en el analista de marketing un profesional contratado para cuidar y desarrollar el análisis de las estrategias y de los resultados de marketing dentro de una empresa.
               </p>
             </div>
           </motion.div>
@@ -181,85 +183,93 @@ export default function PageRecursosHumanos() {
               {[
                 {
                   modulo: "Módulo 1",
-                  titulo: "Análisis Estratégico, Capacitación, Tutoría, Mentoring y Gestión de Talento",
+                  titulo: "Introducción a la RSE y Sostenibilidad",
+                  icon: <FiTrendingUp className="text-red-800" />,
                   temas: [
-                    "Teoría Organizacional",
-                    "Prepararse para el Cambio",
-                    "Modelos para el Cambio",
-                    "Habilidades para Tener y Mantener Talentos Claves",
-                    "Sistema Comunicacional",
-                    "Programa Mentoring"
+                    "Origen y fundamentos de la RSE",
+                    "Conceptos y beneficios",
+                    "Evolución normativa",
+                    "Inversión Socialmente Responsable"
                   ]
                 },
                 {
                   modulo: "Módulo 2",
-                  titulo: "Coaching",
+                  titulo: "Estrategia y Gobierno Corporativo",
+                  icon: <FiShare2 className="text-red-800" />,
                   temas: [
-                    "Saber Escuchar",
-                    "Saber Tender Puentes Emocionales",
-                    "Administración del Cambio",
-                    "Cómo superar la Resistencia del Cambio",
-                    "Generar Trabajo Colaborativo"
+                    "Visión, misión y valores",
+                    "Gobierno corporativo",
+                    "Ética y transparencia",
+                    "Planificación estratégica de RSE",
+                    "Creación de valor corporativo"
                   ]
                 },
                 {
                   modulo: "Módulo 3",
-                  titulo: "Reconocimiento, Autonomía y Retos Profesionales",
+                  titulo: "Proceso de Elaboración de Reportes",
+                  icon: <FiBookOpen className="text-red-800" />,
                   temas: [
-                    "De la administración del personal a la gestión de personas",
-                    "Introducción a la gestión estratégica de personas",
-                    "Alineamiento de las personas a la estrategia de la organización",
-                    "Clima laboral como sustento"
+                    "Indicadores de medición",
+                    "Proceso de verificación RSC",
+                    "Reportes de sostenibilidad",
+                    "Mejora continua"
                   ]
                 },
                 {
                   modulo: "Módulo 4",
-                  titulo: "El Análisis de Puestos de Trabajo y la Identificación del Perfil Competencial del Candidato",
+                  titulo: "Gestión de Derechos Humanos",
+                  icon: <FiUsers className="text-red-800" />,
                   temas: [
-                    "Perfil de competencia en el puesto de trabajo",
-                    "Selección de personal",
-                    "Proceso de Selección",
-                    "Análisis y definición de puesto de trabajo"
+                    "Contexto global de DDHH",
+                    "Evaluación y mapeo",
+                    "Salud y seguridad laboral",
+                    "Relación con stakeholders",
+                    "Políticas de DDHH"
                   ]
                 },
                 {
                   modulo: "Módulo 5",
-                  titulo: "Negociación y Manejo de Conflictos",
+                  titulo: "Emprendimiento e Innovación Social",
+                  icon: <FiTrendingUp className="text-red-800" />,
                   temas: [
-                    "Definición de conflicto y Negociación",
-                    "Análisis del conflicto",
-                    "Clases de conflicto",
-                    "Métodos y formas de enfrentar el conflicto"
+                    "Herramientas para emprender",
+                    "Modelos inclusivos",
+                    "Alianzas público-privadas",
+                    "Voluntariado corporativo"
                   ]
                 },
                 {
                   modulo: "Módulo 6",
-                  titulo: "Nuevos Esquemas de Trabajo y sus Beneficios, Habilidades Personales y Liderazgo",
+                  titulo: "Implementación Estratégica de RSE",
+                  icon: <FiShare2 className="text-red-800" />,
                   temas: [
-                    "¿Qué es el Liderazgo?",
-                    "Desarrollo de habilidades y Capacidades",
-                    "Trabajo en equipo",
-                    "Habilidades Gerenciales"
+                    "Normativa ISO 26000",
+                    "Sistemas de gestión ética",
+                    "Implementación en la estructura organizativa",
+                    "Casos de estudio"
                   ]
                 },
                 {
                   modulo: "Módulo 7",
-                  titulo: "Diagnóstico Organizacional e Innovación en Gestión de Cambio, Clima Laboral",
+                  titulo: "Medición y Reportes de Sostenibilidad",
+                  icon: <FiBookOpen className="text-red-800" />,
                   temas: [
-                    "Concepto",
-                    "Herramientas de Análisis estratégicos",
-                    "Métodos y Análisis estratégicos",
-                    "Análisis del Macro y Micro entorno"
+                    "Indicadores de gestión",
+                    "Proceso de verificación",
+                    "Reportes integrados",
+                    "Mejora continua"
                   ]
                 },
                 {
                   modulo: "Módulo 8",
-                  titulo: "Ética y Moral",
+                  titulo: "Marketing y Comunicación Responsable",
+                  icon: <FiTrendingUp className="text-red-800" />,
                   temas: [
-                    "Ética y Moral",
-                    "El significado del ser",
-                    "Toma de decisiones éticas",
-                    "Acerca de la ética y la felicidad"
+                    "Reputación corporativa",
+                    "Marketing digital y redes sociales",
+                    "Herramientas de diálogo",
+                    "Transparencia comunicacional",
+                    "Investigación responsable"
                   ]
                 }
               ].map((modulo, index) => (
@@ -271,7 +281,10 @@ export default function PageRecursosHumanos() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
-                  <div className="bg-red-800 text-white px-6 py-3">
+                  <div className="bg-red-800 text-white px-6 py-3 flex items-center">
+                    <div className="mr-3">
+                      {modulo.icon}
+                    </div>
                     <h3 className="font-bold">{modulo.modulo}: {modulo.titulo}</h3>
                   </div>
                   <div className="p-6">
@@ -301,7 +314,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            ¿Listo para especializarte en Recursos Humanos?
+            ¿Listo para transformar el marketing con responsabilidad social?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -310,7 +323,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="text-xl mb-8 max-w-2xl mx-auto"
           >
-            Inscríbete ahora y potencia tu carrera profesional
+            Desarrolla estrategias digitales con impacto positivo
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}

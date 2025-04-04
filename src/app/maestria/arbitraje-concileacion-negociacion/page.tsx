@@ -1,13 +1,13 @@
 "use client"
 import { motion } from 'framer-motion'
 import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen } from 'react-icons/fi'
-import { FaRobot, FaBlockchan, FaDigitalTachograph, FaLaptopCode } from 'react-icons/fa'
+import { FaBalanceScale, FaHandshake, FaGavel } from 'react-icons/fa'
 
-export default function PageDerechoDigital() {
+export default function PageResolucionConflictos() {
   return (
     <div className="bg-gray-50">
-      {/* Hero Section con temática tecnológica */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-r from-blue-900 to-blue-600 text-white overflow-hidden">
+      {/* Hero Section with Justice Theme */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-r from-amber-800 to-amber-600 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-black"></div>
         </div>
@@ -16,79 +16,72 @@ export default function PageDerechoDigital() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold mb-6 flex flex-col items-center"
           >
-            <span className="flex items-center justify-center gap-3">
-              <FaLaptopCode className="text-blue-300" />
-              Diplomado en Derecho Procesal Electrónico Legaltech Judicial
-              <FaRobot className="text-blue-300" />
+            <span className="flex items-center gap-3">
+              <FaBalanceScale className="text-amber-200" />
+              Diplomado en Arbitraje, Conciliación y Negociación
+              <FaHandshake className="text-amber-200" />
             </span>
+            <span className="text-xl md:text-2xl mt-4 font-normal">Formación en métodos alternativos de resolución de conflictos</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl max-w-3xl mx-auto"
-          >
-            Especialización en tecnologías aplicadas al sistema judicial y práctica legal digital
-          </motion.p>
         </div>
       </section>
 
-      {/* Basic Info con íconos tecnológicos */}
+      {/* Basic Info */}
       <section className="py-12 container mx-auto px-4">
-        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-blue-100">
+        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-amber-100">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-800"
+              className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-700"
             >
               <div className="flex items-center">
-                <FiCalendar className="text-blue-800 text-2xl mr-3" />
+                <FiCalendar className="text-amber-800 text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inscripción hasta</p>
-                  <p className="font-bold text-blue-900">2022-04-25</p>
+                  <p className="font-bold text-amber-900">2021-06-26</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-800"
+              className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-700"
             >
               <div className="flex items-center">
-                <FiClock className="text-blue-800 text-2xl mr-3" />
+                <FiClock className="text-amber-800 text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Duración</p>
-                  <p className="font-bold text-blue-900">8 Semanas</p>
+                  <p className="font-bold text-amber-900">7 Semanas</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-800"
+              className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-700"
             >
               <div className="flex items-center">
-                <FiAward className="text-blue-800 text-2xl mr-3" />
+                <FiAward className="text-amber-800 text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Modalidad</p>
-                  <p className="font-bold text-blue-900">VIRTUAL</p>
-                  <p className="text-xs text-blue-700">DIPLOMADO</p>
+                  <p className="font-bold text-amber-900">VIRTUAL</p>
+                  <p className="text-xs text-amber-700">DIPLOMADO</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-800"
+              className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-700"
             >
               <div className="flex items-center">
-                <FiDollarSign className="text-blue-800 text-2xl mr-3" />
+                <FiDollarSign className="text-amber-800 text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inversión</p>
-                  <p className="font-bold text-blue-900">3 Cuotas de Bs. 800</p>
-                  <p className="text-xs text-blue-700">Contado: Bs. 2100</p>
+                  <p className="font-bold text-amber-900">3 Cuotas de Bs. 800</p>
+                  <p className="text-xs text-amber-700">Contado: Bs. 2100</p>
                 </div>
               </div>
             </motion.div>
@@ -106,13 +99,13 @@ export default function PageDerechoDigital() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-blue-900 mb-6 flex items-center gap-2">
-              <FaDigitalTachograph className="text-blue-700" />
+            <h2 className="text-3xl font-bold text-amber-900 mb-6 flex items-center gap-2">
+              <FaHandshake className="text-amber-700" />
               Descripción del Programa
             </h2>
             <div className="prose max-w-none">
               <p className="text-gray-700 mb-6 text-lg">
-                Programa innovador que integra el conocimiento jurídico con las últimas tecnologías aplicadas al derecho, preparando profesionales para la justicia digital del siglo XXI.
+                Programa especializado que brinda herramientas teóricas y prácticas en métodos alternativos de resolución de conflictos, formando profesionales capaces de mediar en disputas legales y comerciales.
               </p>
             </div>
           </motion.div>
@@ -129,10 +122,10 @@ export default function PageDerechoDigital() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Objetivo del Programa</h2>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-800">
+            <h2 className="text-3xl font-bold text-amber-900 mb-6">Objetivo del Programa</h2>
+            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-700">
               <p className="text-gray-700">
-                Formar profesionales capaces de comprender y utilizar eficientemente las tecnologías aplicadas al ámbito legal, preparándolos para enfrentar los retos y aprovechar las oportunidades que ofrece la digitalización en el sistema judicial.
+                Desarrollar conocimientos legales y habilidades técnicas que permitan al alumno aplicar de manera eficaz los criterios de Arbitraje, Conciliación y Negociación.
               </p>
             </div>
           </motion.div>
@@ -149,7 +142,7 @@ export default function PageDerechoDigital() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Criterios de Admisión</h2>
+            <h2 className="text-3xl font-bold text-amber-900 mb-6">Criterios de Admisión</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 "Fotocopia simple de la Cédula de Identidad",
@@ -164,9 +157,9 @@ export default function PageDerechoDigital() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start bg-blue-50 p-4 rounded-lg border border-blue-100"
+                  className="flex items-start bg-amber-50 p-4 rounded-lg border border-amber-100"
                 >
-                  <FiUserCheck className="text-blue-800 mt-1 mr-3 flex-shrink-0" />
+                  <FiUserCheck className="text-amber-800 mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-700">{item}</p>
                 </motion.div>
               ))}
@@ -175,7 +168,7 @@ export default function PageDerechoDigital() {
         </div>
       </section>
 
-      {/* Curriculum con temática tecnológica */}
+      {/* Curriculum with Justice Theme */}
       <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
@@ -185,78 +178,102 @@ export default function PageDerechoDigital() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Estructura Curricular</h2>
+            <h2 className="text-3xl font-bold text-amber-900 mb-6">Estructura Curricular</h2>
             
             <div className="space-y-4">
               {[
                 {
                   modulo: "Módulo 1",
-                  titulo: "Transformación del Derecho el Legaltech (Bolivia)",
-                  icon: <FaRobot className="mr-2 text-blue-700" />,
+                  titulo: "Análisis y Desarrollo del Conflicto",
+                  icon: <FaBalanceScale className="mr-2 text-amber-700" />,
                   temas: [
-                    "Introducción al nuevo ámbito doctrinal del derecho Boliviano dentro de la transformación de la justicia digital modernizada",
-                    "El abogado Legaltech que tiene mayor eficiencia con ayuda de los medios de interoperabilidad",
-                    "Sistematización y la implantación dentro de Bolivia"
+                    "Definición de conflicto",
+                    "Análisis del conflicto",
+                    "Clases de conflictos",
+                    "Visión del Conflicto (positiva y negativa)",
+                    "Características del conflicto",
+                    "Formas y métodos de enfrentar el conflicto",
+                    "Dinámica del Conflicto"
                   ]
                 },
                 {
                   modulo: "Módulo 2",
-                  titulo: "Digitalización en Derechos Reales",
-                  icon: <FaLaptopCode className="mr-2 text-blue-700" />,
+                  titulo: "Mecanismos de solución de Controversias - LEY 708",
+                  icon: <FaGavel className="mr-2 text-amber-700" />,
                   temas: [
-                    "Sistema de Emisión de Fichas Virtuales",
-                    "Obtención de la Certificación Nacional de No Propiedad Automática en DDRR",
-                    "Implementación en plataformas de DDRR a nivel nacional"
+                    "Definición y características",
+                    "Garantizar la seguridad jurídica",
+                    "Confidencialidad",
+                    "Comportamiento de compra y venta",
+                    "Solución extrajudicial",
+                    "Protección de inversiones"
                   ]
                 },
                 {
                   modulo: "Módulo 3",
-                  titulo: "Blockchain y Fintech en el Derecho Digital Bancario",
-                  icon: <FaBlockchain className="mr-2 text-blue-700" />,
+                  titulo: "Negociación",
+                  icon: <FaHandshake className="mr-2 text-amber-700" />,
                   temas: [
-                    "Blockchain jurídico y su evolución",
-                    "Vinculación con bitcoin y criptomonedas",
-                    "Aplicaciones tecnológicas en el ámbito jurídico"
+                    "Definición y características",
+                    "Coincidencias y discrepancias",
+                    "Los siete elementos de la negociación según principios desarrollados por R. FISCHER",
+                    "Técnicas y habilidades de negociación"
                   ]
                 },
                 {
                   modulo: "Módulo 4",
-                  titulo: "Investigación Policial Criminal Digital Renovado",
-                  icon: <FaDigitalTachograph className="mr-2 text-blue-700" />,
+                  titulo: "Aspectos Fundamentales de la Conciliación",
+                  icon: <FaHandshake className="mr-2 text-amber-700" />,
                   temas: [
-                    "Diagnóstico sobre ciberdelincuencia en Bolivia",
-                    "Estudio exploratorio sobre delitos informáticos",
-                    "Recomendaciones para la reforma al sistema de justicia",
-                    "Interoperabilidad policial en el ámbito digital"
+                    "Definición y características",
+                    "Condiciones para la conciliación",
+                    "Clases de conciliación",
+                    "Naturaleza jurídica",
+                    "Régimen legal de la conciliación en Bolivia",
+                    "Intervención del estado en conciliación"
                   ]
                 },
                 {
                   modulo: "Módulo 5",
-                  titulo: "Cuaderno de Investigación. Digitalizar desde el Inicio de la Denuncia",
-                  icon: <FaLaptopCode className="mr-2 text-blue-700" />,
+                  titulo: "Aspectos de la Conciliación Judicial",
+                  icon: <FaBalanceScale className="mr-2 text-amber-700" />,
                   temas: [
-                    "Nuevas formas de presentar pruebas conforme a la reforma judicial",
-                    "Sistematización en el ámbito de la digitalización",
-                    "El papel en la era digital judicial penal"
+                    "Conocimientos generales de ética profesional",
+                    "Neutralidad vs. De-Neutralidad",
+                    "Competencia para conductas de tercer neutral y Autodeterminación de las partes",
+                    "Pautas para conductas neutrales",
+                    "Sistema de sanciones para terceros neutrales conciliadores",
+                    "Conciliación Civil",
+                    "Conciliación Penal"
                   ]
                 },
                 {
                   modulo: "Módulo 6",
-                  titulo: "Justicia Digital en el Órgano Judicial",
-                  icon: <FaRobot className="mr-2 text-blue-700" />,
+                  titulo: "Arbitraje",
+                  icon: <FaGavel className="mr-2 text-amber-700" />,
                   temas: [
-                    "Implementación de tecnología en el ámbito judicial",
-                    "Normatividad específica para tecnología aplicada al trámite judicial"
+                    "Definición y características",
+                    "Principios",
+                    "Clases de arbitraje",
+                    "Procedimiento arbitral en Bolivia",
+                    "Origen del procedimiento arbitral",
+                    "Reglamentos aplicables",
+                    "Etapas de un proceso arbitral",
+                    "Valor del laudo arbitral",
+                    "Competencia y auxilio judicial"
                   ]
                 },
                 {
                   modulo: "Módulo 7",
-                  titulo: "Digitalización en Derecho Notarial",
-                  icon: <FaDigitalTachograph className="mr-2 text-blue-700" />,
+                  titulo: "Arbitraje Comercial Internacional",
+                  icon: <FaBalanceScale className="mr-2 text-amber-700" />,
                   temas: [
-                    "Sistema informático del notariado",
-                    "Acceso seguro a documentos notariales",
-                    "Transparencia en el trabajo notarial digital"
+                    "Arbitraje comercial internacional",
+                    "El arbitraje de inversiones",
+                    "Fuentes de arbitraje internacional y de las inversiones",
+                    "El convenio de arbitraje internacional",
+                    "Jurisdicción en los arbitrajes de inversiones",
+                    "Los árbitros y el tribunal arbitral"
                   ]
                 }
               ].map((modulo, index) => (
@@ -266,9 +283,9 @@ export default function PageDerechoDigital() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-md overflow-hidden border border-blue-100"
+                  className="bg-white rounded-lg shadow-md overflow-hidden border border-amber-100"
                 >
-                  <div className="bg-blue-900 text-white px-6 py-3 flex items-center">
+                  <div className="bg-amber-800 text-white px-6 py-3 flex items-center">
                     {modulo.icon}
                     <h3 className="font-bold">{modulo.modulo}: {modulo.titulo}</h3>
                   </div>
@@ -276,7 +293,7 @@ export default function PageDerechoDigital() {
                     <ul className="space-y-2">
                       {modulo.temas.map((tema, i) => (
                         <li key={i} className="flex items-start">
-                          <FiBookOpen className="text-blue-700 mr-2 mt-1 flex-shrink-0" />
+                          <FiBookOpen className="text-amber-700 mr-2 mt-1 flex-shrink-0" />
                           <span className="text-gray-700">{tema}</span>
                         </li>
                       ))}
@@ -289,8 +306,8 @@ export default function PageDerechoDigital() {
         </div>
       </section>
 
-      {/* CTA Section con temática tecnológica */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+      {/* CTA Section with Justice Theme */}
+      <section className="py-20 bg-gradient-to-r from-amber-800 to-amber-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -300,9 +317,9 @@ export default function PageDerechoDigital() {
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             <span className="flex items-center justify-center gap-3">
-              <FaLaptopCode />
-              ¿Listo para transformar tu práctica legal con tecnología?
-              <FaRobot />
+              <FaHandshake />
+              ¿Listo para convertirte en experto en resolución de conflictos?
+              <FaBalanceScale />
             </span>
           </motion.h2>
           <motion.p
@@ -312,7 +329,7 @@ export default function PageDerechoDigital() {
             viewport={{ once: true }}
             className="text-xl mb-8 max-w-2xl mx-auto"
           >
-            Domina las herramientas digitales que están revolucionando el sistema judicial
+            Domina las técnicas de arbitraje, conciliación y negociación profesional
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -320,8 +337,8 @@ export default function PageDerechoDigital() {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <button className="bg-white text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors text-lg shadow-xl flex items-center mx-auto gap-2">
-              <FaLaptopCode />
+            <button className="bg-white text-amber-900 px-10 py-4 rounded-full font-bold hover:bg-amber-50 transition-colors text-lg shadow-xl flex items-center mx-auto gap-2">
+              <FaHandshake />
               ¡Inscríbete Ahora!
             </button>
           </motion.div>

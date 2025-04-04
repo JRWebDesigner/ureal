@@ -2,11 +2,11 @@
 import { motion } from 'framer-motion'
 import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen } from 'react-icons/fi'
 
-export default function PageRecursosHumanos() {
+export default function PageEducacionSuperior() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-r from-red-800 to-yellow-800 text-white overflow-hidden">
+      <section className="relative py-20 md:py-28 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-black"></div>
         </div>
@@ -17,7 +17,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Diplomado en Recursos Humanos y Salario Emocional
+            Diplomado en Educación Superior
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl max-w-3xl mx-auto"
           >
-            Fortalece tus conocimientos para gestionar el capital humano con enfoque estratégico
+            Formación docente para la excelencia en la enseñanza universitaria
           </motion.p>
         </div>
       </section>
@@ -36,52 +36,55 @@ export default function PageRecursosHumanos() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-800"
             >
               <div className="flex items-center">
-                <FiCalendar className="text-red-800 text-2xl mr-3" />
+                <FiCalendar className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inscripción hasta</p>
-                  <p className="font-bold text-red-800">2024-06-26</p>
+                  <p className="font-bold text-black">2022-04-25</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-800"
             >
               <div className="flex items-center">
-                <FiClock className="text-red-800 text-2xl mr-3" />
+                <FiClock className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Duración</p>
-                  <p className="font-bold text-red-800">8 Semanas</p>
+                  <p className="font-bold text-black">8 Semanas</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-800"
             >
               <div className="flex items-center">
-                <FiAward className="text-red-800 text-2xl mr-3" />
+                <FiAward className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Modalidad</p>
-                  <p className="font-bold text-red-800">VIRTUAL</p>
+                  <p className="font-bold text-black">VIRTUAL</p>
+                  <p className="text-xs text-gray-500">DIPLOMADO</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-800"
             >
               <div className="flex items-center">
-                <FiDollarSign className="text-red-800 text-2xl mr-3" />
+                <FiDollarSign className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inversión</p>
-                  <p className="font-bold text-red-800">3 Cuotas de Bs. 800</p>
+                  <p className="font-bold text-black">3 Cuotas de Bs. 800</p>
+                  <p className="text-xs text-gray-500">Contado: Bs. 2100</p>
+                  <p className="text-xs text-gray-500">Descuentos Corporativos</p>
                 </div>
               </div>
             </motion.div>
@@ -99,10 +102,10 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Descripción del Programa</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Descripción del Programa</h2>
             <div className="prose max-w-none">
               <p className="text-gray-700 mb-6 text-lg">
-                El Diplomado en Recursos Humanos y Salario Emocional busca fortalecer los conocimientos de los profesionales para resolver los problemas que cotidianamente se les presentan en RRHH y Salario Emocional, buscando que los participantes empleen las normativas correspondientes de una manera eficaz y oportuna.
+                Programa especializado que desarrolla competencias pedagógicas y de gestión para la docencia universitaria, con enfoque en entornos virtuales y educación por competencias.
               </p>
             </div>
           </motion.div>
@@ -119,10 +122,10 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Objetivo del Programa</h2>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-800">
+            <h2 className="text-3xl font-bold text-black mb-6">Objetivo del Programa</h2>
+            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-800">
               <p className="text-gray-700">
-                Conocer y desarrollar la legislación tributaria vigente, con énfasis en los principales cuerpos normativos que regulan esta materia, manejando conceptos jurídicos y contables que se utilizarán como herramientas para la aplicación e interpretación de esta normativa específica en materia tributaria y aduanera, con el fin de desarrollar habilidades para evaluar, analizar y aplicar las estrategias y soluciones tributarias y aduaneras que requieran instituciones y clientes.
+                El objetivo del Diplomado en Educación Superior es capacitar a profesionales para desempeñarse eficazmente en roles docentes y de gestión en instituciones de educación superior, desarrollando competencias pedagógicas, didácticas y de liderazgo.
               </p>
             </div>
           </motion.div>
@@ -139,7 +142,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Criterios de Admisión</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Criterios de Admisión</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 "Fotocopia simple de la Cédula de Identidad",
@@ -154,9 +157,9 @@ export default function PageRecursosHumanos() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start bg-red-50 p-4 rounded-lg"
+                  className="flex items-start bg-purple-50 p-4 rounded-lg"
                 >
-                  <FiUserCheck className="text-red-800 mt-1 mr-3 flex-shrink-0" />
+                  <FiUserCheck className="text-black mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-700">{item}</p>
                 </motion.div>
               ))}
@@ -175,91 +178,65 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Estructura Curricular</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Estructura Curricular</h2>
             
             <div className="space-y-4">
               {[
                 {
                   modulo: "Módulo 1",
-                  titulo: "Análisis Estratégico, Capacitación, Tutoría, Mentoring y Gestión de Talento",
+                  titulo: "Competencia Docente en Ambientes del Aprendizaje Virtual",
                   temas: [
-                    "Teoría Organizacional",
-                    "Prepararse para el Cambio",
-                    "Modelos para el Cambio",
-                    "Habilidades para Tener y Mantener Talentos Claves",
-                    "Sistema Comunicacional",
-                    "Programa Mentoring"
+                    "Competencias Básicas para antes del inicio del Curso",
+                    "Competencias Docentes para el Desarrollo del curso",
+                    "Competencias Sociales",
+                    "Competencias para la Función Docente en la Institución"
                   ]
                 },
                 {
                   modulo: "Módulo 2",
-                  titulo: "Coaching",
+                  titulo: "Planeación Educativa del Docente Presencial al Docente Virtual",
                   temas: [
-                    "Saber Escuchar",
-                    "Saber Tender Puentes Emocionales",
-                    "Administración del Cambio",
-                    "Cómo superar la Resistencia del Cambio",
-                    "Generar Trabajo Colaborativo"
+                    "Implicaciones de la distribución normal como criterio de evaluación",
+                    "Diseño de procedimiento de medición que proporcionen información evaluativa",
+                    "Pauta para evaluar los aprendizajes propuestos y cómo pueden variar según se aplica uno u otro criterio de evaluación en un programa de curso o asignatura",
+                    "Plan de Estudios",
+                    "Programa de la Asignatura - Secuencias Didácticas",
+                    "Competencias Genéricas - Específicas",
+                    "Estrategias Didácticas",
+                    "Evaluación"
                   ]
                 },
                 {
                   modulo: "Módulo 3",
-                  titulo: "Reconocimiento, Autonomía y Retos Profesionales",
+                  titulo: "Didácticas Educativas en Aprendizaje Virtual",
                   temas: [
-                    "De la administración del personal a la gestión de personas",
-                    "Introducción a la gestión estratégica de personas",
-                    "Alineamiento de las personas a la estrategia de la organización",
-                    "Clima laboral como sustento"
+                    "Teoría Didáctica",
+                    "Proceso de la Didáctica",
+                    "Técnicas de Enseñanza",
+                    "La comunicación",
+                    "La afectividad"
                   ]
                 },
                 {
                   modulo: "Módulo 4",
-                  titulo: "El Análisis de Puestos de Trabajo y la Identificación del Perfil Competencial del Candidato",
+                  titulo: "Evaluación por Competencias en Aulas Virtuales",
                   temas: [
-                    "Perfil de competencia en el puesto de trabajo",
-                    "Selección de personal",
-                    "Proceso de Selección",
-                    "Análisis y definición de puesto de trabajo"
+                    "La competencia en el trabajo. Pauta de evaluación de Competencias de trabajo (un modelo)",
+                    "Formulación de Competencias con sus estándares de desempeño",
+                    "Producción de objetivos o aprendizajes esperados que expresen las capacidades que poseerá el estudiante con la intervención educacional",
+                    "Situaciones de desempeño o tareas claves que permitan determinar el grado de dominio del objetivo o de los aprendizajes esperados",
+                    "Componentes de los estándares de desempeño. Condiciones de realización de las áreas claves y sus relaciones con los datos, hechos y conceptos"
                   ]
                 },
                 {
                   modulo: "Módulo 5",
-                  titulo: "Negociación y Manejo de Conflictos",
+                  titulo: "Educación Transversal Universitaria",
                   temas: [
-                    "Definición de conflicto y Negociación",
-                    "Análisis del conflicto",
-                    "Clases de conflicto",
-                    "Métodos y formas de enfrentar el conflicto"
-                  ]
-                },
-                {
-                  modulo: "Módulo 6",
-                  titulo: "Nuevos Esquemas de Trabajo y sus Beneficios, Habilidades Personales y Liderazgo",
-                  temas: [
-                    "¿Qué es el Liderazgo?",
-                    "Desarrollo de habilidades y Capacidades",
-                    "Trabajo en equipo",
-                    "Habilidades Gerenciales"
-                  ]
-                },
-                {
-                  modulo: "Módulo 7",
-                  titulo: "Diagnóstico Organizacional e Innovación en Gestión de Cambio, Clima Laboral",
-                  temas: [
-                    "Concepto",
-                    "Herramientas de Análisis estratégicos",
-                    "Métodos y Análisis estratégicos",
-                    "Análisis del Macro y Micro entorno"
-                  ]
-                },
-                {
-                  modulo: "Módulo 8",
-                  titulo: "Ética y Moral",
-                  temas: [
-                    "Ética y Moral",
-                    "El significado del ser",
-                    "Toma de decisiones éticas",
-                    "Acerca de la ética y la felicidad"
+                    "Valores y actitudes",
+                    "Ética moral y corrupción",
+                    "Educación sexual",
+                    "Alcoholismo y drogadicción",
+                    "Educación medio ambiental"
                   ]
                 }
               ].map((modulo, index) => (
@@ -271,14 +248,14 @@ export default function PageRecursosHumanos() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
-                  <div className="bg-red-800 text-white px-6 py-3">
+                  <div className="bg-black text-white px-6 py-3">
                     <h3 className="font-bold">{modulo.modulo}: {modulo.titulo}</h3>
                   </div>
                   <div className="p-6">
                     <ul className="grid md:grid-cols-2 gap-2">
                       {modulo.temas.map((tema, i) => (
                         <li key={i} className="flex items-start">
-                          <FiBookOpen className="text-red-800 mr-2 mt-1 flex-shrink-0" />
+                          <FiBookOpen className="text-black mr-2 mt-1 flex-shrink-0" />
                           <span className="text-gray-700">{tema}</span>
                         </li>
                       ))}
@@ -292,7 +269,7 @@ export default function PageRecursosHumanos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-800 to-yellow-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-800 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -301,7 +278,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            ¿Listo para especializarte en Recursos Humanos?
+            ¿Listo para transformar la educación superior?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -310,7 +287,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="text-xl mb-8 max-w-2xl mx-auto"
           >
-            Inscríbete ahora y potencia tu carrera profesional
+            Inscríbete ahora y conviértete en un docente universitario de excelencia
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -318,7 +295,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <button className="bg-white text-red-800 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors text-lg shadow-xl">
+            <button className="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors text-lg shadow-xl">
               ¡Inscríbete Ahora!
             </button>
           </motion.div>

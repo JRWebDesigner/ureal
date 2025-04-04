@@ -2,11 +2,11 @@
 import { motion } from 'framer-motion'
 import { FiCalendar, FiClock, FiDollarSign, FiAward, FiUserCheck, FiBookOpen } from 'react-icons/fi'
 
-export default function PageRecursosHumanos() {
+export default function PageDerechoEmpresarial() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-r from-red-800 to-yellow-800 text-white overflow-hidden">
+      <section className="relative py-20 md:py-28 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-black"></div>
         </div>
@@ -17,7 +17,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Diplomado en Recursos Humanos y Salario Emocional
+            Diplomado en Derecho Empresarial
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl max-w-3xl mx-auto"
           >
-            Fortalece tus conocimientos para gestionar el capital humano con enfoque estratégico
+            Especialización en normativa legal aplicada al mundo empresarial
           </motion.p>
         </div>
       </section>
@@ -36,52 +36,55 @@ export default function PageRecursosHumanos() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-800"
             >
               <div className="flex items-center">
-                <FiCalendar className="text-red-800 text-2xl mr-3" />
+                <FiCalendar className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inscripción hasta</p>
-                  <p className="font-bold text-red-800">2024-06-26</p>
+                  <p className="font-bold text-black">2021-06-26</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-800"
             >
               <div className="flex items-center">
-                <FiClock className="text-red-800 text-2xl mr-3" />
+                <FiClock className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Duración</p>
-                  <p className="font-bold text-red-800">8 Semanas</p>
+                  <p className="font-bold text-black">8 Semanas</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-800"
             >
               <div className="flex items-center">
-                <FiAward className="text-red-800 text-2xl mr-3" />
+                <FiAward className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Modalidad</p>
-                  <p className="font-bold text-red-800">VIRTUAL</p>
+                  <p className="font-bold text-black">VIRTUAL</p>
+                  <p className="text-xs text-gray-500">DIPLOMADO</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="bg-red-50 p-4 rounded-lg border-l-4 border-red-800"
+              className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-800"
             >
               <div className="flex items-center">
-                <FiDollarSign className="text-red-800 text-2xl mr-3" />
+                <FiDollarSign className="text-black text-2xl mr-3" />
                 <div>
                   <p className="text-sm text-gray-600">Inversión</p>
-                  <p className="font-bold text-red-800">3 Cuotas de Bs. 800</p>
+                  <p className="font-bold text-black">3 Cuotas de Bs. 800</p>
+                  <p className="text-xs text-gray-500">Contado: Bs. 2100</p>
+                  <p className="text-xs text-gray-500">Descuentos Corporativos</p>
                 </div>
               </div>
             </motion.div>
@@ -99,10 +102,10 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Descripción del Programa</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Descripción del Programa</h2>
             <div className="prose max-w-none">
               <p className="text-gray-700 mb-6 text-lg">
-                El Diplomado en Recursos Humanos y Salario Emocional busca fortalecer los conocimientos de los profesionales para resolver los problemas que cotidianamente se les presentan en RRHH y Salario Emocional, buscando que los participantes empleen las normativas correspondientes de una manera eficaz y oportuna.
+                Programa especializado que brinda conocimientos integrales sobre las diversas ramas del derecho aplicadas al ámbito empresarial, preparando profesionales para los desafíos legales del mundo corporativo.
               </p>
             </div>
           </motion.div>
@@ -119,10 +122,10 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Objetivo del Programa</h2>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-800">
+            <h2 className="text-3xl font-bold text-black mb-6">Objetivo del Programa</h2>
+            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-800">
               <p className="text-gray-700">
-                Conocer y desarrollar la legislación tributaria vigente, con énfasis en los principales cuerpos normativos que regulan esta materia, manejando conceptos jurídicos y contables que se utilizarán como herramientas para la aplicación e interpretación de esta normativa específica en materia tributaria y aduanera, con el fin de desarrollar habilidades para evaluar, analizar y aplicar las estrategias y soluciones tributarias y aduaneras que requieran instituciones y clientes.
+                Proporcionar las herramientas para atender procedimientos y requerimientos de la gestión del comercio exterior y Aduanas, para la identificación y correcta tipificación de la Normativa Legal, Procedimientos, Investigación de Mercados, Criterios Técnicos Y Operativos, comercio Electrónico y Elaboración de Documentos, tanto en actividades relacionadas a su fuente laboral como en emprendimientos personales, asumiendo una visión de internacionalización.
               </p>
             </div>
           </motion.div>
@@ -139,7 +142,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Criterios de Admisión</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Criterios de Admisión</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 "Fotocopia simple de la Cédula de Identidad",
@@ -154,9 +157,9 @@ export default function PageRecursosHumanos() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start bg-red-50 p-4 rounded-lg"
+                  className="flex items-start bg-indigo-50 p-4 rounded-lg"
                 >
-                  <FiUserCheck className="text-red-800 mt-1 mr-3 flex-shrink-0" />
+                  <FiUserCheck className="text-black mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-700">{item}</p>
                 </motion.div>
               ))}
@@ -175,91 +178,104 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-red-800 mb-6">Estructura Curricular</h2>
+            <h2 className="text-3xl font-bold text-black mb-6">Estructura Curricular</h2>
             
             <div className="space-y-4">
               {[
                 {
                   modulo: "Módulo 1",
-                  titulo: "Análisis Estratégico, Capacitación, Tutoría, Mentoring y Gestión de Talento",
+                  titulo: "Derecho Administrativo Empresarial",
                   temas: [
-                    "Teoría Organizacional",
-                    "Prepararse para el Cambio",
-                    "Modelos para el Cambio",
-                    "Habilidades para Tener y Mantener Talentos Claves",
-                    "Sistema Comunicacional",
-                    "Programa Mentoring"
+                    "Derecho Administrativo",
+                    "Administración Pública",
+                    "Administración Privada",
+                    "Promoción Económica y Actividad Empresarial del Estado",
+                    "Actos Administrativos",
+                    "Contratos Administrativos",
+                    "Objeto",
+                    "Puntos de Contacto y Diferencias",
+                    "Importancia de Ambas Administraciones",
+                    "Administración y Derecho",
+                    "Proceso Contencioso Administrativo"
                   ]
                 },
                 {
                   modulo: "Módulo 2",
-                  titulo: "Coaching",
+                  titulo: "Derecho Civil Patrimonial",
                   temas: [
-                    "Saber Escuchar",
-                    "Saber Tender Puentes Emocionales",
-                    "Administración del Cambio",
-                    "Cómo superar la Resistencia del Cambio",
-                    "Generar Trabajo Colaborativo"
+                    "Fundamentación",
+                    "Antecedentes Históricos Doctrinarios",
+                    "Evolución del Estado",
+                    "Principios del Estado Social de Derecho",
+                    "Fundamentos de la Transformación",
+                    "Aspectos Trascendentales en la Actualidad"
                   ]
                 },
                 {
                   modulo: "Módulo 3",
-                  titulo: "Reconocimiento, Autonomía y Retos Profesionales",
+                  titulo: "Derecho Laboral Empresarial",
                   temas: [
-                    "De la administración del personal a la gestión de personas",
-                    "Introducción a la gestión estratégica de personas",
-                    "Alineamiento de las personas a la estrategia de la organización",
-                    "Clima laboral como sustento"
+                    "Naturaleza Jurídica y Formas de Contratación Laboral",
+                    "Facultad Sancionadora del Empleador",
+                    "Formas de Extinción de la Relación Laboral",
+                    "Técnicas de Negociación Colectiva",
+                    "Procesos Administrativos y Judiciales Laborales"
                   ]
                 },
                 {
                   modulo: "Módulo 4",
-                  titulo: "El Análisis de Puestos de Trabajo y la Identificación del Perfil Competencial del Candidato",
+                  titulo: "Derecho Tributario Empresarial",
                   temas: [
-                    "Perfil de competencia en el puesto de trabajo",
-                    "Selección de personal",
-                    "Proceso de Selección",
-                    "Análisis y definición de puesto de trabajo"
+                    "Antecedentes Históricos",
+                    "Doctrina General de la Tributación",
+                    "Régimen Tributario de las Sociedades Comerciales",
+                    "Legislación Tributaria Aplicada",
+                    "Política Económica y Fiscal",
+                    "Delitos, Sanciones, Recursos y Procedimientos Tributarios"
                   ]
                 },
                 {
                   modulo: "Módulo 5",
-                  titulo: "Negociación y Manejo de Conflictos",
+                  titulo: "Resolución Alternativa de Conflictos",
                   temas: [
-                    "Definición de conflicto y Negociación",
-                    "Análisis del conflicto",
-                    "Clases de conflicto",
-                    "Métodos y formas de enfrentar el conflicto"
+                    "Teoría y Análisis del Conflicto",
+                    "Procesos de Resolución y Transformación del Conflicto",
+                    "Técnicas de Resolución de Conflictos: Negociación",
+                    "La Mediación: Técnicas y Estrategias de la Mediación. Ética del Mediador",
+                    "Habilidades para la Resolución y Transformación de Conflictos"
                   ]
                 },
                 {
                   modulo: "Módulo 6",
-                  titulo: "Nuevos Esquemas de Trabajo y sus Beneficios, Habilidades Personales y Liderazgo",
+                  titulo: "Derecho Económico Empresarial",
                   temas: [
-                    "¿Qué es el Liderazgo?",
-                    "Desarrollo de habilidades y Capacidades",
-                    "Trabajo en equipo",
-                    "Habilidades Gerenciales"
+                    "Análisis Económico del Derecho e Intervención del Estado en la Economía",
+                    "Derecho de la Competencia",
+                    "Regulación Bancaria",
+                    "Regulación de los Servidores Públicos",
+                    "Derecho Internacional de Inversiones"
                   ]
                 },
                 {
                   modulo: "Módulo 7",
-                  titulo: "Diagnóstico Organizacional e Innovación en Gestión de Cambio, Clima Laboral",
+                  titulo: "Derecho Procesal Civil Societario",
                   temas: [
-                    "Concepto",
-                    "Herramientas de Análisis estratégicos",
-                    "Métodos y Análisis estratégicos",
-                    "Análisis del Macro y Micro entorno"
+                    "Fundamentos Procesales Societarios",
+                    "Proceso Ordinario y Extraordinario",
+                    "Proceso de Ejecución y Monitorio",
+                    "Proceso Voluntario y Concursal",
+                    "Argumentación Legal y Técnicas de Litigación"
                   ]
                 },
                 {
                   modulo: "Módulo 8",
-                  titulo: "Ética y Moral",
+                  titulo: "Derecho Comercial Empresarial",
                   temas: [
-                    "Ética y Moral",
-                    "El significado del ser",
-                    "Toma de decisiones éticas",
-                    "Acerca de la ética y la felicidad"
+                    "Actos comerciales",
+                    "Sociedades Comerciales",
+                    "Fundempresa",
+                    "Títulos Valores",
+                    "Contratos Comerciales"
                   ]
                 }
               ].map((modulo, index) => (
@@ -271,14 +287,14 @@ export default function PageRecursosHumanos() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
-                  <div className="bg-red-800 text-white px-6 py-3">
+                  <div className="bg-black text-white px-6 py-3">
                     <h3 className="font-bold">{modulo.modulo}: {modulo.titulo}</h3>
                   </div>
                   <div className="p-6">
                     <ul className="grid md:grid-cols-2 gap-2">
                       {modulo.temas.map((tema, i) => (
                         <li key={i} className="flex items-start">
-                          <FiBookOpen className="text-red-800 mr-2 mt-1 flex-shrink-0" />
+                          <FiBookOpen className="text-black mr-2 mt-1 flex-shrink-0" />
                           <span className="text-gray-700">{tema}</span>
                         </li>
                       ))}
@@ -292,7 +308,7 @@ export default function PageRecursosHumanos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-800 to-yellow-800 text-white">
+      <section className="py-20 bg-blue-950 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -301,7 +317,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            ¿Listo para especializarte en Recursos Humanos?
+            ¿Listo para dominar el derecho empresarial?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -310,7 +326,7 @@ export default function PageRecursosHumanos() {
             viewport={{ once: true }}
             className="text-xl mb-8 max-w-2xl mx-auto"
           >
-            Inscríbete ahora y potencia tu carrera profesional
+            Inscríbete ahora y conviértete en un experto en normativa legal empresarial
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -318,7 +334,7 @@ export default function PageRecursosHumanos() {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <button className="bg-white text-red-800 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors text-lg shadow-xl">
+            <button className="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors text-lg shadow-xl">
               ¡Inscríbete Ahora!
             </button>
           </motion.div>
