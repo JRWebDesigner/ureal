@@ -56,7 +56,7 @@ export default function PageMisionVision() {
             {/* Visión */}
             <motion.div
               whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-yellow-700"
+                className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-yellow-700"
             >
               <h3 className="text-2xl font-bold text-red-700 mb-4 flex items-center">
                 <span className="bg-red-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">V</span>
