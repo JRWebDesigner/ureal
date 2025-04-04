@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function PageMaestria() {
-  const  = [
+  const diplomados = [
     {
       nombre: "Recursos Humanos y Salario Emocional",
       slug: "recursos-humanos-salario-emocional",
@@ -144,7 +144,7 @@ export default function PageMaestria() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {.map((diplomado, index) => (
+            {diplomados.map((diplomado, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
