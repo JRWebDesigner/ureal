@@ -24,17 +24,17 @@ export default function Header() {
       name: "Formación", 
       href: "#",
       submenu: [
-        { name: "Pregrado", href: "/pregrado" },
-        { name: "Postgrado", href: "/postgrado" },
-        { name: "Maestría", href: "/maestria" }
+        { name: "Pregrado", href: "/formacion/pregrado" },
+        { name: "Postgrado", href: "/formacion/postgrado" },
+        { name: "Maestría", href: "/formacion/maestria" }
       ]
     },
     { name: "Conócenos", href: "#",
       submenu:[
-        { name: "Mision y Vision", href: "/mision-vision" },
-        { name: "Plan al Contado", href: "/plan-al-contado" },
-        { name: "Descuentos", href: "/descuentos" },
-        { name: "Becas", href: "/becas"}
+        { name: "Mision y Vision", href: "/conocenos/mision-vision" },
+        { name: "Plan al Contado", href: "/conocenos/plan-al-contado" },
+        { name: "Descuentos", href: "/conocenos/descuentos" },
+        { name: "Becas", href: "/conocenos/becas"}
       ]
     },
     { name: "Contáctanos", href: "/contactanos" },
