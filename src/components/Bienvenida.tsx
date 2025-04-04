@@ -9,7 +9,7 @@ export default function Bienvenida(){
          <p className="text-lg md:text-xl text-center mb-3">Somos una institución de educación superior enfocada en formar líderes empresariales con una visión global e innovadora. Con un enfoque práctico y una sólida red de alianzas comerciales, brindamos a nuestros estudiantes una 
         educación de excelencia alineada con las necesidades del mercado.</p>
         </motion.div>
-        <motion.img initial={{opacity: 0}} whileInView={{opacity:1}} transition={{duration: 0.9}}  className="rounded-full w-[300px] h-[300px] md:w-[500px] md:h-[500px] object-cover" src="/Images/bienvenido.jpg"  alt="bienvenida"/>
+        <motion.img initial={{opacity: 0}} whileInView={{opacity:1}} transition={{duration: 0.9}}  className="rounded-full w-[360px] h-[360px] md:w-[500px] md:h-[500px] object-cover" src="/Images/bienvenido.jpg"  alt="bienvenida"/>
     </section>    
   )
 }
