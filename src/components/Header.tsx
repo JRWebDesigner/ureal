@@ -24,9 +24,9 @@ export default function Header() {
       name: "Formación", 
       href: "#",
       submenu: [
-        { name: "Pregrado", href: "/formacion/pregrado" },
-        { name: "Postgrado", href: "/formacion/postgrado" },
-        { name: "Maestría", href: "/formacion/maestria" }
+        { name: "Pregrado", href: "/pregrado" },
+        { name: "Postgrado", href: "/postgrado" },
+        { name: "Maestría", href: "/maestria" }
       ]
     },
     { name: "Conócenos", href: "#",
