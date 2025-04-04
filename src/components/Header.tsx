@@ -9,7 +9,7 @@ import { FaBars, FaTimes, FaPhoneAlt, FaChevronDown, FaChevronUp } from 'react-i
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -42,10 +42,11 @@ export default function Header() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setOpenSubmenu(null); // Cerrar todos los submenús al cambiar de ruta
   }, [pathname]);
 
-  const toggleSubmenu = () => {
-    setSubmenuOpen(!submenuOpen);
+  const toggleSubmenu = (menuName: string) => {
+    setOpenSubmenu(openSubmenu === menuName ? null : menuName);
   };
 
   return (
@@ -63,7 +64,7 @@ export default function Header() {
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.1 }}>
               <Link href="/">
-                <img width={130} src="/Images/logo.png" alt="logo" className="h-12 w-auto" />
+                <img width={70} src="/Images/logo.png" alt="logo" className="h-12 w-auto" />
               </Link>
             </motion.div>
 
@@ -71,25 +72,25 @@ export default function Header() {
             <ul className="hidden md:flex gap-6 text-white items-center">
               {links.map((link) => (
                 <motion.li
-                  key={link.href}
+                  key={link.name}
                   className="relative"
-                  onMouseEnter={() => link.submenu && setSubmenuOpen(true)}
-                  onMouseLeave={() => link.submenu && setSubmenuOpen(false)}
+                  onMouseEnter={() => link.submenu && setOpenSubmenu(link.name)}
+                  onMouseLeave={() => link.submenu && setOpenSubmenu(null)}
                 >
                   {link.submenu ? (
                     <>
                       <button
-                        onClick={toggleSubmenu}
+                        onClick={() => toggleSubmenu(link.name)}
                         className={`flex items-center gap-1 px-2 py-1 ${
                           pathname === link.href ? "font-bold" : ""
                         }`}
                       >
                         {link.name}
-                        {submenuOpen ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
+                        {openSubmenu === link.name ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
                       </button>
                       
                       <AnimatePresence>
-                        {submenuOpen && (
+                        {openSubmenu === link.name && (
                           <motion.ul
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -165,7 +166,7 @@ export default function Header() {
                 <ul className="flex flex-col gap-1 py-4 text-white">
                   {links.map((link) => (
                     <motion.li
-                      key={link.href}
+                      key={link.name}
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.3 }}
@@ -173,17 +174,17 @@ export default function Header() {
                       {link.submenu ? (
                         <div className="flex flex-col">
                           <button
-                            onClick={toggleSubmenu}
+                            onClick={() => toggleSubmenu(link.name)}
                             className={`flex justify-between items-center px-4 py-3 text-lg ${
                               pathname === link.href ? "font-bold bg-red-700 rounded" : ""
                             }`}
                           >
                             {link.name}
-                            {submenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+                            {openSubmenu === link.name ? <FaChevronUp /> : <FaChevronDown />}
                           </button>
                           
                           <AnimatePresence>
-                            {submenuOpen && (
+                            {openSubmenu === link.name && (
                               <motion.ul
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
