@@ -18,7 +18,7 @@ const PostgradoSection = () => {
             Programas de Postgrado
           </h2>
           <p className="text-xl italic font-medium text-gray-700 mb-6">
-            "Impulsa tu carrera al siguiente nivel con formación especializada y visión global."
+            &#39 Impulsa tu carrera al siguiente nivel con formación especializada y visión global. &#39
           </p>
           <p className="text-lg leading-relaxed text-gray-800">
             En UREAL, los programas de posgrado están diseñados para profesionales que buscan potenciar su perfil ejecutivo, adquirir conocimientos de vanguardia y ampliar su red de contactos. Nuestra propuesta académica combina teoría avanzada, práctica empresarial y una orientación estratégica que responde a las exigencias del mundo moderno.
