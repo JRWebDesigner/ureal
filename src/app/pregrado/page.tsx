@@ -179,3 +179,4 @@ export default function PagePregrado() {
       </section>
     </div>
   )
+}
