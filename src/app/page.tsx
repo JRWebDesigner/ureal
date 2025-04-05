@@ -1,3 +1,4 @@
+import Botones from '../components/Botones'
 import PregradoSeccion from '../components/PregradoSeccion'
 import PostgradoSeccion from '../components/PostgradoSeccion'
 import Container from '../components/Container';
@@ -19,6 +20,7 @@ export default function Home() {
       </Container>
       <Oportunidad />
       <Container>
+        <Botones />
         <Elegirnos /> 
         <CTA />
         <PostgradoSeccion />
