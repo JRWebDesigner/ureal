@@ -10,7 +10,7 @@ import {
 
 export default function Botones() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 w-full max-w-6xl">
         {/* Botón Sistema Ureal */}
         <motion.div
@@ -24,23 +24,23 @@ export default function Botones() {
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],
-              boxShadow: "0 0 20px rgba(22, 163, 74, 0.7)"
+              boxShadow: "0 0 20px rgba(74, 222, 128, 0.5)"
             }}
             whileTap={{ scale: 0.95 }}
             href="http://sistema.ureal.edu.bo/"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-green-600 hover:bg-green-700 text-white shadow-lg cursor-pointer relative overflow-hidden"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-emerald-500 hover:bg-emerald-400 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
-            <FaUserGraduate className="text-4xl md:text-5xl" />
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            <FaUserGraduate className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
             <motion.div 
               initial={{ scale: 0 }}
               whileHover={{ scale: 1.2 }}
-              className="absolute inset-0 border-4 border-white rounded-full opacity-0 hover:opacity-100 transition-all duration-300"
+              className="absolute inset-0 border-2 border-emerald-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-green-300 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-emerald-400 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -61,23 +61,23 @@ export default function Botones() {
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],
-              boxShadow: "0 0 20px rgba(161, 98, 7, 0.7)"
+              boxShadow: "0 0 20px rgba(250, 204, 21, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
             href="https://virtual.ureal.edu.bo/login/index.php"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-yellow-600 hover:bg-yellow-700 text-white shadow-lg cursor-pointer relative overflow-hidden"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-amber-400 hover:bg-amber-300 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
-            <FaLaptop className="text-4xl md:text-5xl" />
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            <FaLaptop className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
             <motion.div 
               initial={{ scale: 0 }}
               whileHover={{ scale: 1.2 }}
-              className="absolute inset-0 border-4 border-white rounded-full opacity-0 hover:opacity-100 transition-all duration-300"
+              className="absolute inset-0 border-2 border-amber-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-yellow-300 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-amber-400 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -98,23 +98,23 @@ export default function Botones() {
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],
-              boxShadow: "0 0 20px rgba(29, 78, 216, 0.7)"
+              boxShadow: "0 0 20px rgba(96, 165, 250, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
             href="https://ureal.edu.bo/landingbiblio.html"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-blue-600 hover:bg-blue-700 text-white shadow-lg cursor-pointer relative overflow-hidden"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-blue-400 hover:bg-blue-300 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
-            <FaBook className="text-4xl md:text-5xl" />
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            <FaBook className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
             <motion.div 
               initial={{ scale: 0 }}
               whileHover={{ scale: 1.2 }}
-              className="absolute inset-0 border-4 border-white rounded-full opacity-0 hover:opacity-100 transition-all duration-300"
+              className="absolute inset-0 border-2 border-blue-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-blue-300 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-blue-400 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -135,23 +135,23 @@ export default function Botones() {
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],
-              boxShadow: "0 0 20px rgba(220, 38, 38, 0.7)"
+              boxShadow: "0 0 20px rgba(248, 113, 113, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
             href="https://teams.microsoft.com/v2/"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-red-600 hover:bg-red-700 text-white shadow-lg cursor-pointer relative overflow-hidden"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-rose-500 hover:bg-rose-400 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
-            <FaUsers className="text-4xl md:text-5xl" />
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            <FaUsers className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
             <motion.div 
               initial={{ scale: 0 }}
               whileHover={{ scale: 1.2 }}
-              className="absolute inset-0 border-4 border-white rounded-full opacity-0 hover:opacity-100 transition-all duration-300"
+              className="absolute inset-0 border-2 border-rose-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-red-300 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-rose-400 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -172,23 +172,23 @@ export default function Botones() {
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],
-              boxShadow: "0 0 20px rgba(234, 88, 12, 0.7)"
+              boxShadow: "0 0 20px rgba(249, 115, 22, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
             href="https://ureal.edu.bo/pregrado/formsPago/"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-orange-600 hover:bg-orange-700 text-white shadow-lg cursor-pointer relative overflow-hidden"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-orange-400 hover:bg-orange-300 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
-            <FaCreditCard className="text-4xl md:text-5xl" />
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            <FaCreditCard className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
             <motion.div 
               initial={{ scale: 0 }}
               whileHover={{ scale: 1.2 }}
-              className="absolute inset-0 border-4 border-white rounded-full opacity-0 hover:opacity-100 transition-all duration-300"
+              className="absolute inset-0 border-2 border-orange-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-orange-300 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-orange-400 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
