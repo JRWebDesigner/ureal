@@ -63,11 +63,11 @@ export default function Header() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className={`fixed top-0 left-0 w-full transition-all z-50 ${
+          className={`fixed py-4 top-0 left-0 w-full transition-all z-50 ${
             scrolling ? "bg-black shadow-lg" : "bg-[#000000]"
           }`}
         >
-        <section className='redes bg-red-950 flex flex-center md:flex-start items-center md:items-start gap-6 text-white my-2 pl-6 px-4 py-2'>
+        <section className='redes border-b-2 border-white flex flex-center md:flex-start items-center md:items-start gap-6 text-white my-2 pl-6 px-4 py-2'>
           <a
           href="https://www.facebook.com/univreal"
           target="_blank"
