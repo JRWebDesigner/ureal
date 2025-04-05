@@ -178,34 +178,34 @@ const handleAreaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
               </motion.div>
 
               {/* Selección de Carrera (solo visible si se seleccionó un área) */}
-              {selectedArea && (
-                <motion.div 
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  whileHover={hoverEffect} 
-                  whileTap={tapEffect}
-                >
-                  <label htmlFor="career" className="block text-sm font-medium text-gray-300 mb-1">
-                    Selecciona una carrera
-                  </label>
-                  <select
-                    id="career"
-                    name="career"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white focus:ring-2 focus:ring-white focus:outline-none transition-all"
-                    value={selectedCareer}
-                    onChange={(e) => setSelectedCareer(e.target.value)}
-                  >
-                    <option value="">Selecciona una carrera</option>
-                    {careersData[selectedArea].map((career) => (
-                      <option key={career} value={career}>
-                        {career}
-                      </option>
-                    ))}
-                  </select>
-                </motion.div>
-              )}
 
+              {selectedArea && (
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          whileHover={hoverEffect} 
+          whileTap={tapEffect}
+        >
+          <label htmlFor="career" className="block text-sm font-medium text-gray-300 mb-1">
+            Selecciona una carrera
+          </label>
+          <select
+            id="career"
+            name="career"
+            className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white focus:ring-2 focus:ring-white focus:outline-none transition-all"
+            value={selectedCareer}
+            onChange={handleCareerChange}
+          >
+            <option value="">Selecciona una carrera</option>
+            {careersData[selectedArea].map((career: string) => (
+              <option key={career} value={career}>
+                {career}
+              </option>
+            ))}
+          </select>
+        </motion.div>
+      )}
               <motion.div whileHover={hoverEffect} whileTap={tapEffect}>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                   Mensaje
