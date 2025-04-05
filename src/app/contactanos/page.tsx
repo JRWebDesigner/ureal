@@ -217,7 +217,7 @@ const handleAreaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
                 <textarea
                   id="message"
                   name="message"
-                  rows="5"
+                  rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:outline-none transition-all"
                   placeholder="Escribe tu mensaje aquí..."
                 ></textarea>
