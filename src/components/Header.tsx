@@ -57,13 +57,13 @@ export default function Header() {
   //};
 
   return (
-    <header className="">
+    <header className="mb-10 md:mb-0">
       <Container>      
         <motion.nav
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className={`sticky md:fixed top-0 left-0 w-full px-4 py-2 transition-all z-50 ${
+          className={`fixed top-0 left-0 w-full px-4 py-2 transition-all z-50 ${
             scrolling ? "bg-black shadow-lg" : "bg-[#000000]"
           }`}
         >
