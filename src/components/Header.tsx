@@ -63,7 +63,7 @@ export default function Header() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className={`fixed py-4 top-0 left-0 w-full transition-all z-50 ${
+          className={`fixed py-4 px-2 top-0 left-0 w-full transition-all z-50 ${
             scrolling ? "bg-black shadow-lg" : "bg-[#000000]"
           }`}
         >
