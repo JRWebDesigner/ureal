@@ -73,19 +73,19 @@ export default function ContactPage() {
     }
   };
 
-  const hoverEffect = {
-    scale: 1.03,
-    transition: { type: 'spring', stiffness: 400, damping: 10 }
+const handleAreaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedArea(e.target.value as AreaType);
+    setSelectedCareer('');
+  };
+
+  const handleCareerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCareer(e.target.value);
   };
 
   const tapEffect = {
     scale: 0.98
   };
 
-  const handleAreaChange = (e) => {
-    setSelectedArea(e.target.value);
-    setSelectedCareer('');  
-  };
 
   return (
     <motion.div 
