@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Footer() {
-  // Estados para los submenús
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
 
   const toggleSubmenu = (menu: string) => {
@@ -97,13 +96,8 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/postgrado" className="text-red-200 hover:text-white block py-1">
-                        Postgrado
-                      </Link>
-                    </li>
-                    <li>
                       <Link href="/maestria" className="text-red-200 hover:text-white block py-1">
-                        Maestría
+                        Postgrado
                       </Link>
                     </li>
                   </motion.ul>
