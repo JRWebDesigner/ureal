@@ -37,7 +37,7 @@ export default function Header() {
     { name: "Conócenos", href: "/conocenos/mision-vision",
     },
     {
-      name:"Planes", href:"/conocenos/planes-al-contado"
+      name:"Planes", href:"/conocenos/plan-al-contado "
     },
     {
       name:"Descuentos", href:"/conocenos/descuentos"
