@@ -10,7 +10,7 @@ import {
 
 export default function Botones() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="flex flex-col items-center justify-center px-4 py-8">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 w-full max-w-6xl">
         {/* Botón Sistema Ureal */}
         <motion.div
