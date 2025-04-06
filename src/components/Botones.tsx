@@ -18,7 +18,7 @@ export default function Botones() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center"
+          className="flex flex-center"
         >
           <motion.a
             whileHover={{ 
@@ -29,7 +29,7 @@ export default function Botones() {
             whileTap={{ scale: 0.95 }}
             href="http://sistema.ureal.edu.bo/"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-emerald-500 hover:bg-emerald-400 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-red-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <FaUserGraduate className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
