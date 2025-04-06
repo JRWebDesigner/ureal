@@ -39,7 +39,7 @@ const titleVariants: Variants = {
         whileInView="onscreen"
         viewport={{ once: true }}
       >
-               <h1 className="uppercase text-3xl md:text-5xl text-center font-bold"> Universidad Real de la Cámara de Comercio</h1> 
+               <h1 className="uppercase text-3xl md:text-5xl text-center font-bold"> Universidad Real de la Cámara Nacional de Comercio</h1> 
             <span className="text-center text-xl">Formando líderes empresariales </span>
        </motion.div>
 		
