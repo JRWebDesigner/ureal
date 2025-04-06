@@ -66,7 +66,7 @@ export default function Botones() {
             whileTap={{ scale: 0.95 }}
             href="https://virtual.ureal.edu.bo/login/index.php"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-amber-400 hover:bg-amber-300 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-red-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <FaLaptop className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
@@ -77,7 +77,7 @@ export default function Botones() {
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-amber-400 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -103,7 +103,7 @@ export default function Botones() {
             whileTap={{ scale: 0.95 }}
             href="https://ureal.edu.bo/landingbiblio.html"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-blue-400 hover:bg-blue-300 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-blue-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <FaBook className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
@@ -114,7 +114,7 @@ export default function Botones() {
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-blue-400 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -140,7 +140,7 @@ export default function Botones() {
             whileTap={{ scale: 0.95 }}
             href="https://teams.microsoft.com/v2/"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-rose-500 hover:bg-rose-400 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-red-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <FaUsers className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
@@ -151,7 +151,7 @@ export default function Botones() {
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-rose-400 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -177,7 +177,7 @@ export default function Botones() {
             whileTap={{ scale: 0.95 }}
             href="https://ureal.edu.bo/pregrado/formsPago/"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-orange-400 hover:bg-orange-300 text-gray-900 shadow-lg cursor-pointer relative overflow-hidden group"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-red-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <FaCreditCard className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
@@ -188,7 +188,7 @@ export default function Botones() {
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-orange-400 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
