@@ -57,7 +57,7 @@ export default function Header() {
   //};
 
   return (
-    <header className="mb-16 md:mb-0">
+    <header className="uppercase mb-16 md:mb-0">
       <Container>      
         <motion.nav
           initial={{ y: -100, opacity: 0 }}
