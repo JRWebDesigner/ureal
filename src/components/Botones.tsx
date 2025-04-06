@@ -103,7 +103,7 @@ export default function Botones() {
             whileTap={{ scale: 0.95 }}
             href="https://ureal.edu.bo/landingbiblio.html"
             target="_blank"
-            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-blue-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
+            className="flex items-center justify-center rounded-full w-24 h-24 md:w-32 md:h-32 bg-red-900 hover:bg-red-800 text-white shadow-lg cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <FaBook className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110" />
