@@ -18,7 +18,7 @@ export default function Botones() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
           viewport={{ once: true }}
-          className="flex flex justify-center items-center"
+          className="flex flex-col items-center"
         >
           <motion.a
             whileHover={{ 
