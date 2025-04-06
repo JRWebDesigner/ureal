@@ -18,7 +18,7 @@ export default function Botones() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
           viewport={{ once: true }}
-          className="flex flex-center"
+          className="flex flex justify-center items-center"
         >
           <motion.a
             whileHover={{ 
@@ -40,7 +40,7 @@ export default function Botones() {
             />
           </motion.a>
           <motion.span 
-            className="mt-4 text-emerald-400 text-sm md:text-base font-medium tracking-wider"
+            className="mt-4 text-black text-sm md:text-base font-medium tracking-wider"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
