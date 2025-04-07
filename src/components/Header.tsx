@@ -154,11 +154,11 @@ export default function Header() {
             >
               <Link href="/" aria-label="Ir al inicio">
                 <img 
-                  width={140} 
-                  height={80}
+                  width={180} 
+                  height={120}
                   src="/Images/logo.png" 
                   alt="Logo Universidad Real de Cámara de Comercio" 
-                  className="h-16 w-auto object-contain"
+                  className="h-26 w-auto object-contain"
                 />
               </Link>
             </motion.div>
@@ -255,7 +255,7 @@ export default function Header() {
       animate={{ opacity: 1, height: "auto" }}
       exit={{ opacity: 0, height: 0 }}
       transition={{ duration: 0.3 }}
-      className="md:hidden bg-gray-900 overflow-y-auto uppercase fixed top-[84px] bottom-0 left-0 right-0 z-40"
+      className="md:hidden bg-gray-900 text-white overflow-y-auto uppercase fixed top-[130px] bottom-0 left-0 right-0 z-40"
     >
       <ul className="flex flex-col gap-1 py-4 px-4">
         {/* Mostrar enlaces adicionales en móvil */}
