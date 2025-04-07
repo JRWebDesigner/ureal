@@ -13,6 +13,9 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 
+// Definimos el tipo para el componente de icono
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
@@ -72,15 +75,7 @@ export default function Header() {
     { name: "Blog", href: "https://sites.google.com/view/turealblog/inicio" },
   ];
 
-  // Enlaces adicionales para la barra superior
-  const additionalLinks = [
-    { name: "CONÓCENOS", href: "/conocenos" },
-    { name: "SOY UREAL", href: "/soy-ureal" },
-    { name: "CAMPUS VIRTUAL", href: "https://campus.ureal.edu" },
-    { name: "MICROSOFT LEARN", href: "/microsoft-learn" },
-    { name: "BIBLIOTECA", href: "/biblioteca" }
-  ];
-
+  // Función para verificar si la ruta actual coincide con algún submenú
   const isSubmenuActive = (submenuItems: any[]) => {
     return submenuItems.some(item => pathname === item.href);
   };
@@ -89,7 +84,8 @@ export default function Header() {
     setOpenSubmenu(openSubmenu === menuName ? null : menuName);
   };
 
-  const renderSocialIcon = (Icon: any, href: string, label: string) => (
+  // Función renderSocialIcon con tipado correcto
+  const renderSocialIcon = (Icon: IconComponent, href: string, label: string) => (
     <a
       href={href}
       target="_blank"
@@ -100,6 +96,15 @@ export default function Header() {
       <Icon size={20} />
     </a>
   );
+
+  // Enlaces adicionales para la barra superior
+  const additionalLinks = [
+    { name: "CONÓCENOS", href: "/conocenos" },
+    { name: "SOY UREAL", href: "/soy-ureal" },
+    { name: "CAMPUS VIRTUAL", href: "https://campus.ureal.edu" },
+    { name: "MICROSOFT LEARN", href: "/microsoft-learn" },
+    { name: "BIBLIOTECA", href: "/biblioteca" }
+  ];
 
   return (
     <header className="mb-30">
