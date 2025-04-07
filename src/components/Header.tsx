@@ -249,92 +249,111 @@ export default function Header() {
 
           {/* Menú Móvil */}
           <AnimatePresence>
-            {mobileMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="md:hidden bg-gray-900 overflow-hidden uppercase overflow-y-auto"
-              >
-                <ul className="flex flex-col gap-1 py-4 px-4">
-                  {/* Mostrar enlaces adicionales en móvil */}
-                  {additionalLinks.map((link, index) => (
-                    <motion.li
-                      key={link.name}
-                      initial={{ x: -20, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.2, delay: index * 0.05 }}
-                    >
-                      <Link
-                        href={link.href}
-                        className="block px-4 py-3 rounded-lg hover:bg-gray-800 text-white"
-                      >
-                        {link.name}
-                      </Link>
-                    </motion.li>
-                  ))}
+  {mobileMenuOpen && (
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden bg-gray-900 overflow-y-auto uppercase fixed top-[84px] bottom-0 left-0 right-0 z-40"
+    >
+      <ul className="flex flex-col gap-1 py-4 px-4">
+        {/* Mostrar enlaces adicionales en móvil */}
+        {additionalLinks.map((link, index) => (
+          <motion.li
+            key={link.name}
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.2, delay: index * 0.05 }}
+          >
+            <Link
+              href={link.href}
+              className="block px-4 py-3 rounded-lg hover:bg-gray-800 text-white"
+            >
+              {link.name}
+            </Link>
+          </motion.li>
+        ))}
 
-                  {/* Separador */}
-                  <div className="border-t border-gray-700 my-2"></div>
+        {/* Separador */}
+        <div className="border-t border-gray-700 my-2"></div>
 
-                  {/* Menú principal */}
-                  {links.map((link, index) => (
-                    <motion.li
-                      key={link.name}
-                      initial={{ x: -20, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.2, delay: (index + additionalLinks.length) * 0.05 }}
-                      className='text-white'
+        {/* Menú principal */}
+        {links.map((link, index) => (
+          <motion.li
+            key={link.name}
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.2, delay: (index + additionalLinks.length) * 0.05 }}
+          >
+            {link.submenu ? (
+              <div className="mb-2">
+                <button
+                  onClick={() => toggleSubmenu(link.name)}
+                  className={`flex items-center justify-between w-full px-4 py-3 rounded-lg ${
+                    pathname === link.href || isSubmenuActive(link.submenu)
+                      ? "bg-white text-black font-bold" 
+                      : "hover:bg-gray-800"
+                  }`}
+                  aria-expanded={openSubmenu === link.name}
+                >
+                  {link.name}
+                  {openSubmenu === link.name ? 
+                    <FaChevronUp size={14} /> : 
+                    <FaChevronDown size={14} />}
+                </button>
+                
+                <AnimatePresence>
+                  {openSubmenu === link.name && (
+                    <motion.ul
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="pl-4 mt-1 space-y-1"
                     >
-                      {link.submenu ? (
-                        <div className="mb-2">
-                          <button
-                            onClick={() => toggleSubmenu(link.name)}
-                            className={`flex items-center justify-between w-full px-4 py-3 rounded-lg ${
-                              pathname === link.href || isSubmenuActive(link.submenu)
+                      {link.submenu.map((subItem) => (
+                        <motion.li
+                          key={subItem.href}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <Link
+                            href={subItem.href}
+                            className={`block px-4 py-2 rounded-lg ${
+                              pathname === subItem.href 
                                 ? "bg-white text-black font-bold" 
                                 : "hover:bg-gray-800"
                             }`}
-                            aria-expanded={openSubmenu === link.name}
                           >
-                            {link.name}
-                            {openSubmenu === link.name ? 
-                              <FaChevronUp size={14} /> : 
-                              <FaChevronDown size={14} />}
-                          </button>
-                          
-                          <AnimatePresence>
-                            {openSubmenu === link.name && (
-                              <motion.ul
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="pl-4 mt-1 space-y-1"
-                              >
-                                {link.submenu.map((subItem) => (
-                                  <motion.li
-                                    key={subItem.href}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.2 }}
-                                  >
-                                    <Link
-                                      href={subItem.href}
-                                      className={`block px-4 py-2 rounded-lg ${
-                                        pathname === subItem.href 
-                                          ? "bg-white text-black font-bold" 
-                                          : "hover:bg-gray-800"
-                                      }`}
-                                    >
-                                      {subItem.name}
-                                    </Link>
-                                  </motion.li>
-                                ))}
-                              </motion.ul>
-                            )}
-                          </AnimatePresence>
+                            {subItem.name}
+                          </Link>
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <Link
+                href={link.href}
+                className={`block px-4 py-3 rounded-lg ${
+                  pathname === link.href 
+                    ? "bg-white text-black font-bold" 
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                {link.name}
+              </Link>
+            )}
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
+  )}
+</AnimatePresence>
+
                         </div>
                       ) : (
                         <Link
