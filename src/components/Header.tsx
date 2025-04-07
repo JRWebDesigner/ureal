@@ -285,6 +285,7 @@ export default function Header() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: (index + additionalLinks.length) * 0.05 }}
+                      className='text-white'
                     >
                       {link.submenu ? (
                         <div className="mb-2">
