@@ -92,7 +92,7 @@ export default function Header() {
       aria-label={label}
       className="text-white hover:text-red-500 transition-colors duration-300 p-2 uppercase"
     >
-      <Icon size={20} />
+      <Icon className="w-5 h-5" />
     </a>
   );
 
