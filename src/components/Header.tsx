@@ -76,7 +76,7 @@ export default function Header() {
   ];
 
   // Función para verificar si la ruta actual coincide con algún submenú
-  const isSubmenuActive = (submenuItems: any[]) => {
+  const isSubmenuActive = (submenuItems: MenuItem[]) => {
     return submenuItems.some(item => pathname === item.href);
   };
 
