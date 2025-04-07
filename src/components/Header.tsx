@@ -248,7 +248,7 @@ export default function Header() {
           </div>
 
           {/* Menú Móvil */}
-          <AnimatePresence>
+    <AnimatePresence>
   {mobileMenuOpen && (
     <motion.div
       initial={{ opacity: 0, height: 0 }}
@@ -353,26 +353,6 @@ export default function Header() {
     </motion.div>
   )}
 </AnimatePresence>
-
-                        </div>
-                      ) : (
-                        <Link
-                          href={link.href}
-                          className={`block px-4 py-3 rounded-lg ${
-                            pathname === link.href 
-                              ? "bg-white text-black font-bold" 
-                              : "hover:bg-gray-800"
-                          }`}
-                        >
-                          {link.name}
-                        </Link>
-                      )}
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </motion.nav>
       </Container>
     </header>
