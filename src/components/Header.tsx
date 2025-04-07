@@ -255,7 +255,7 @@ export default function Header() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="md:hidden bg-gray-900 overflow-hidden uppercase"
+                className="md:hidden bg-gray-900 overflow-hidden uppercase overflow-y-auto"
               >
                 <ul className="flex flex-col gap-1 py-4 px-4">
                   {/* Mostrar enlaces adicionales en móvil */}
