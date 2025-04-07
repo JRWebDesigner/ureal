@@ -14,16 +14,9 @@ import {
 } from "react-icons/fa6";
 
 export default function Header() {
-  const [scrolling, setScrolling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => setScrolling(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -40,7 +33,7 @@ export default function Header() {
         { name: "Mensaje del Rector de la Universidad", href: "/conocenos/mensaje-rector" },
         { name: "Mision y vision", href: "/conocenos/mision-vision" },
         { name: "Aspectos Legales", href: "/conocenos/aspectos-legales" }
-    },
+    ]},
     { 
       name: "FORMACION", 
       href: "#",
@@ -49,12 +42,45 @@ export default function Header() {
         { name: "pregrado", href: "/pregrado" },
         { name: "postgrado", href: "/maestria" },
         { name: "maestria", href: "/maestria" }
-    },
+    ]},
+    { 
+      name: "EXTENSION", 
+      href: "#",
+      submenu: [
+        { name: "nuestras actividades", href: "/extension/nuestras-actividades" },
+        { name: "Deportes", href: "/extension/deportes" },
+        { name: "eventos", href: "/extension/eventos" },
+        { name: "ex-alumnos", href: "/extension/exalumnos" }
+    ]},
+    { 
+      name: "ENLACES", 
+      href: "#",
+      submenu: [
+        { name: "PLAN CONTADO", href: "/enlaces/plan-contado" },
+        { name: "descuentos", href: "/enlaces/descuentos" },
+        { name: "becas", href: "/enlaces/becas" },
+    ]},
+    { 
+      name: "SERVICIOS", 
+      href: "#",
+      submenu: [
+        { name: "bolsa de trabajo", href: "/servicios/bolsa-trabajo" },
+        { name: "investigacion", href: "/servicios/investigacion" },
+        { name: "preguntas frecuentes", href: "/servicios/faq" },
+        { name: "contactanos", href: "/contactanos" }
+    ]},
     { name: "Blog", href: "https://sites.google.com/view/turealblog/inicio" },
-    { name: "Contáctanos", href: "/contactanos" },
   ];
 
-  // Función para verificar si la ruta actual coincide con algún submenú
+  // Enlaces adicionales para la barra superior
+  const additionalLinks = [
+    { name: "CONÓCENOS", href: "/conocenos" },
+    { name: "SOY UREAL", href: "/soy-ureal" },
+    { name: "CAMPUS VIRTUAL", href: "https://campus.ureal.edu" },
+    { name: "MICROSOFT LEARN", href: "/microsoft-learn" },
+    { name: "BIBLIOTECA", href: "/biblioteca" }
+  ];
+
   const isSubmenuActive = (submenuItems: any[]) => {
     return submenuItems.some(item => pathname === item.href);
   };
@@ -85,13 +111,34 @@ export default function Header() {
           className="fixed top-0 left-0 w-full z-50 bg-black"
           aria-label="Navegación principal"
         >
-          {/* Redes Sociales */}
-          <div className='border-b border-white flex justify-center md:justify-start items-center gap-2 px-4 py-2 uppercase'>
-            {renderSocialIcon(FaFacebookF, "https://www.facebook.com/univreal", "Facebook")}
-            {renderSocialIcon(FaInstagram, "https://instagram.com/univreal?utm_medium=copy_link", "Instagram")}
-            {renderSocialIcon(FaXTwitter, "https://twitter.com/UnivReal?s=08", "Twitter")}
-            {renderSocialIcon(FaYoutube, "https://www.youtube.com/c/universidadreal/videos", "YouTube")}
-            {renderSocialIcon(FaWhatsapp, "https://wa.me/+59161190061", "WhatsApp")}
+          {/* Barra superior con redes sociales y enlaces adicionales */}
+          <div className='border-b border-white flex justify-between items-center px-4 py-2 uppercase'>
+            {/* Redes Sociales */}
+            <div className="flex items-center gap-2">
+              {renderSocialIcon(FaFacebookF, "https://www.facebook.com/univreal", "Facebook")}
+              {renderSocialIcon(FaInstagram, "https://instagram.com/univreal?utm_medium=copy_link", "Instagram")}
+              {renderSocialIcon(FaXTwitter, "https://twitter.com/UnivReal?s=08", "Twitter")}
+              {renderSocialIcon(FaYoutube, "https://www.youtube.com/c/universidadreal/videos", "YouTube")}
+              {renderSocialIcon(FaWhatsapp, "https://wa.me/+59161190061", "WhatsApp")}
+            </div>
+
+            {/* Enlaces adicionales - solo en desktop */}
+            <div className="hidden md:flex items-center gap-4">
+              {additionalLinks.map((link) => (
+                <motion.div
+                  key={link.name}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="text-white hover:text-red-500 text-sm font-medium transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="container mx-auto flex justify-between items-center py-2 px-4">
@@ -207,12 +254,33 @@ export default function Header() {
                 className="md:hidden bg-gray-900 overflow-hidden uppercase"
               >
                 <ul className="flex flex-col gap-1 py-4 px-4">
-                  {links.map((link, index) => (
+                  {/* Mostrar enlaces adicionales en móvil */}
+                  {additionalLinks.map((link, index) => (
                     <motion.li
                       key={link.name}
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: index * 0.05 }}
+                    >
+                      <Link
+                        href={link.href}
+                        className="block px-4 py-3 rounded-lg hover:bg-gray-800 text-white"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+
+                  {/* Separador */}
+                  <div className="border-t border-gray-700 my-2"></div>
+
+                  {/* Menú principal */}
+                  {links.map((link, index) => (
+                    <motion.li
+                      key={link.name}
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.2, delay: (index + additionalLinks.length) * 0.05 }}
                     >
                       {link.submenu ? (
                         <div className="mb-2">
