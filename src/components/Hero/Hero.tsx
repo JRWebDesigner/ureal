@@ -25,7 +25,7 @@ const titleVariants: Variants = {
     return (
         <section 
             id="hero"
-            className="uppercase relative flex items-center justify-center px-5 h-[80vh] md:h-[100vh] bg-[url('/Images/banner.webp')] bg-cover bg-center bg-no-repeat bg-opacity-10"
+            className="uppercase relative flex items-center justify-center px-5 h-[80vh] md:h-[90vh] bg-[url('/Images/banner.webp')] bg-cover bg-center bg-no-repeat bg-opacity-10"
         >
 	
         <div className='absolute w-full h-full bg-black opacity-60 z-20' />
