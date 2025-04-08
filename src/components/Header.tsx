@@ -99,10 +99,10 @@ export default function Header() {
   // Enlaces adicionales para la barra superior
   const additionalLinks = [
     { name: "CONÓCENOS", href: "/conocenos" },
-    { name: "SOY UREAL", href: "/soy-ureal" },
-    { name: "CAMPUS VIRTUAL", href: "https://campus.ureal.edu" },
-    { name: "MICROSOFT LEARN", href: "/microsoft-learn" },
-    { name: "BIBLIOTECA", href: "/biblioteca" }
+    { name: "SOY UREAL", href: "http://sistema.ureal.edu.bo/" },
+    { name: "CAMPUS VIRTUAL", href: "https://virtual.ureal.edu.bo/login/index.php" },
+    { name: "MICROSOFT LEARN", href: "https://teams.microsoft.com/v2/" },
+    { name: "BIBLIOTECA", href: "https://ureal.edu.bo/landingbiblio.html" }
   ];
 
   return (
@@ -158,7 +158,7 @@ export default function Header() {
                   height={120}
                   src="/Images/logo.png" 
                   alt="Logo Universidad Real de Cámara de Comercio" 
-                  className="h-26 w-auto object-contain"
+                  className="h-16 md:h-26 w-auto object-contain"
                 />
               </Link>
             </motion.div>
