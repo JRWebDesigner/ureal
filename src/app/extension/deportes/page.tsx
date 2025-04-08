@@ -238,5 +238,5 @@ export default function PageJuegosDeportivos() {
         </motion.div>
       )}
     </div>
-  )
-                      
+    )
+}
