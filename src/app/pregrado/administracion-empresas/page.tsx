@@ -291,69 +291,55 @@ export default function PageAdministracionEmpresas() {
             Plan de Estudios
           </motion.h2>
           
-          {/* Contenedor principal con dos columnas */}
-          <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
-            {/* Columna izquierda - Materias del semestre seleccionado */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="lg:w-2/3"
-            >
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-2xl font-bold text-blue-800 mb-6">
-                  {semestres[semestreSeleccionado].nombre}
-                </h3>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  {semestres[semestreSeleccionado].materias.map((materia, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: i * 0.05 }}
-                      className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 hover:bg-blue-50 transition-colors"
-                    >
-                      <span className="font-mono text-sm text-blue-600">{materia.codigo}</span>
-                      <p className="text-gray-800 font-medium">{materia.nombre}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            {/* Selector de Semestres */}
+            <div className="flex overflow-x-auto px-4 py-2 bg-blue-50">
+              {semestres.map((semestre, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSemestreSeleccionado(index)}
+                  className={`px-4 py-2 mx-1 rounded-md whitespace-nowrap transition-colors ${
+                    semestreSeleccionado === index
+                      ? 'bg-blue-600 text-white font-medium'
+                      : 'bg-white text-blue-800 hover:bg-blue-100'
+                  }`}
+                >
+                  {semestre.nombre.split(' ')[0]} {semestre.nombre.split(' ')[1]}
+                </button>
+              ))}
+            </div>
             
-            {/* Columna derecha - Selector de semestres */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:w-1/3"
-            >
-              <div className="bg-white rounded-xl shadow-lg p-6 sticky top-6">
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Selecciona un Semestre</h3>
-                
-                <div className="space-y-2">
-                  {semestres.map((semestre, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSemestreSeleccionado(index)}
-                      className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-                        semestreSeleccionado === index
-                          ? 'bg-blue-100 text-blue-800 font-medium border-l-4 border-blue-600'
-                          : 'hover:bg-gray-100 text-gray-700'
-                      }`}
-                    >
-                      {semestre.nombre}
-                    </button>
-                  ))}
-                </div>
+            {/* Contenido del Semestre Seleccionado */}
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                {semestres[semestreSeleccionado].nombre}
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                {semestres[semestreSeleccionado].materias.map((materia, i) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                    className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 hover:bg-blue-50 transition-colors"
+                  >
+                    <span className="font-mono text-sm text-blue-600">{materia.codigo}</span>
+                    <p className="text-gray-800 font-medium">{materia.nombre}</p>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
+
       {/* CTA Final */}
       <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -389,4 +375,4 @@ export default function PageAdministracionEmpresas() {
       </section>
     </div>
   )
-}
+              }
