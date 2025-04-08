@@ -5,7 +5,7 @@ import { FiAward, FiUser, FiMail, FiPhone, FiEdit2 } from 'react-icons/fi'
 import { FaTrophy } from 'react-icons/fa'
 
 export default function PageJuegosDeportivos() {
-  const [activeImage, setActiveImage] = useState(null)
+  const [activeImage, setActiveImage] = useState<string | null>(null)
 
   const secciones = [
     {
