@@ -1,7 +1,8 @@
 "use client"
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FiTrophy, FiAward, FiUser, FiMail, FiPhone, FiEdit2 } from 'react-icons/fi'
+import { FiAward, FiUser, FiMail, FiPhone, FiEdit2 } from 'react-icons/fi'
+import { FaTrophy } from 'react-icons/fa'
 
 export default function PageJuegosDeportivos() {
   const [activeImage, setActiveImage] = useState(null)
@@ -55,7 +56,7 @@ export default function PageJuegosDeportivos() {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <FiTrophy className="text-yellow-400 text-6xl mx-auto mb-6" />
+            <FaTrophy className="text-yellow-400 text-6xl mx-auto mb-6" />
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0 }}
@@ -238,5 +239,5 @@ export default function PageJuegosDeportivos() {
         </motion.div>
       )}
     </div>
-    )
+  )
 }
