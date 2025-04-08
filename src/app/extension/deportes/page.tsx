@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FiTrophy, FiCalendar, FiAward, FiUser, FiMail, FiPhone, FiEdit2 } from 'react-icons/fi'
+import { FiTrophy, FiAward, FiUser, FiMail, FiPhone, FiEdit2 } from 'react-icons/fi'
 
 export default function PageJuegosDeportivos() {
   const [activeImage, setActiveImage] = useState(null)
