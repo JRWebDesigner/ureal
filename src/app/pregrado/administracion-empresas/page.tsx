@@ -1,109 +1,113 @@
 "use client"
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 export default function PageAdministracionEmpresas() {
+  const [semestreSeleccionado, setSemestreSeleccionado] = useState(0)
+  
   const semestres = [
-  {
-    nombre: "Primer Semestre",
-    materias: [
-      { codigo: "MAT100-1", nombre: "Matemáticas I" },
-      { codigo: "LEN100-1", nombre: "Lenguaje y Redacción en Español" },
-      { codigo: "MET100-1", nombre: "Metodos y Tecnicas de Estudio" },
-      { codigo: "ADM100-1", nombre: "Administracion" },
-      { codigo: "CON100-1", nombre: "Contabilidad Basica" },
-      { codigo: "ECO100-1", nombre: "Principios de Microeconomia" },
-      { codigo: "ENG100-1", nombre: "Inglés I" }
-    ]
-  },
-  {
-    nombre: "Segundo Semestre",
-    materias: [
-      { codigo: "DER101-2", nombre: "Derecho Comercial y Administrativo" },
-      { codigo: "ECO101-2", nombre: "Principios de Macroeconomía" },
-      { codigo: "MAT101-2", nombre: "Matemáticas II" },
-      { codigo: "ADM101-2", nombre: "Adminitración II" },
-      { codigo: "CON101-2", nombre: "Contabilidad Intermedia" },
-      { codigo: "PSI101-2", nombre: "Psicologia Organizacional" },
-      { codigo: "ENG101-2", nombre: "Inglés II" }
-    ]
-  },
-  {
-    nombre: "Tercer Semestre",
-    materias: [
-      { codigo: "COM101-3", nombre: "Computacion para la Administracion" },
-      { codigo: "CON102-3", nombre: "Contabilidad de Costos" },
-      { codigo: "FIN101-3", nombre: "Finanzas I" },
-      { codigo: "GES100-3", nombre: "Gestion de Proyectos" },
-      { codigo: "CDA101-3", nombre: "Estadistica Adminitrativa" },
-      { codigo: "DRE101-3", nombre: "Desarrollo de Emprendedores" },
-      { codigo: "ENG102-3", nombre: "Inglés III" }
-    ]
-  },
-  {
-    nombre: "Cuarto Semestre",
-    materias: [
-      { codigo: "RHH101-4", nombre: "Recursos Humanos" },
-      { codigo: "FIN102-4", nombre: "Finanzas II" },
-      { codigo: "PSI102-4", nombre: "Desarrollo Organizacional" },
-      { codigo: "LI100-4", nombre: "Liderazgo Empresarial" },
-      { codigo: "MER101-4", nombre: "Mercadotecnia I" },
-      { codigo: "CDA102-4", nombre: "Tec. Cuan. para la Toma de Decisiones" },
-      { codigo: "ENG103-4", nombre: "Inglés IV" }
-    ]
-  },
-  {
-    nombre: "Quinto Semestre",
-    materias: [
-      { codigo: "LI102-5", nombre: "Innovación Empresarial" },
-      { codigo: "CDA103-5", nombre: "Análisis de Decisiones I" },
-      { codigo: "ADC103-5", nombre: "Análisis del Consumidor" },
-      { codigo: "PSI103-5", nombre: "Administración de la Producción" },
-      { codigo: "ADF103-5", nombre: "Administración Financiera" },
-      { codigo: "LI103-5", nombre: "Pensamiento Estratégicos" },
-      { codigo: "ENG104-5", nombre: "Inglés V" }
-    ]
-  },
-  {
-    nombre: "Sexto Semestre",
-    materias: [
-      { codigo: "ORO100-6", nombre: "Dirección Estratégica I" },
-      { codigo: "CDA104-6", nombre: "Análisis de Decisiones II" },
-      { codigo: "DER102-6", nombre: "Derecho de Trabajo" },
-      { codigo: "IDM104-6", nombre: "Investigacion de Mercados I" },
-      { codigo: "RHH102-6", nombre: "Gest. Estratégica de RRHH" },
-      { codigo: "CON104-6", nombre: "Presupuestos" },
-      { codigo: "ENG105-6", nombre: "Inglés VI" }
-    ]
-  },
-  {
-    nombre: "Séptimo Semestre",
-    materias: [
-      { codigo: "ORO101-7", nombre: "Dirección Estratégica II" },
-      { codigo: "FEP104-7", nombre: "Formulacion y Evaluacion de Proyectos" },
-      { codigo: "PSI104-7", nombre: "Gerencia de Calidad" },
-      { codigo: "AIF104-7", nombre: "Análisis e Interpretación de Estados Financieros" },
-      { codigo: "GPU107-7", nombre: "Gestión Pública" },
-      { codigo: "VEP107-7", nombre: "Valores en el Ejercicio Profesional" },
-      { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
-    ]
-  },
-  {
-    nombre: "Octavo Semestre",
-    materias: [
-      { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
-      { codigo: "PRE108-8", nombre: "Practica Empresarial" }
-    ]
-  },
-  {
-    nombre: "Materias Complementarias",
-    materias: [
-      { codigo: "INA100", nombre: "Idioma Nativo (Aymara o Quechua)" },
-      { codigo: "IDM105", nombre: "Investigación de Mercados II" },
-      { codigo: "PEE101", nombre: "Politica y Estrategia Empresarial" },
-      { codigo: "ECO102-4", nombre: "Economía Financiera" }
-    ]
-  }
-];
+    {
+      nombre: "Primer Semestre",
+      materias: [
+        { codigo: "MAT100-1", nombre: "Matemáticas I" },
+        { codigo: "LEN100-1", nombre: "Lenguaje y Redacción en Español" },
+        { codigo: "MET100-1", nombre: "Metodos y Tecnicas de Estudio" },
+        { codigo: "ADM100-1", nombre: "Administracion" },
+        { codigo: "CON100-1", nombre: "Contabilidad Basica" },
+        { codigo: "ECO100-1", nombre: "Principios de Microeconomia" },
+        { codigo: "ENG100-1", nombre: "Inglés I" }
+      ]
+    },
+    {
+      nombre: "Segundo Semestre",
+      materias: [
+        { codigo: "DER101-2", nombre: "Derecho Comercial y Administrativo" },
+        { codigo: "ECO101-2", nombre: "Principios de Macroeconomía" },
+        { codigo: "MAT101-2", nombre: "Matemáticas II" },
+        { codigo: "ADM101-2", nombre: "Adminitración II" },
+        { codigo: "CON101-2", nombre: "Contabilidad Intermedia" },
+        { codigo: "PSI101-2", nombre: "Psicologia Organizacional" },
+        { codigo: "ENG101-2", nombre: "Inglés II" }
+      ]
+    },
+    {
+      nombre: "Tercer Semestre",
+      materias: [
+        { codigo: "COM101-3", nombre: "Computacion para la Administracion" },
+        { codigo: "CON102-3", nombre: "Contabilidad de Costos" },
+        { codigo: "FIN101-3", nombre: "Finanzas I" },
+        { codigo: "GES100-3", nombre: "Gestion de Proyectos" },
+        { codigo: "CDA101-3", nombre: "Estadistica Adminitrativa" },
+        { codigo: "DRE101-3", nombre: "Desarrollo de Emprendedores" },
+        { codigo: "ENG102-3", nombre: "Inglés III" }
+      ]
+    },
+    {
+      nombre: "Cuarto Semestre",
+      materias: [
+        { codigo: "RHH101-4", nombre: "Recursos Humanos" },
+        { codigo: "FIN102-4", nombre: "Finanzas II" },
+        { codigo: "PSI102-4", nombre: "Desarrollo Organizacional" },
+        { codigo: "LI100-4", nombre: "Liderazgo Empresarial" },
+        { codigo: "MER101-4", nombre: "Mercadotecnia I" },
+        { codigo: "CDA102-4", nombre: "Tec. Cuan. para la Toma de Decisiones" },
+        { codigo: "ENG103-4", nombre: "Inglés IV" }
+      ]
+    },
+    {
+      nombre: "Quinto Semestre",
+      materias: [
+        { codigo: "LI102-5", nombre: "Innovación Empresarial" },
+        { codigo: "CDA103-5", nombre: "Análisis de Decisiones I" },
+        { codigo: "ADC103-5", nombre: "Análisis del Consumidor" },
+        { codigo: "PSI103-5", nombre: "Administración de la Producción" },
+        { codigo: "ADF103-5", nombre: "Administración Financiera" },
+        { codigo: "LI103-5", nombre: "Pensamiento Estratégicos" },
+        { codigo: "ENG104-5", nombre: "Inglés V" }
+      ]
+    },
+    {
+      nombre: "Sexto Semestre",
+      materias: [
+        { codigo: "ORO100-6", nombre: "Dirección Estratégica I" },
+        { codigo: "CDA104-6", nombre: "Análisis de Decisiones II" },
+        { codigo: "DER102-6", nombre: "Derecho de Trabajo" },
+        { codigo: "IDM104-6", nombre: "Investigacion de Mercados I" },
+        { codigo: "RHH102-6", nombre: "Gest. Estratégica de RRHH" },
+        { codigo: "CON104-6", nombre: "Presupuestos" },
+        { codigo: "ENG105-6", nombre: "Inglés VI" }
+      ]
+    },
+    {
+      nombre: "Séptimo Semestre",
+      materias: [
+        { codigo: "ORO101-7", nombre: "Dirección Estratégica II" },
+        { codigo: "FEP104-7", nombre: "Formulacion y Evaluacion de Proyectos" },
+        { codigo: "PSI104-7", nombre: "Gerencia de Calidad" },
+        { codigo: "AIF104-7", nombre: "Análisis e Interpretación de Estados Financieros" },
+        { codigo: "GPU107-7", nombre: "Gestión Pública" },
+        { codigo: "VEP107-7", nombre: "Valores en el Ejercicio Profesional" },
+        { codigo: "SDG107-7", nombre: "Seminario de Grado I" }
+      ]
+    },
+    {
+      nombre: "Octavo Semestre",
+      materias: [
+        { codigo: "SDG108-8", nombre: "Seminario de Grado II" },
+        { codigo: "PRE108-8", nombre: "Practica Empresarial" }
+      ]
+    },
+    {
+      nombre: "Materias Complementarias",
+      materias: [
+        { codigo: "INA100", nombre: "Idioma Nativo (Aymara o Quechua)" },
+        { codigo: "IDM105", nombre: "Investigación de Mercados II" },
+        { codigo: "PEE101", nombre: "Politica y Estrategia Empresarial" },
+        { codigo: "ECO102-4", nombre: "Economía Financiera" }
+      ]
+    }
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -286,28 +290,53 @@ export default function PageAdministracionEmpresas() {
           >
             Plan de Estudios
           </motion.h2>
-          <div className="mt-8 max-w-4xl mx-auto">
-            {semestres.map((semestre, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="mb-6"
-              >
-                <h3 className="text-xl font-bold text-blue-800 mb-4">{semestre.nombre}</h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {semestre.materias.map((materia, i) => (
-                    <div key={i} className="bg-white p-4 rounded-lg shadow-sm border-l-2 border-blue-400">
-                      <span className="font-mono text-blue-600">{materia.codigo}</span>
-                      <p className="text-gray-800">{materia.nombre}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-        </div>
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            {/* Selector de Semestres */}
+            <div className="flex overflow-x-auto px-4 py-2 bg-blue-50">
+              {semestres.map((semestre, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSemestreSeleccionado(index)}
+                  className={`px-4 py-2 mx-1 rounded-md whitespace-nowrap transition-colors ${
+                    semestreSeleccionado === index
+                      ? 'bg-blue-600 text-white font-medium'
+                      : 'bg-white text-blue-800 hover:bg-blue-100'
+                  }`}
+                >
+                  {semestre.nombre.split(' ')[0]} {semestre.nombre.split(' ')[1]}
+                </button>
+              ))}
+            </div>
+            
+            {/* Contenido del Semestre Seleccionado */}
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                {semestres[semestreSeleccionado].nombre}
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                {semestres[semestreSeleccionado].materias.map((materia, i) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                    className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 hover:bg-blue-50 transition-colors"
+                  >
+                    <span className="font-mono text-sm text-blue-600">{materia.codigo}</span>
+                    <p className="text-gray-800 font-medium">{materia.nombre}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
