@@ -36,10 +36,10 @@ export default function PageActividadesCulturales() {
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-r from-red-800 to-yellow-800 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-black"></div>
+      {/* Hero Section - Ahora en negro */}
+      <section className="relative py-20 md:py-28 bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-80">
+          <div className="absolute inset-0 bg-gradient-to-r from-black to-gray-900"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1 
@@ -61,7 +61,7 @@ export default function PageActividadesCulturales() {
         </div>
       </section>
 
-      {/* Galería de Actividades */}
+      {/* Galería de Actividades - Versión mejorada para móviles */}
       <section className="py-16 container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -82,39 +82,37 @@ export default function PageActividadesCulturales() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
                 className="relative group overflow-hidden rounded-xl shadow-lg"
               >
-                {/* Imagen con overlay */}
+                {/* Contenedor de imagen */}
                 <div className="relative h-64 w-full">
                   {/* Imagen de fondo */}
                   <div 
                     className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105"
                     style={{ backgroundImage: `url(${actividad.imagen})` }}
-                  >
-                    {/* Overlay gradiente */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-100 group-hover:opacity-90 transition-opacity duration-300"></div>
-                  </div>
+                  />
                   
-                  {/* Contenido que aparece al hacer hover */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white transition-all duration-300 transform translate-y-20 group-hover:translate-y-0">
+                  {/* Overlay que siempre se muestra (ahora visible en móviles) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                  
+                  {/* Contenido que ahora es visible siempre, no solo en hover */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 text-white">
                     <div className="flex items-center mb-2">
-                      <div className="mr-3">
+                      <div className="mr-2">
                         {actividad.icono}
                       </div>
-                      <span className="text-sm font-semibold bg-red-800 px-3 py-1 rounded-full">
+                      <span className="text-xs md:text-sm font-semibold bg-red-800 px-2 md:px-3 py-1 rounded-full">
                         {actividad.categoria}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">{actividad.titulo}</h3>
-                    <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {actividad.descripcion}
-                    </p>
-                  </div>
-                  
-                  {/* Contenido visible siempre */}
-                  <div className="absolute inset-0 flex items-end p-6 text-white">
-                    <h3 className="text-xl font-bold">{actividad.titulo}</h3>
+                    <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2">{actividad.titulo}</h3>
+                    
+                    {/* Descripción - visible en móviles y desktop */}
+                    <div className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-xs md:text-sm mt-1">
+                        {actividad.descripcion}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
