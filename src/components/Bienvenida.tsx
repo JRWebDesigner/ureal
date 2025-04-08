@@ -19,7 +19,7 @@ export default function Bienvenida() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className='text-3xl md:text-4xl font-bold text-white'
             >
-              <span className="text-red-600">Bienvenidos</span> a la Universidad Real de Cámara de Comercio
+              <span className="text-red-600">Bienvenidos</span> a la Universidad Real de la Cámara Nacional de Comercio
             </motion.h2>
             
             <motion.p 
