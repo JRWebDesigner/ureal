@@ -13,7 +13,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 
-// Definimos el tipo para el componente de icono
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 export default function Header() {
@@ -59,7 +58,7 @@ export default function Header() {
       name: "ENLACES", 
       href: "#",
       submenu: [
-        { name: "PLAN CONTADO", href: "/enlaces/plan-contado" },
+        { name: "PLAN CONTADO", href: "/enlaces/plan-al-contado" },
         { name: "descuentos", href: "/enlaces/descuentos" },
         { name: "becas", href: "/enlaces/becas" },
     ]},
@@ -75,7 +74,6 @@ export default function Header() {
     { name: "Blog", href: "https://sites.google.com/view/turealblog/inicio" },
   ];
 
-  // Función para verificar si la ruta actual coincide con algún submenú
  const isSubmenuActive = (submenuItems: Array<{ href: string }>) => {
   return submenuItems.some(item => pathname === item.href);
 };
@@ -83,7 +81,6 @@ export default function Header() {
     setOpenSubmenu(openSubmenu === menuName ? null : menuName);
   };
 
-  // Función renderSocialIcon con tipado correcto
   const renderSocialIcon = (Icon: IconComponent, href: string, label: string) => (
     <a
       href={href}
@@ -96,7 +93,6 @@ export default function Header() {
     </a>
   );
 
-  // Enlaces adicionales para la barra superior
   const additionalLinks = [
     { name: "CONÓCENOS", href: "/conocenos" },
     { name: "SOY UREAL", href: "http://sistema.ureal.edu.bo/" },
