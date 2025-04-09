@@ -1,4 +1,5 @@
 'use client'
+import FormularioInscripcion from '@/components/Formulario'
 import { motion } from 'framer-motion'
 import { FaArrowDown, FaFileAlt, FaBirthdayCake, FaIdCard, FaImages, FaFolder, FaPassport, FaSchool, FaGraduationCap, FaMoneyBillWave, FaBook } from 'react-icons/fa'
 
@@ -343,110 +344,7 @@ export default function RequisitosInscripcion() {
             Regístrate en nuestro formulario de interés y nos contactaremos contigo lo antes posible.
           </motion.p>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gray-900 p-8 rounded-lg shadow-xl"
-          >
-            <form className="space-y-6">
-              <div>
-                <label className="block mb-2 font-medium">Nombres</label>
-                <input 
-                  type="text" 
-                  className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                  placeholder="Ingresa tus nombres"
-                />
-              </div>
-              
-              <div>
-                <label className="block mb-2 font-medium">Apellidos</label>
-                <input 
-                  type="text" 
-                  className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                  placeholder="Ingresa tus apellidos"
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block mb-2 font-medium">Cédula</label>
-                  <input 
-                    type="text" 
-                    className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Número de cédula"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block mb-2 font-medium">Ciudad</label>
-                  <select className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-                    <option>Elige una Ciudad</option>
-                    <option>La Paz</option>
-                    <option>Cochabamba</option>
-                    <option>Santa Cruz</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block mb-2 font-medium">Correo Electrónico</label>
-                  <input 
-                    type="email" 
-                    className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="ejemplo@algo.com"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block mb-2 font-medium">Celular</label>
-                  <input 
-                    type="tel" 
-                    className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Número de celular"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label className="block mb-2 font-medium">¿QUÉ CARRERA TE INTERESA?</label>
-                <select className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 mb-4">
-                  <option>Elige una carrera (Licenciatura)</option>
-                  <option>Administración de Empresas</option>
-                  <option>Contaduría Pública</option>
-                  <option>Marketing Digital</option>
-                </select>
-                
-                <select className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-                  <option>Elige una carrera (Técnico Superior)</option>
-                  <option>Desarrollo de Software</option>
-                  <option>Gestión Financiera</option>
-                  <option>Logística Internacional</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block mb-2 font-medium">¿QUÉ MODALIDAD DE PAGO TE INTERESA?</label>
-                <select className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-                  <option>Elige una Modalidad</option>
-                  <option>Plan Regular</option>
-                  <option>Plan Semestral</option>
-                  <option>Plan Contado</option>
-                </select>
-              </div>
-              
-              <div className="pt-4">
-                <button 
-                  type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300"
-                >
-                  ENVIAR SOLICITUD
-                </button>
-              </div>
-            </form>
-          </motion.div>
+          <FormularioInscripcion />
         </div>
       </section>
     </div>
