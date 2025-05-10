@@ -46,12 +46,12 @@ export default function FormularioInscripcion() {
     'Semestral contado'
   ]
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const { name, value } = e.target
+  setFormData(prev => ({
+    ...prev,
+    [name]: value
+  }))
   }
 
   const handleSubmit = (e) => {
