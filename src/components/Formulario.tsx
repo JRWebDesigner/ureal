@@ -54,11 +54,12 @@ export default function FormularioInscripcion() {
   }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    console.log('Datos enviados:', formData)
-    alert('¡Formulario enviado con éxito! Nos contactaremos contigo pronto.')
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  // Aquí iría la lógica para enviar el formulario
+  console.log('Datos enviados:', formData)
+  alert('¡Formulario enviado con éxito! Nos contactaremos contigo pronto.')
   }
 
   return (
